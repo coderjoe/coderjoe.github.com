@@ -1,0 +1,14 @@
+--- 
+layout: post
+title: And it has begun...
+wordpress_id: 1
+categories: 
+- Coding
+tags: 
+- projects
+- coderjoe.net
+---
+
+After careful consideration I decided to go with WordPress for my blog coderjoe.net.
+We'll see how this turns out, but so far it's looking welcoming.
+Expect to see posts and articles relating to myself, my current projects, and related topics.
