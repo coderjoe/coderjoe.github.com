@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>The RND benchmarks - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="Recently, a digg article featured a Javascript templating system called RND. RND is touted as a &#8220;fast and simple JS template system&#8221;. I &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2006/08/12/the-rnd-benchmarks/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">The RND Benchmarks</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-08-12T00:00:00-04:00" pubdate data-updated="true">Aug 12<span>th</span>, 2006</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recently, a <a href="http://www.digg.com/programming/JavaScript_templating_system_Display_HTML_blazingly_fast" title="JavaScript templating system - Display HTML blazingly fast">digg article</a> featured a Javascript templating system called <a href="http://amix.dk/index.py/permanentLink?id=161" title="RND - fast and simple JS template system">RND</a>.</p>
+
+<p>RND is touted as a &#8220;fast and simple JS template system&#8221;. I can categorically state that it is indeed fast and simple. Those are exactly the reasons why I like it.</p>
+
+<p>You&#8217;re probably asking yourself &#8220;Well how fast is it?&#8221; . So fast in fact, that the author decided to post benchmarks of his solution against similar solutions written using innerHTML, the W3C DOM functions, and <a href="http://orangoo.%20com/labs/?page_id=39" title="AmiJS">AmiJS</a>. His benchmarks showed time and time again that his solution was notably faster than the pure DOM function methods! This surprised me to say the least, so I decided to take a look.</p>
+
+<!--more-->
+
+
+<p>Now you&#8217;re probably want to ask me &#8220;Joe, if you like it, why do all this work?&#8221; Well, simply because I was bored and I was curious.</p>
+
+<p>I quickly found issue with the basic dom example in the initial version of the benchmark.</p>
+
+<p>The first thing I noticed was line 34:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'>    <span class="nx">span</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">div</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">div</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">AJS</span><span class="p">.</span><span class="nx">RCN</span><span class="p">(</span><span class="nx">cnt</span><span class="p">,</span> <span class="nx">span</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Wait a second? Why are we using AJS if we want to test basic DOM.</p>
+
+<p>A quick look at AJS. RCN gives us:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'>    <span class="c1">//Shortcut: AJS.RCN</span>
+</span><span class='line'>    <span class="nx">replaceChildNodes</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">node</span><span class="cm">/*, nodes...*/</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">child</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">while</span> <span class="p">((</span><span class="nx">child</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">))</span>
+</span><span class='line'>            <span class="nx">node</span><span class="p">.</span> <span class="nx">removeChild</span><span class="p">(</span><span class="nx">child</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">if</span> <span class="p">(</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
+</span><span class='line'>            <span class="k">return</span> <span class="nx">node</span><span class="p">;</span>
+</span><span class='line'>        <span class="k">else</span>
+</span><span class='line'>            <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">appendChildNodes</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">node</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That seems like a lot of extra processing for the sake of this benchmark, so I just replaced the AJS. RCN call with the following:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'>    <span class="k">while</span><span class="p">(</span><span class="nx">cnt</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">cnt</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">cnt</span><span class="p">.</span><span class="nx">firstChild</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="nx">cnt</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">span</span><span class="p">);</span>
+</span><span class='line'>    <span class="nx">cnt</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">div</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Well, that&#8217;s a lot shorter!</p>
+
+<p>I almost thought I was done, then I saw a lingering innerHTML used in the basic DOM test being used to create a text node. Shouldn&#8217;t we be using the dom function <a href="http://www.quirksmode.org/dom/w3c_core.html#fourmethods" title="createTextNode()">createTextNode</a>?</p>
+
+<p>A quick rewrite modified the entire function. At that point I added functionality to compare the output of the different tests against each other, and in the process changed the majority of the files. The new version is available in <a href="/images/posts/2006/08/html_rnd_benchmark-updated.zip" title="benchmark-updated.zip">this</a> zip.</p>
+
+<p>The archive contains the following files:</p>
+
+<ul>
+<li>test. html - The original test file I was comparing against.</li>
+<li>test-fixed. html - My &#8220;fixed&#8221; version of the test with corrected basic DOM.</li>
+<li>test-unfairdom. html - While I was writing this solution, a poster to <a href="http://amix.%20dk/index.%20py/permanentLink?id=161" title="amix. dk : RND - fast and simple JS template system">the blog&#8217;s comments</a> by the name of Matt made passing mention that while loops are slower in Internet Explorer. I have not tested this, but just in case I created this version, which uses a hacky if statement instead of a while loop to remove the elements. This is sort of cheating, since I make use of the fact that I already know how many elements would be placed in the element before we have to replace them.</li>
+</ul>
+
+
+<p>It&#8217;s also worth noting that in my examples I changed the number of times the test is run from 10 to 20 as I got less variation in my averages. YMMV.</p>
+
+<p>Please check it out! Correct me where I&#8217;m wrong, and let me know where I&#8217;m right. I like to learn from my mistakes. :)</p>
+
+<p>I was going to post my benchmark results, but I can only test against Konqueror and Firefox right now. I welcome results from the internet at large. ;)</p>
+
+<p>Update:</p>
+
+<p>The same Matt from before was kind enough to note that my previous implementation is not fair, as it does not simulate a templated system but just creates static elements! So I&#8217;ve made modifications to my benchmark in order to correct this mistake. :)</p>
+
+<p>It&#8217;s not perfect, but it&#8217;s my last attempt. I&#8217;m way too tired to continue.</p>
+
+<p>You can find the file <a href="/images/posts/2006/08/html_rnd_benchmark-updated2.zip" title="html_rnd_benchmark-updated2.zip">here</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-08-12T00:00:00-04:00" pubdate data-updated="true">Aug 12<span>th</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2006/08/12/the-rnd-benchmarks/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2006/08/12/the-rnd-benchmarks/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2006/07/18/josephbausernet-stage-2/" title="Previous Post: JosephBauser.net Stage 2!">&laquo; JosephBauser.net Stage 2!</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2006/08/12/updated-rnd-benchmarks/" title="Next Post: Updated RND Benchmarks">Updated RND Benchmarks &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

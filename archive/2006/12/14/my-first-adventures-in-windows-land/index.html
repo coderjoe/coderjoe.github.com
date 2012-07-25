@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My First Adventures in Windows Land - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="It&#8217;s been years since I was given the gift of my first compiler by my parents. It&#8217;s been almost as long since I&#8217;ve experimented &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2006/12/14/my-first-adventures-in-windows-land/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">My First Adventures in Windows Land</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-14T00:00:00-05:00" pubdate data-updated="true">Dec 14<span>th</span>, 2006</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>It&#8217;s been years since I was given the gift of my first compiler by my parents.</p>
+
+<p>It&#8217;s been almost as long since I&#8217;ve experimented with the Windows API.</p>
+
+<p>Shortly after receiving the gift of Visual Studio 6 I made the switch to Linux as my desktop operating system of choice. Unfortunately this left me with minimal experience with windows programming. To this day the majority of my programming projects and tasks have taken the form of simple 2D graphics engines using SDL, or simple form based applications using QT or GTK+.</p>
+
+<p>Until recently I had always felt like I was missing something, I never had the most basic experience developing applications for the Windows operating system. This always left me with a bit of a pit in my stomach, as I didn&#8217;t have the funds required to purchase a copy of Windows, purchase Visual Studio, and begin my experiments anew.</p>
+
+<p>Thankfully I was very recently offered a paid internship position with a company called Railcomm Inc. At Railcomm I was given the opportunity to develop some Windows programming skills. I developed screen after screen of graphical Windows application with relative ease. I considered myself at least a successful basic Windows programmer.</p>
+
+<p>At the start of this project I figured setting up a Window to contain my DirectX 9. 0c rendering context would be simple as pie. &#8220;It&#8217;s only a few function calls&#8221; I had been told over and over again. I was sure I&#8217;d have no problems at all.</p>
+
+<p>Boy was I wrong. What follows are the steps I used to learn to develop a &#8220;simple&#8221; Windows application.</p>
+
+<p><strong>Step 1: Search the web and follow a tutorial</strong></p>
+
+<p>The first two tutorials I discovered suggested using the MFC Wizard to generate your basic windows application. This seemed simple enough. I could just click, and go, and I would have a single window application which I could bend and tailor to my application&#8217;s needs.</p>
+
+<p>I was horribly wrong. The application contained way too much default functionality for my needs which made it useless as a subject to learn from.</p>
+
+<p><strong>Step 2: Ask the roommates</strong></p>
+
+<p>I&#8217;m fortunate enough to be living with at least one Windows programmer in my apartment. He was kind enough to offer his assistance. However, I am always hesitant to ask for too much help when learning something new, fearing that I may become reliant on others for my answers. So I asked him for the simplest tip he could provide. How could I set up a basic project structure from which to learn basic Windows programming?</p>
+
+<p>&#8220;Start with a Windows Console Application and build up from there!&#8221;, he suggested with ease. This idea made me giddy. I had recently learned that WinMain was the entry point for a windows application (after numerous tutorials and the previous wizard generated sample shoved it in my face a few hundred times) and I was ready to begin my new experiment. I built a windows console application and imagine my surprise when it began with a function declaration as follows.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='cpp'><span class='line'>    <span class="kt">int</span> <span class="n">_tmain</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[]</span> <span class="p">)</span> <span class="p">{}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ok, I&#8217;m smart enough to understand that _tmain is nothing but a redefinition of main. I&#8217;m also smart enough to realise that I wasn&#8217;t seeing what I was expecting. I had told the Wizard I wanted MFC support enabled.</p>
+
+<p><strong>Step 3: Pretend nothing is wrong and forge ahead anyway</strong>.</p>
+
+<p>Question: What had I done wrong?</p>
+
+<p>Answer: I had selected a Windows Console application.</p>
+
+<p>Looking back this is exactly what I wanted, but at the time it did nothing to ease my fears. I began to construct a Window by following the MSDN linking structure as follows.</p>
+
+<ol>
+<li>Search for CreateWindow. Find CreateWindow. Read function declaration.</li>
+<li>Find CreateWindowEx. Read function declaration.</li>
+<li>Find RegisterClassEx. Read function declaration.</li>
+<li>Find WINDCLASSEX structure. Read structure information.</li>
+<li>Play fanfair and gain +1 to Windows API INT and DEX.</li>
+</ol>
+
+
+<p>I figured I would need a WinMain function. So being the fearless ( read: clueless ) programmer I was, I blew away the silly looking _tmain and replaced it with an empty WinMain declaration. Into that WinMain declaration I placed my WINDCLASSEX structure, my RegisterClassEx function call, and my call to CreateWindow.</p>
+
+<p>Finally I was getting somewhere!</p>
+
+<p>Time to compile and run&#8230; uh oh&#8230; link error?</p>
+
+<p>Can&#8217;t find main?</p>
+
+<p>My mind was boggled. I could find nothing in my project settings for my other Wizard generated applications that I was missing. Did I forget some obscure prayer to the Windows gods to make them forget _tmain ever existed?</p>
+
+<p><strong>Step 4: Realize that those feelings of fear and doubt were right. <em>Something is horribly wrong</em></strong></p>
+
+<p>Until this point I was only bothered by the fact that Windows Applications seemed to magically know that WinMain is their entry point. Up to this point I just chalked it up to some extra includes or settings linked through including <em>windows.h</em>.</p>
+
+<p>But I had included windows.h, and now my fears were realized. There was something I didn&#8217;t do! To quote Eddie Izzard&#8217;s sketch on Armageddon and Computers, &#8220;What, what haven&#8217;t I done? Just tell me and I&#8217;ll do it! Uh.. no, I can&#8217;t tell you.&#8221;</p>
+
+<p>I searched the web. Pleaded with my computer. Why wouldn&#8217;t it work? Then I finally noticed a setting under project properties and linker. It would seem that I can toggle a setting which can be changed from Console to Windows. Eureka!</p>
+
+<p>Compile, Link, Success!</p>
+
+<p>Run? Nothing, not even a flash.</p>
+
+<p>In my excitement I had forgotten about the half empty global Windows Procedure function I had left alone, and I had left out calls to Display and Update my window.</p>
+
+<p>While adding the missing calls I added a basic event loop which would PeekMessage, look for quit, and quit as necessary. A TranslateMessage and DispatchMessage later I had a working windows application! It opens, it has a minimize and maximize button, and even a close X!</p>
+
+<p>Now if I can only make it object oriented.</p>
+
+<p>That&#8217;s an entry for another day.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-12-14T00:00:00-05:00" pubdate data-updated="true">Dec 14<span>th</span>, 2006</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2006/12/14/my-first-adventures-in-windows-land/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2006/12/14/my-first-adventures-in-windows-land/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2006/12/05/foundations-of-2d-graphics-journal-go/" title="Previous Post: Foundations of 2D Graphics Journal GO!">&laquo; Foundations of 2D Graphics Journal GO!</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2007/03/19/assignment-1/" title="Next Post: Assignment 1">Assignment 1 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

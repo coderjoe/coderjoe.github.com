@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[coderjoe.net]]></title>
+  <link href="http://coderjoe.net/atom.xml" rel="self"/>
+  <link href="http://coderjoe.net/"/>
+  <updated>2012-07-25T18:51:29-04:00</updated>
+  <id>http://coderjoe.net/</id>
+  <author>
+    <name><![CDATA[Joe "coderjoe" Bauser]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Official Rstarcraft.info Firefox Extension]]></title>
+    <link href="http://coderjoe.net/archive/2011/04/03/official-rstarcraft-info-firefox-extension/"/>
+    <updated>2011-04-03T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2011/04/03/official-rstarcraft-info-firefox-extension</id>
+    <content type="html"><![CDATA[<p>When <a href="http://rstarcraft.info" title="rstarcraft.info">rstarcraft.info</a> was <a href="http://coderjoe.net/archive/2011/03/23/rstarcraft_info_beta_launch/" title="launched">launched</a> a little over a week ago, it wasÂ accompaniedÂ by both a Greasemonkey script and a Chrome extension.</p>
+
+<p>This was made very simple thanks to the fact that the structure of Greasemonkey scripts and Chrome extensions are very similar. However, this left me with a few small problems.</p>
+
+<ol>
+<li>A good number of Firefox users wanting to use my extensions had no idea what Greasemonkey was.</li>
+<li>There is no really decent way to handle automatic updating of Greaemonkey scripts&#8230; meaning there isn&#8217;t a good way to migrate my users forward as the site evolves.</li>
+</ol>
+
+
+<p>Combined, these two factors create an unacceptable situation for my Firefox users, so I&#8217;m happy to announce that there is now a <a href="https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/" title="dedicated rstarcraft.info extension for Firefox">dedicated rstarcraft.info extension for Firefox</a>!</p>
+
+<p>As a result of this switch, the greasemonkey script should be considered deprecated and unmaintained. No further updates to the Greasemonkey script will be made.</p>
+
+<p>The Firefox extension can be found at: <a href="https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/">https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/</a> and is the preferred method for enhancing your experience in Firefox.</p>
+
+<p>The Chrome extension, as always, can be found at: <a href="https://chrome.google.com/webstore/detail/bnhmcekcpdihlgpmaglmapfjapafaljn">https://chrome.google.com/webstore/detail/bnhmcekcpdihlgpmaglmapfjapafaljn</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[rstarcraft.info beta launch]]></title>
+    <link href="http://coderjoe.net/archive/2011/03/23/rstarcraft_info_beta_launch/"/>
+    <updated>2011-03-23T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2011/03/23/rstarcraft_info_beta_launch</id>
+    <content type="html"><![CDATA[<p><strong>The History:</strong></p>
+
+<p>Those of you who know me know that I&#8217;ve become a bit obsessed with this game called <a href="http://en.wikipedia.org/wiki/StarCraft_II:_Wings_of_Liberty" title="Starcraft 2">Starcraft 2</a>. Combining two of my favorite internet pass-times I&#8217;ve been spending a lot of my free internet time in <a href="http://reddit.com/r/starcraft" title="Reddit's /r/starcraft">Reddit&#8217;s /r/starcraft</a> community.</p>
+
+<p>When I first joined the Reddit Starcraft community there was a nifty little feature which would display your Starcraft race next to your username. Unfortunately as the community grew, the CSS required to implement this feature did as well. Eventually the required CSS outgrew some subreddit filesize requirement and the icons were forced to disappear.</p>
+
+<p>A little bit later a site called <a href="http://rstarcraft.com" title="rstarcraft.com">rstarcraft.com</a> was launched by the ever helpful redditor and /r/starcraft mod <a href="http://www.reddit.com/user/Aceanuu" title="Aceanuu">Aceanuu</a>. The site allowed users to list their accounts, their ranks, their Reddit team, and some other useful information in order to relate redditors to their <a href="http://en.wikipedia.org/wiki/Battle.net" title="Battle.net">Battle.net</a> accounts.</p>
+
+<p><strong>An Impetus for Change:</strong></p>
+
+<p>Rstarcraft.com was very useful for those of us that used it, but it quickly fell out of favor with me due to a few things I perceived as shortcomings.</p>
+
+<ul>
+<li>You had to manually report and update your ranks</li>
+<li>There was no verification that the Battle.net users actually had the ranks reported</li>
+<li>There was no integration with /r/starcraft</li>
+<li>There was no explicit support for people with multiple SC2 Accounts</li>
+<li>The site&#8217;s functionality was entirely javascript based, causing overly large load times</li>
+</ul>
+
+
+<p><strong>A new opportunity:</strong></p>
+
+<p>I&#8217;m a fairly &#8220;competent&#8221; software engineer and wanted to improve this situation. When a few quick attempts at offering my services for the improvement of <a href="http://rstarcraft.com" title="rstarcraft.com">rstarcraft.com</a> failed I got impatient and decided to just spin up a new site to fix the problems I saw.</p>
+
+<p>And thus <a href="http://rstarcraft.info" title="rstarcraft.info">rstarcraft.info</a> was born. The site fills exactly the same needs as rstarcraft.com but with a few important ( to me at least ) additions.</p>
+
+<ul>
+<li>The site allows you to link Battle.net profiles with redditor accounts.</li>
+<li>It supports multiple battle.net accounts per Redditor.</li>
+<li>Ranks are synced with actual Battle.net ranks via <a href="http://sc2ranks.com" title="sc2ranks.com">sc2ranks.com</a></li>
+<li>And the most fun: rank and race info can be superimposed on Reddit through the use of an rstarcraft.info<a href="http://rstarcraft.info/extension" title="Greasemonkey script or Google Chrome extension"> Greasemonkey script or Chrome extension</a>!</li>
+<li>Password recovery is done through Reddit&#8217;s messaging system so if someone &#8220;steals&#8221; your identity, you can always get it back.</li>
+</ul>
+
+
+<p><a href="http://rstarcraft.info" title="The site">The site</a> is officially in open beta, and I&#8217;ll be posting a link to the site with a short description on Reddit soon. I hope people enjoy it as much as Â my limited test group did.</p>
+
+<p>Get support for the site at the <a href="http://www.googlegroups.com/group/rstarcraftinfo." title="rstarcraft.info Google group.">rstarcraft.info Google group</a>.</p>
+
+<p>You can follow progress on the site by watching the Twitter account <a href="http://twitter.com/rstarcraftinfo" title="@rstarcraftinfo">@rstarcraftinfo</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Earth Hour]]></title>
+    <link href="http://coderjoe.net/archive/2009/02/14/earth-hour/"/>
+    <updated>2009-02-14T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2009/02/14/earth-hour</id>
+    <content type="html"><![CDATA[<p>For one hour on Saturday March 28 at 8:30pm, switch off for our planet earth.</p>
+
+<p>If it&#8217;s a clear night, go outside, check out the night sky you&#8217;ll be surprised what you can see.</p>
+
+<p><a href="http://www.earthhour.org" title="Earth Hour 2009">Earth Hour 2009</a></p>
+
+<p>From their <a href="http://www.earthhour.org/about" title="about page">about page</a>:</p>
+
+<blockquote><p>&#8220;What began as a campaign to get Sydneysiders to turn their lights off, has grown to become one of the world&#8217;s biggest climate change initiatives. In 2009, at 8. 30pm on March 28, people around the world will turn their lights off for one hour Earth Hour. We&#8217;re aiming to reach one billion people, more than 1000 cities, all joining together in a global effort to show that its possible to take action on global warming.</p>
+
+<p>Earth Hour started in 2007 in Sydney, Australia with 2.2 million homes and businesses turning their lights off for one hour. Only a year later and this event had become a global sustainability movement with up to 50 million people across 35 countries participating. Global landmarks such as the Golden Gate Bridge in San Francisco, Rome&#8217;s Colosseum and the Coca Cola billboard in Times Square, all stood in darkness, as symbols of hope for a cause that grows more urgent by the hour.&#8221;</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A little turkey day coding!]]></title>
+    <link href="http://coderjoe.net/archive/2008/12/01/a-little-turkey-day-coding/"/>
+    <updated>2008-12-01T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2008/12/01/a-little-turkey-day-coding</id>
+    <content type="html"><![CDATA[<p>So what does any self respecting programmer do when he finds himself awake at 2am after Thanksgiving?</p>
+
+<p>Do some coding of course!</p>
+
+<p>In this case I decided to finish up that holiday shopping budget I had been putting off. Using this simple little javascript application you can tell exactly how much you can afford to spend on each person.</p>
+
+<p><a href="http://lab.coderjoe.net/holiday-budget/budget.html" title="http://lab.coderjoe.net/holiday-budget/budget.html">http://lab.coderjoe.net/holiday-budget/budget.html</a></p>
+
+<p>Just choose your overall max budget, enter the names of all those people you will be giving gifts to, and rate them on a scale from 1 to 10!</p>
+
+<p>Easy as pie.</p>
+
+<p>Happy Holidays!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Chrome's Terms of Service: They want your stuff?]]></title>
+    <link href="http://coderjoe.net/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/"/>
+    <updated>2008-09-03T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff</id>
+    <content type="html"><![CDATA[<p><strong>UPDATE: The Terms of Service have been updated as of September 4th 2008 to state that you retain the rights and copyright on all things displayed with or through &#8220;The Service&#8221;. The EULA is no longer a problem and I look forward to giving Chrome an in depth try. (See the EULA here:</strong><a href="http://www.google.com/chrome/eula.html" title="http://www.google.com/chrome/eula.html">http://www.google.com/chrome/eula. html</a>)</p>
+
+<p>How often have you tried to install an application only to be stopped by a dialog asking you to agree to some terms of service (TOS), or an end user license agreement (EULA)?Now how often do you actually take the time to read through these terms to see what you&#8217;re agreeing to?</p>
+
+<!--more-->
+
+
+<p>When I switched to Linux for my day to day computing I did not miss these constant reminders that my ability to use my computer was being impeded by some faceless corporate entity somewhere. I quickly became interested in the content of these agreements that I used to click through without a passing thought, and I was surprised at what I found.</p>
+
+<p>Many of these agreements are almost exactly the same; they all contain the same boiler plate legalese defining the terms used in the agreement, and protecting the company from frivolous lawsuits. In the case of web services, the standard TOS will also protect the company from content you post on their service, as well as protect them from you should you find something objectionable on their service. Some sites which are used to archive or distribute your content on the web, such as deviantART, Flickr, or many Google services, also grant themselves royalty-free non-exclusive rights to reproduce, distribute, or perform your works. This essentially prevents them from people who don&#8217;t understand that in order to present this content to the web at large, they need to make a copy.</p>
+
+<p>In the majority of cases, pieces of desktop software do not contain the same royalty-free distribution clauses as web applications (with the exception of software designed to use the web services) because they donâ€™t need your content. Theyâ€™ll still protect themselves from reverse-engineering and hacking, but not much else more.</p>
+
+<p>However, when reading Google Chromeâ€™s terms of service I couldnâ€™t help but notice a slight difference. Unlike the desktop applications I was used to, this terms of service seems to treat the application like a service!</p>
+
+<p>Throughout the document you&#8217;re reminded of the rights granted to you while using the &#8220;Service&#8221;. Nowhere in the document is a distinction made between Google Chrome and Googleâ€™s services. As a result we end up with some curious phrases granting some rather astonishing rights to Google.</p>
+
+<p>Take the following for example:</p>
+
+<blockquote><p>11. Content license from you</p>
+
+<p>11.1 You retain copyright and any other rights you already hold in Content which you submit, post or display on or through, the Services. By submitting, posting or displaying the content you give Google a perpetual, irrevocable, worldwide, royalty-free, and non-exclusive license to reproduce, adapt, modify, translate, publish, publicly perform, publicly display and distribute any Content which you submit, post or display on or through, the Services. This license is for the sole purpose of enabling Google to display, distribute and promote the Services and may be revoked for certain Services as defined in the Additional Terms of those Services.</p></blockquote>
+
+<p>What that says to me, is that any content I display or submit using Google Chrome I grant Google the right to use to display, distribute, and promote Google Chrome.</p>
+
+<p>But wait, what if I use Google Chrome to access my web based source repository? Do I grant Google the right to display and distribute the source code viewed to promote their product? What if Iâ€™m an artist, and I preview some files for web viewing in Google Chrome. Do I grant Google the rights to these images for promotional purposes?</p>
+
+<p>It is due to these concerns that I sent the following letter as part of my uninstall questionnaire:</p>
+
+<blockquote><p>I am not happy with one fairly critical decision made for Chrome distribution: The Terms of Service.</p>
+
+<p>I do not like the idea that Google Chrome will automatically download and update itself for me as described in the terms of service. In addition to the above, the overzealous use of the term &#8220;Service&#8221; to describe everything Google does, (presumably including Chrome since no language states otherwise) thereby granting Google trademark free and royalty free rights to my content is completely unacceptable.</p>
+
+<p>While I do not believe that the Terms of Service were penned with malicious intent, but the danger is there and I must avoid it.</p>
+
+<p>Other than the issues with the Terms of Service I found Chrome quite nice, but I can&#8217;t risk sacrificing the rights to my content for the sake of a new web browser. Unfortunately that means my opinion of Chrome will only change when the Terms of Service do.</p>
+
+<p>I can&#8217;t help but think only semi-sarcastically, &#8220;Why does a project supposedly fueled with such an Open Source mindset have such a draconian license anyway?&#8221;</p>
+
+<p>Sincerely,</p>
+
+<p>Joseph Bauser</p></blockquote>
+
+<p>While I&#8217;m positive the TOS was not penned with malicious intent, I can&#8217;t use any product or service which grants such far-reaching rights to its creators. If Google chooses to modify their Terms of Service for Chrome, I&#8217;d be happy to give it an honest trial.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[When Recruiting Goes Wonderfully Wrong]]></title>
+    <link href="http://coderjoe.net/archive/2008/07/19/when-recruiting-goes-wonderfully-wrong/"/>
+    <updated>2008-07-19T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2008/07/19/when-recruiting-goes-wonderfully-wrong</id>
+    <content type="html"><![CDATA[<p>The Pradipta 416 caused all of this in less than 24 hours. This is why I love the internet.</p>
+
+<p><a href="http://groups.google.com/group/pradiptas-rolodex" title="http://groups.google.com/group/pradiptas-rolodex">http://groups.google.com/group/pradiptas-rolodex</a></p>
+
+<p><a href="http://thepradipta416.com" title="Proud Member of the Pradipta 416"><img src="http://thepradipta416.com/img/badge1.gif" alt="The Few, The Proud, The Pradipta 416" /></a></p>
+
+<p>For the full story see here: <a href="http://blog.reverberate.org/2008/07/17/416-random-people-with-ror-on-their-resume-reply-all-reverse-flash-mob/" title="416 Random People with RoR...">416 Random People with RoR&#8230;</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[New Hobby: Hi-Tech Treasure Hunting!]]></title>
+    <link href="http://coderjoe.net/archive/2008/06/08/new-hobby-hi-tech-treasure-hunting/"/>
+    <updated>2008-06-08T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2008/06/08/new-hobby-hi-tech-treasure-hunting</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://coderjoe.net/images/posts/2008/06/lovebugs.jpg" title="Geocaching: Love Bugs" ></p>
+
+<p>What do you do when you have a GPS receiver, the internet, and a penchant for treasure hunting? You go Geocaching! Geocaching is a game where you quite literally use multi-million dollar satellites to hunt for boxes in the woods.</p>
+
+<p>The game works as follows:
+1. First you log into the Official Geocaching website (geocaching.com).
+2. Enter your zip code to find all of the caches near where you live.
+3. Put a few cache locations onto your GPS, and go hunting!</p>
+
+<p><img class="right" src="http://coderjoe.net/images/posts/2008/06/bluff2-300x225.jpg" title="View from a bluff" ></p>
+
+<p>The caches themselves range in size from magnetic key holders to ammo boxes painted and marked with the word â€œGeocacheâ€. All caches contain a small logbook where finders can sign the date of their find, their nickname, and maybe even a quick description of the fun they had hunting.</p>
+
+<p>Some of the larger caches are variable treasure troves of trinkets. Geocachers follow a policy of trade equal or trade up. This means that if you stumble upon a cache with a nifty goody you&#8217;d like to snag, you must trade that item for something of equal or greater value. This ensures the boxes stay stocked with things to keep everybody entertained.</p>
+
+<p>The caches themselves vary in difficulty from easy to find, to incredibly hard. To make matters worse, since some people may frown upon the idea of geocaching, you generally must stay as inconspicuous as possible while caching. After all, the last thing you&#8217;d want to do is give away the cache to someone else hunting, or even worse be witnessed re-hiding the cache only to have it stolen.</p>
+
+<p><img class="right" src="http://coderjoe.net/images/posts/2008/06/wheresjodo-225x300.jpg" title="Stump with Mushrooms" ></p>
+
+<p>The number of people enjoying this interesting hobby is often surprising. Chances are if you&#8217;re out caching you&#8217;ll bump into another person doing the same. Caches are so wide spread that if you&#8217;re anywhere any park, or city, chances are you walk right bye more than a few each day.</p>
+
+<p>I began caching with a few friends from work known on geocaching.com as DrDonut and Raegx. Since then our caching adventures have taken us to various beautiful parks around the Rochester area. I&#8217;ve even revisited some of my favorite spots from high school only to discover caches present in the area.</p>
+
+<p>The joy of the find and neat swag aside, the real fun of Geocaching comes from the community itself. The game itself is entirely community run. Geocachers make the caches and post them to the site. Geocachers find the caches. Geocachers police the caches and warn people when they need maintenance. But most importantly, geocachers all seem to be cut from the same adventurous cloth.</p>
+
+<p>An overbearing theme for all caches seems to be to get you to look at your world a little differently. Many caches are placed in such a way that they will take you somewhere you might never know existed. Walking the trail, or even a bit off the beaten path, you&#8217;re sure to see something cool and have a good deal of fun.</p>
+
+<p>Happy caching!</p>
+
+<p><img src="http://img.geocaching.com/stats/img.aspx?txt=View+my+profile&amp;uid=b98c72fe-0237-40b7-bfae-d002eb08a7e0" alt="" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Road Runner is at it again...]]></title>
+    <link href="http://coderjoe.net/archive/2008/03/30/road-runner-is-at-it-again-httpwwwcoderjoenetarchive20080111road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested/"/>
+    <updated>2008-03-30T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2008/03/30/road-runner-is-at-it-again-httpwwwcoderjoenetarchive20080111road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested</id>
+    <content type="html"><![CDATA[<p>After writing my <a href="http://coderjoe.net/archive/2008/01/11/road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested/" title="My fist post describing the idiotic ">first post</a> describing Road Runner&#8217;s annoying practice of redirecting all invalid DNS requests to their own advertising laden search page I opted out. I figured that would be the end of it.</p>
+
+<p>I was wrong.</p>
+
+<p>As of this morning Road Runner ha re-enabled the DNS redirecting again.</p>
+
+<p>How stupid are they? At least now I know how much they actually actually care about their user&#8217;s settings.</p>
+
+<p>Road Runer, if you&#8217;re reading this. Stop turning this feature on. It&#8217;s absolute rubbish and I really don&#8217;t want it. When I opt-out of a service this does NOT mean you should re-enable it a few months later and hope I won&#8217;t notice.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oracle Core Dump Grapher]]></title>
+    <link href="http://coderjoe.net/archive/2008/03/20/oracle-core-dump-grapher/"/>
+    <updated>2008-03-20T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2008/03/20/oracle-core-dump-grapher</id>
+    <content type="html"><![CDATA[<p>Anyone who has ever spent any significant amount of time working with an Oracle database has probably seen a ORA-600 or ORA-07445 &#8220;exception encountered: core dump&#8221; trace file.</p>
+
+<p>Unfortunately, when you come across an Oracle core dump you can&#8217;t do much more than send the dump to Oracle and hope the issue is already resolved in a newer version, or that a patch is available for your current version.</p>
+
+<p>This process usually consists of three steps:</p>
+
+<ol>
+<li>Collect the trace files related to the issue.</li>
+<li>Open a Service Request on Oracle&#8217;s Metalink site.</li>
+<li>Wait for a response</li>
+</ol>
+
+
+<p><em>If you&#8217;re lucky</em>, the first step is an easy one.</p>
+
+<p><em>If you&#8217;re lucky</em> you caught the first occurrence of the core dump and only need to shoot off a single trace file to the guys at Oracle.</p>
+
+<p>On the other hand, if you&#8217;re not lucky, you might be handed 50-60 trace files spanning multiple weeks and be asked to sort them by distinct issue for reporting to Oracle.</p>
+
+<p>I&#8217;m <strong>not</strong> lucky.</p>
+
+<p>Sorting the trace files is a long process which involves searching the trace file for the dump, researching the issue on Metalink, finding similar issues on Metalink, and then sorting the trace files by those issues.</p>
+
+<p>Two trace files into the process I knew there had to be a better way. Well, what better way to organize trace files than by the stack trace that generated the dump?</p>
+
+<p>From that idea TraceFileGrapher was born. The TraceFileGrapher takes as input a directory of trace files, and creates a graph representing the call stacks of all of the trace files resulting in core dumps. The graph is then saved as any <a href="http://www.graphviz.org" title="Graphviz: The opensource graph vizualisation package.">Graphviz</a> compatible format of your choosing.</p>
+
+<p>The graphs themselves are simple. The starting nodes of the graph are colored green. The ending nodes are colored red. For a stack trace graph, the end nodes are the names of the trace files in which the core dump appeared. For a PL/SQL Call stack graph, the end nodes are the final PL/SQL function or procedure call name.</p>
+
+<p>Example Graphs</p>
+
+<ul>
+<li><a href="http://coderjoe.net/images/posts/2008/03/example-stack-graph.png" title="Oracle Core Dump Stack Graph">Oracle Core Dump Stack Graph</a></li>
+<li><a href="http://coderjoe.net/images/posts/2008/03/example-noloop-stack-graph.png" title="Oracle Core Dump Stack Graph without loops">Oracle Core Dump Stack Graph without loops</a></li>
+<li><a href="http://coderjoe.net/images/posts/2008/03/example-plsql-graph.png" title="PL/SQL Call Stack Graph">PL/SQL Call Stack Graph</a></li>
+<li><a href="http://coderjoe.net/images/posts/2008/03/example-noloop-plsql-graph.png" title="PL/SQL Call Stack Graph without loops">PL/SQL Call Stack Graph without loops</a></li>
+</ul>
+
+
+<p>In addition to graphing core dump stack traces, TraceFileGrapher can graph PL/SQL Call Stacks as well.</p>
+
+<p>The TraceFileGrapher requires <a href="http://www.perl.org" title="The offical Perl webpage.">Perl</a>, the <a href="http://search.cpan.org/~tels/Graph-Easy/" title="The Graph::Easy CPAN module for creating graphs in Perl.">Graph::Easy</a> Perl module, and the <a href="http://www.graphviz.org" title="Graphviz: The open source graph visualization project.">Graphviz</a> open source graph visualization software.</p>
+
+<p>Get the TraceFileGrapher <a href="http://coderjoe.net/images/posts/2008/03/tracefilegrapher-0.1.tar.gz" title="TraceFileGrapher-0.1.tar.gz">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GoGeocode PHP Library Release]]></title>
+    <link href="http://coderjoe.net/archive/2008/02/26/gogeocode-php-library-release/"/>
+    <updated>2008-02-26T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2008/02/26/gogeocode-php-library-release</id>
+    <content type="html"><![CDATA[<p>Over the past two months or so I&#8217;ve been playing with an old pet project of mine that I tend to peck away at when I can&#8217;t think of a better to work on.</p>
+
+<p>As part of this project I found myself needing to do a massive amount of geocoding in PHP.</p>
+
+<p>After searching through the various PHP based geocoding libraries online I came to notice that none of them seemed to make use of the APIs ability to return multiple points as well as informational data about each point.</p>
+
+<p>Thus GoGeocode was born.</p>
+
+<p>GoGeocode is an extremely small set of classes for use in querying both the Google and Yahoo geocoding APIs.</p>
+
+<p>I&#8217;ve released the code under the <a href="http://www.opensource.org/licenses/mit-license.php" title="MIT License">MIT License</a> and posted the code at <a href="http://code.google.com/p/gogeocode/" title="http://code.google.com/p/gogeocode/">http://code.google.com/p/gogeocode/</a></p>
+
+<p>Take and enjoy!</p>
+
+<p><strong>Update:</strong> The GoGeocode page has been updated with a description, example use case, and a tar.gz archive of the gogeocode-0.1 release tag from SVN.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Road Runner High Speed Internet HTTP Redirecting All Invalid Domains Requested]]></title>
+    <link href="http://coderjoe.net/archive/2008/01/11/road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested/"/>
+    <updated>2008-01-11T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2008/01/11/road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested</id>
+    <content type="html"><![CDATA[<p>Advertisement filled domain search sites, once the domain of shady domain squatters, have shown up on Road Runner High Speed Internet for URLs of invalid domains.</p>
+
+<p>Earlier this evening I decided to visit the website for a paint ball field in Syracuse NY. Looking for their address I tried to visit their site <a href="http://www.headrush.com" title="Webpage for a nice Syracuse NY based paintball field (among other fun recreations).">http://www.headrush.com</a>. Unfortunately I mistyped and ended up at <a href="http://www.headrus.com" title="This site does not exist as of the writing of this blog post.">http://www.headrus.com</a>. I was greeted with the site pictured below.</p>
+
+<p><a href="http://coderjoe.net/images/posts/2008/01/roadrunner-squattersearch1.jpg" title="Road Runner Squatter Search Page Screenshot 1"><img src="http://coderjoe.net/images/posts/2008/01/roadrunner-squattersearch1.thumbnail.jpg" alt="Road Runner Squatter Search Page Screenshot 1" /></a></p>
+
+<!--more-->
+
+
+<p>At first I just thought this was some sort of funny coincidence. My ISP just happened to be squatting the domain I mistyped. But wait, Road Runner High Speed doesn&#8217;t squat domains. They only play in the high-speed internet and shitty customer service markets. They couldn&#8217;t POSSIBLY be doing what I think they&#8217;re doing? Are they redirecting invalid domains to a search page of their design? I visited <a href="http://hdalashqwhqhffa.com" title="This site doesn't exist as of the writing of this blog post.">http://hdalashqwhqhffa.com</a> just to check.</p>
+
+<p><a href="http://coderjoe.net/images/posts/2008/01/roadrunner-squattersearch2.jpg" title="Road Runner Squatter Search Page Screenshot 2"><img src="http://coderjoe.net/images/posts/2008/01/roadrunner-squattersearch2.thumbnail.jpg" alt="Road Runner Squatter Search Page Screenshot 2" /></a></p>
+
+<p>To be honest this pisses me off. I&#8217;m paying them no small chunk of change for access to the Internet. This in itself doesn&#8217;t bother me. However, what I am paying them for is for unfettered access to the internet as a resource, not a pre-filtered monitored windowpane into it. If I wanted a service that corrected me, protected me, monitored me, and alerted me to everything out there automatically I&#8217;d sign up for AOL.</p>
+
+<p>Annoyed consumer &#8220;I don&#8217;t pay for this to happen&#8221; complaints aside, I have a small script I&#8217;ve been running for a while which monitors referrer logs from my websites. It attempts pinpoint invalid requests by watching for forged referrer headers. In the past the script has worked great. I&#8217;ve found some interesting request data for my site that I never would have seen otherwise. Now, however, the little &#8220;callback&#8221; script notes every request as valid.</p>
+
+<p>Fixing the problems with my log checker isn&#8217;t hard. I could check the domain name to see if it&#8217;s valid. Regardless, I don&#8217;t want invalid domains returning me a HTTP redirect. That&#8217;s not the way it works.</p>
+
+<p>On the up side, they do have an opt-out for the service.</p>
+
+<p><a href="http://coderjoe.net/images/posts/2008/01/roadrunner-optout.jpg" title="Road Runner Search Page Opt-Out image"><img src="http://coderjoe.net/images/posts/2008/01/roadrunner-optout.jpg" alt="Road Runner Search Page Opt-Out image" /></a></p>
+
+<p>I find it humorous that they say you can &#8220;opt-in or out of this service&#8221;. There is no opt-in. They give it to you by default.</p>
+
+<p>Frankly I am disgusted by the number of ISPs that think this sort of content tampering is ok. First <a href="http://arstechnica.com/news.ars/post/20071210-canadian-isp-tests-injecting-content-into-web-pages.html" title="Arstechnica Article detailing the process Rogers tested recently.">Rogers (a Canadian ISP) tests inserting content into existing pages for convenience sake</a>, and now Road Runner is replacing invalid addresses with their own squatting style search site. If I&#8217;m supposed to receive a no such domain error, I want to receive a no such domain error.</p>
+
+<p>Admittedly Road Runner&#8217;s tactics are a little nicer than those of Rogers listed above, but it&#8217;s not that far to jump from this to inserting their own content into my pages.</p>
+
+<p>This, my friends, is why we need to nip this <a href="http://savetheinternet.com/=faq" title="SaveTheInternet.com's FAQ page">Net Neutrality</a> thing in the butt now.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FreeRice. com and Automaton]]></title>
+    <link href="http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton/"/>
+    <updated>2007-11-19T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton</id>
+    <content type="html"><![CDATA[<p>I had recently become aware of a website named <a href="http://freerice.com" title="FreeRice.com: Learn vocabulary while feeding the hungry.">FreeRice. com</a>. This site provides a vocabulary game where one identifies synonyms for words with an ever increasing difficulty. Since I could always use a better vocabulary the site intrigued me. I played the game for a few hours but was in no way satisfied with my progress. At roughly one correct answer every two seconds I&#8217;d rank up 18,000 grains of rice an hour. Unfortunately, once I reached the higher levels I was averaging only 3 out of every 4 questions right.</p>
+
+<p>While 13,500 (75% of my estimated optimal efficiency) grains of rice is a lot, it was nowhere near satisfactory. After joking about my &#8220;horrible rice metrics&#8221; at work, I mused that I should write a <a href="http://www.greasespot.net/" title="The Greasemonkey Firefox Extension.">Greasemonkey</a> script which would play the game better than I could possibly hope to. As the rest of my work day rolled on I became more and more intrigued by the idea. There was absolutely no reason why I couldn&#8217;t write a very simple AI to play the FreeRice.com game.</p>
+
+<p>Were there reasons why I shouldn&#8217;t?</p>
+
+<p>I knew the most obvious reason:</p>
+
+<p>This wasn&#8217;t a controlled experiment. If the script spun out of control and was allowed to play over and over I could risk exhausting FreeRice.com&#8217;s funds.</p>
+
+<p>Because I didn&#8217;t want to be responsible for the downfall of a potentially lucrative source of food for impoverished children  I initially abandoned my bot. Despite my fears, curiosity eventually got the best of me and I began implementing my bot. I started by implementing a simple timing method limiting page requests to once every 10 seconds for debugging purposes, just in case.</p>
+
+<!--more-->
+
+
+<p>Flash forward a day or so and I had a working FreeRice.com bot named &#8220;Automarice&#8221;. The bot had a number of interesting features which I found fun. First and foremost the bot kept statistics on its &#8220;correctness&#8221; per level it visited. These statistics were provided both over every answer given for a single level, as well as for the last hundred answers. These answers were provided as a simple HTML table benieth the FreeRice. com advertisements.</p>
+
+<p><a href="http://coderjoe.net/images/posts/2007/11/freerice-stats.jpg" title="Automarice - Statistics"><img src="http://coderjoe.net/images/posts/2007/11/freerice-stats.jpg" alt="Automarice - Statistics" /></a></p>
+
+<p>The AI behind Automarice was simplistic at best. I have no formal training in Artificial Intelligence and as such I just tried to make the bot behave as I would. To implement the AI the bot was given a few things. First, the bot was given a dictionary which it could use to store words and definitions. Second, the bot was set to record the associations it remembered learning from playing the game. In this way the bot was given a &#8220;memory&#8221; of previous correct answers. The bot started out with random play. If the bot was unsure of the answer it would select one answer at random, and would record the result. In this way the bot would slowly build a large vocabulary and increase its level.</p>
+
+<p>The algorithm was improved on slightly by allowing the bot to reduce it&#8217;s probable correct answer set by excluding potential answers which it already knew that did not match the given question word. This did introduce incorrect answers when new synonyms were learned, but since it improved the general case it was considered a good thing. The thought process of the bot was identified in the UI by striking through answers it believed were incorrect, and underlining the answer it would chose. If the answer was a guess it would append a question mark to that answer.</p>
+
+<p><a href="http://coderjoe.net/images/posts/2007/11/freerice-list.jpg" title="Automarice - List Changes"><img src="http://coderjoe.net/images/posts/2007/11/freerice-list.jpg" alt="Automarice - List Changes" /></a></p>
+
+<p>Finally, I implemented a dictionary and statistics exporter and importer. An export would generate an HTML page containing JSON representations of the internal dictionary and statistics. When this export file was opened it would trigger Automarice to import the data.</p>
+
+<p>My bot contained a number of functional bugs. For example, if both the bot and the user played at the same time, the bot would produce script errors. However, since my bot was able to play the game successfully these errors didn&#8217;t really bother me.</p>
+
+<p>After reducing the wait time from 10 seconds to a random number between 2 to 10 seconds per question I let my bot go for a few hours. After my bot gained an accuracy of 78% on level one, it looked like it would gain 1 or 2 levels every hour or so.</p>
+
+<p>Satisfied with my progress I retired my bot. While I am interested in releasing the source code I do not want to provide a plug and play method for taking down FreeRice.com. As such the source code will remain locked up.</p>
+
+<p><a href="http://coderjoe.net/images/posts/2007/11/freerice-full.jpg" title="Automarice - Full View"><img src="http://coderjoe.net/images/posts/2007/11/freerice-full.thumbnail.jpg" alt="Automarice - Full View" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[More Fun with Greasemonkey]]></title>
+    <link href="http://coderjoe.net/archive/2007/10/30/more-fun-with-greasemonkey/"/>
+    <updated>2007-10-30T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/10/30/more-fun-with-greasemonkey</id>
+    <content type="html"><![CDATA[<p>The past month has been a difficult one. Between readying the apartment for winter, various chores, and social obligations, I&#8217;ve had little time for my own personal projects. Recently however I came across a few things that I just couldn&#8217;t pass up.</p>
+
+<p><strong>More fun with Experts Exchange</strong></p>
+
+<p>I was recently informed that my <a href="http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption/" title="Unhide Experts Exchange script">Unhide Experts Exchange Greasemonkey script</a> had become obsolete. Reader <a href="http://community.zdnet.co.uk/blog/0,1000000567,2000342184b,00.htm" title="nico5038's blog covering issues with Experts Exchange">nico5038</a> points out in a comment that Experts Exchange now hides all comments from users unless they&#8217;re logged in.</p>
+
+<p>I would have been content to leave it at that until my friend <a href="http://www.seancolombo.com" title="Sean Colombo's blog.">Sean</a> pointed out that Experts Exchange seems to be “<a href="http://en.wikipedia.org/wiki/Cloaking" title="Wikipedia article on Cloaking">cloaking</a>” its answer pages. What this means is that when a search spider visits the site Experts-Exchange they will present a page that has all comments visible. However, if you or I go visit the site, the comments are hidden. This isn&#8217;t exactly the nicest thing to do on the web these days, so I&#8217;ve decided to write a new Experts-Exchange Greasemonkey script to fetch the hidden text from one of many different potential sources and replace the hidden text with the text that we should all be able to see.</p>
+
+<p>Edit: They aren&#8217;t cloaking they&#8217;re just appending the comments to the end of their page. In any case grabbing a cached version of the page will help stave off any other awkward practices they use in the future.</p>
+
+<p>I&#8217;ll update again tomorrow with the script once its been tested.</p>
+
+<p>In the mean time enjoy a Happy Halloween!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Experts Exchange Part 2]]></title>
+    <link href="http://coderjoe.net/archive/2007/10/28/experts-exchange-part-2/"/>
+    <updated>2007-10-28T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/10/28/experts-exchange-part-2</id>
+    <content type="html"><![CDATA[<p>It would seem that Experts Exchange has changed their free access strategy. Where they would once display the normal solutions to a question hidden under a weak <a href="http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption/" title="Expets Exchange Encryption">rot13</a> encryption, they have finally chosen to hide the articles all out unless one signs up for an account.</p>
+
+<p>I for one welcome the change. Since it was their intention to only provide answers to registered users in the first place, moving away from obfuscated text helps clarify the site&#8217;s goals.</p>
+
+<p>As a result of this site change I&#8217;ve been asked by a number of anonymous visitors to my site to rewrite my script to fetch the answers to an article so they don&#8217;t have to log in. I would like to make it clear that given the sites new design, that a script to display the answers is no longer possible. As such no effort will be put forth to do so.</p>
+
+<p>Sorry to anybody who had their hopes up, but you can&#8217;t un-hide what isn&#8217;t there.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Continuations: What is the deal?]]></title>
+    <link href="http://coderjoe.net/archive/2007/09/07/continuations-what-is-the-deal/"/>
+    <updated>2007-09-07T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/09/07/continuations-what-is-the-deal</id>
+    <content type="html"><![CDATA[<p>Over the past few weeks I&#8217;ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I&#8217;m curious about how useful they will turn out to be. I&#8217;ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
+
+<p>With such a positive opinion about the potential use of continuations, it surprises my colleagues to learn that I am very wary of their actual use. I find myself asking, or being asked, the same question again and again.</p>
+
+<p><strong>What&#8217;s wrong with continuations?</strong></p>
+
+<p>Quite frankly, continuations remind me too much of the &#8220;GOTO&#8221; statement. Continuations, as with GOTOs, have their potential uses. However, I feel that the problems inherent in using continuations outweigh the benefits.</p>
+
+<p>From what I&#8217;ve gathered from my individual conversations, continuations are useful in a numer of ways.</p>
+
+<ul>
+<li>First, in generators.</li>
+<li>Second, in the form of their close cousin, the closure.</li>
+<li>Finally, for their use in arbitrary state management.</li>
+</ul>
+
+
+<p>Their use as a part of generators is obvious, even if only made evident through the number of times the Python Fibonacci generator has been published as an example of the use of a continuation. Despite this, I don&#8217;t find myself creating and using generators in my every day code. Generators may be helpful, but using one seems like more of an occasional convenience than the rule.</p>
+
+<p>Closures on the other hand are something I use every day. My job involves a fair amount of web application development which results in a good deal of Javascript development. I will openly admit that I would be lost without  closures. Closures are invaluable when dealing with things such as binding execution to event handling. Without closures, some of the things I do might very well be impossible given Javascript&#8217;s event system design. Then again, Javascript was designed with closures in mind, so one could very well consider their use a moot point.</p>
+
+<p>The use of continuations for state management may not be as apparent as the previous examples. For an example, one need only look as far as the <a href="http://www.seaside.st/" title="Seaside: A Continuation Based Web Framework">Seaside</a> web framework. Seaside is a continuation based web framework which takes the stance that one should <a href="http://www.seaside.st/documentation/videos?16&amp;_k=jWLNbTUu&amp;_n&amp;_s=URoqQLYxrnXYKHZb" title="As stated by Lukas Renggli in his talk ">&#8220;share as much state as possible&#8221;</a>. In essence, the web framework itself keeps track of the sessions. These sessions are tied to a hash of continuations, each representing a state in the current application&#8217;s logical flow. The web application URL is not meaningful and contains little more than a reference ID to the current continuation. When you render a new page, a new continuation is generated and a reference to it is pushed into a hash somewhere for fetching later. That way if you hit the back button, going back to a previous page, the page will reference the previous continuation. When that continuation is used, your application flow would start from where you left off on that previous page.</p>
+
+<p>All of a sudden the back button is useful!</p>
+
+<p>Seaside has found an incredibly ingenious way to manage session state. At the same time, I believe it&#8217;s important to remember that while you gain automatic session state management, you lose some rather nice perks. The first thing I would miss while using Seaside would be meaningful URLs. In addition, your web framework is maintaining an ever increasing amount of state for each session. For some reason I get the feeling that this solution isn&#8217;t as great as it initially seemed.</p>
+
+<p><strong>With so many good examples, why be so wary of continuations?</strong></p>
+
+<p>It is true that there are many examples of continuations used for some very interesting, and often ingenious tasks. However, I still remember seeing GOTOs used in some of the most interesting and ingenious examples of code I have ever seen. For a proper example of the type of &#8220;ingenious&#8221; and &#8220;interesting&#8221; code I speak of, I refer you to <a href="http://catb.org/jargon/html/story-of-mel.html" title="The Story of Mel from The Jargon File.">&#8220;The Story of Mel&#8221;</a>.</p>
+
+<p>So Internet, I ask you, what is the deal? Are continuations just the current topic fad that they seem to be to me? Or are continuations something people are actually very excited about? Should I look forward to finding more examples of good continuation practice? Or will I soon be suggesting that programmers avoid both GOTOs and continuations because they encourage lazy or hard to manage code? Could their possibly be a happy medium?</p>
+
+<p>Forgive me for remaining skeptical, but I just can&#8217;t shake the feeling that continuations aren&#8217;t the magical entity that people seem to keep telling me they are.  I&#8217;ll leave it up to history (or the Internet) to decide&#8230;</p>
+
+<p>Addendum: It would seem that <a href="http://www.wikipedia.org/wiki/Continuation#Disadvantages" title="Wikipedia Continuations Article - Disadvantages">Wikipedia already agrees</a> with me that continuations are really just “the functional expression of the GOTO statement&#8221;.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Foxnight. net is dead... anybody want it?]]></title>
+    <link href="http://coderjoe.net/archive/2007/08/17/foxnightnet-is-dead-anybody-want-it/"/>
+    <updated>2007-08-17T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/08/17/foxnightnet-is-dead-anybody-want-it</id>
+    <content type="html"><![CDATA[<p><strong>Oh no! You killed it!</strong></p>
+
+<p>When I purchased my first domain I had a nifty idea for a particularly useful and exciting web application. It was to be the be-all and end-all of all my internet needs.</p>
+
+<p>Then I realized that my idea sucked harder than a vacuum.</p>
+
+<p>Since then the domain has been sitting around gathering dust, and generally wasting space. People have suggested that I sell the domain, but I&#8217;ve decided to just give it to the first person to  give me a good reason why it should be theirs.</p>
+
+<p><strong>How can I get it from you?</strong></p>
+
+<ul>
+<li>First, you need whatever the transfer costs for your registrar.</li>
+<li>Second, you need a good reason why you should be the lucky one to own <a href="http://www.foxnight.net" title="Foxnight.net">Foxnight. net</a>.</li>
+</ul>
+
+
+<p>Ok, so the reason doesn&#8217;t have to be amazing. Your reason just needs to beat the many &#8220;because I want it&#8221; reasons I&#8217;ve been receiving.</p>
+
+<p>Want to do something good with the domain? Going to start a business? Want to own your first domain and think it sounds neat?</p>
+
+<p>Let me know!</p>
+
+<p>Contact me via my e-mail address at coderjoe[squiggily-a]coderjoe.net with your reason, and if I like it we&#8217;ll get the transfer process started.</p>
+
+<p>I&#8217;ll leave this post up for as long as it takes to catch someones interest.  Once the domain has a new owner I&#8217;ll note it at the top of this post.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Experts Exchange Encryption]]></title>
+    <link href="http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption/"/>
+    <updated>2007-08-10T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption</id>
+    <content type="html"><![CDATA[<blockquote><p><strong>NOTE: The methods listed below are no longer necessary! Experts Exchange has moved to providing the answers in plain text at the bottom of the page. Just look past the first set of &#8220;answers&#8221;, past the advertisements and link farm, and you&#8217;ll see them.</strong></p></blockquote>
+
+<p><strong>What is Experts Exchange?</strong></p>
+
+<p>If you&#8217;ve ever tried to look up some sort of technical information on the internet, you&#8217;ve likely come across the <a href="http://www.experts-exchange.com" title="The Experts Exchange website.">Experts Exchange</a>. Experts Exchange is a site on which people can ask questions about a variably infinite number of technical topics and receive a range of answers from experts purported experts.</p>
+
+<p>The site then allows the user to select a &#8220;best answer&#8221; earning the answer&#8217;s author extra points. Points can be redeemed for a better type of account and access to other things on the site.</p>
+
+<p>In this way the site is user supported, without the experts there would be no exchange of answers.</p>
+
+<p><strong>What&#8217;s your problem with Experts Exchange?</strong></p>
+
+<p>As an incentive to sign up, the questions asked on experts exchange are visible to all, however, the answers are obscured in two rather tricky ways.</p>
+
+<ol>
+<li>The answers are obscured by a transparent gif with alternating pixels of solid and transparent, making the words a fuzzy haze.</li>
+<li>The answer text itself is encrypted using a basic and fairly famous encryption scheme called <a href="http://en.wikipedia.org/wiki/Rot13" title="Wikipedia article about Rot13.">Rot13</a></li>
+</ol>
+
+
+<p>As a person just looking for the answer to my question I&#8217;m often frustrated by the number of times I stumble across an experts exchange thread which might answer my question, but is obscured.</p>
+
+<p><strong>What are you going to do about it?</strong></p>
+
+<p>Well I hate to be bothered with unnecessary prompts to log in as much as the next guy.  With that in mind, I present to you:</p>
+
+<p><a href="http://coderjoe.net/images/posts/2007/08/unhide_experts_exchange.user.js" title="The Unhide Experts Exchange Greasemonkey Script">The Unhide Experts Exchange Greasemonkey Script</a></p>
+
+<p>This script does what it says, it removes the image which blurs the answer text, and then Rot13 decrypts the answers for your viewing pleasure.</p>
+
+<p>As the title implies, you will need to be using <a href="http://www.getfirefox.com" title="Download firefox your your web browsing pleasure!">Firefox</a>, and you will need the <a href="http://www.greasespot.net/" title="The official Greasemonkey blog.">Greasemonkey</a> plug-in to use this script.</p>
+
+<p><strong>Will this destroy Experts Exchange?</strong></p>
+
+<p>For those of you worried that this might just ruin the Experts Exchange, fear not. In their infinite wisdom they decided to completely omit the &#8220;selected answers&#8221; for the questions unless you&#8217;re logged in.</p>
+
+<p>In this way there is still incentive to get an account and contribute!</p>
+
+<p>In addition, I do not believe that my little <a href="http://www.greasespot.net/" title="The Greasemonkey blog.">Greasemonkey</a> script will ever gain enough momentum to offset a significant portion of potential Experts Exchange visitors. If it ever did, all they would have to do is change their cypher or insert dummy text.</p>
+
+<p>Any change to the cypher algorithm will be taken as a hint. (Also I&#8217;m way too lazy to implement anything other than rot13 instead of just logging in.)</p>
+
+<p>However, if you&#8217;re as lazy as I (or rather as lazy as one needs to be to write a Greasemonkey script to avoid logging in&#8230;), and would prefer not to manage yet another user name and password combination, you may use the script above.</p>
+
+<p>Note: The Greasemonkey script was updated on Sunday August 12th at 1:00am. It now properly takes care of the &lt;br&gt; characters that they do not rot13.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A list of Nintendo DS Homebrew Resources]]></title>
+    <link href="http://coderjoe.net/archive/2007/08/08/a-list-of-nintendo-ds-homebrew-resources/"/>
+    <updated>2007-08-08T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/08/08/a-list-of-nintendo-ds-homebrew-resources</id>
+    <content type="html"><![CDATA[<p>I was asked recently what resources I use as references while developing Nintendo DS homebrew.</p>
+
+<p>As such I&#8217;ve decided to collect my favorite links in a single post for your enjoyment.  ( Please keep in mind that I am also new to the Ninendo DS development scene, and as such this post is by no means a complete list of all of the resources available to you. )</p>
+
+<p>If you know of any killer resources that I&#8217;m missing please feel free to let me know and I&#8217;ll add them to the list.</p>
+
+<p><strong> Hardware References:</strong></p>
+
+<ul>
+<li><a href="http://www.bottledlight.com/ds/" title="More information than you'd ever need to know about the Nintendo DS's hardware.">NDSTech Wiki</a> - The de-facto Nintendo DS Hardware Doc.</li>
+<li><a href="http://www.work.de/nocash/gbatek.htm" title="The GBATek GBA hardware documentation, with a little bit of information about the NDS as well.">GBATek Specifications</a> - The de-facto GBA Hardware doc (with some NDS thrown in for good measure)</li>
+</ul>
+
+
+<p><strong>Tutorials: </strong></p>
+
+<ul>
+<li><a href="http://www.dev-scene.com/NDS/Tutorials" title="Dev-Scene. com's programming tutorials. While incomplete, the sections that are finished are very useful.">dev-scene. com tutorials</a> - The official dev-scene. com tutorials. Incomplete but thorough.</li>
+<li><a href="http://www.patatersoft.info/manual.php" title="Provides a step by step look into Nintendo DS 2D game programming with example code.">PataterSoft Introduction to NDS Programming</a> - A step-by-step introduction to Nintendo DS 2D game development with examples.</li>
+</ul>
+
+
+<p><strong>Library References:</strong></p>
+
+<ul>
+<li><a href="http://devkitpro.sourceforge.net/devkitProWiki/libnds/index.html" title="The libnds doxygen documentation.">libnds documentation</a> - Libnds documentation as generated by doxygen. Excellent autodocs.</li>
+</ul>
+
+
+<p><strong>Communities:</strong></p>
+
+<ul>
+<li><a href="http://www.dev-scene.com" title="The dev-scene. com website.">dev-scene.com</a></li>
+<li><a href="http://www.drunkencoders.com" title="The Drunken Coders website.">Drunken Coders</a> - The guys who brought you many (if not all) of the nds-examples code!</li>
+</ul>
+
+
+<p>That&#8217;s all I&#8217;ve got for now. If you feel I&#8217;m missing something important please let me know!</p>
+
+<p>Code away.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Notepad++ with devkitARM and libnds]]></title>
+    <link href="http://coderjoe.net/archive/2007/07/31/using-notepad-with-devkitarm-and-libnds/"/>
+    <updated>2007-07-31T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/07/31/using-notepad-with-devkitarm-and-libnds</id>
+    <content type="html"><![CDATA[<p>First follow the instructions for creating a <a href="http://coderjoe.net/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">template based project</a>.</p>
+
+<p>Once you have that set up you&#8217;re almost finished.</p>
+
+<p>All you need to do is set up the relevant application binds so you can build your project from within <a href="http://notepad-plus.sourceforge.net/" title="Get Notepad++ here!">Notepad++</a>.</p>
+
+<p>Unfortunately Notepad++ is not an IDE, as such it was not designed to compile applications. In order to do this we need a few helper scripts that Notepad++ can call to build and clean our project.</p>
+
+<p>I&#8217;ve taken the liberty of creating a &#8220;build script&#8221; to help in this process.</p>
+
+<p>Download the <a href="http://coderjoe.net/images/posts/2007/07/npp-buildscript.zip" title="The Notepad++ Project Build Helper Script">Notepad++ Project Build Helper Script</a> file <a href="http://coderjoe.net/images/posts/2007/07/npp-buildscript.zip" title="The Notepad++ Project Build Helper Script">here</a> and extract its contents to &#8220;c:\Program Files\Notepad++&#8221;.</p>
+
+<p><strong> Note: Extracting this archive will remove any existing NppExec scripts you already have defined! Merge the configuration files together if you wish to maintain your existing scripts.</strong></p>
+
+<p>Extracting the archive will set up two NppExec scripts called &#8220;Build Project&#8221; and &#8220;Clean Project&#8221;. These two scripts will build and clean the project respectively. In addition it will bind the NppExec run dialog to F8.</p>
+
+<p>Now to compile your project just open a file in your projects source directory, hit F8, select &#8220;Build Project&#8221;, and click &#8220;Ok&#8221;</p>
+
+<p>When you run the build script a command console will open in Notepad++ which will display the result of the build.</p>
+
+<p>If there are any errors in the build the errors will be displayed in the console. Individual errors can be double clicked to jump to the line on which the error occurred.</p>
+
+<p>You now have everything you need to develop in Notepad++.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using KDevelop with libnds and devkitARM]]></title>
+    <link href="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/"/>
+    <updated>2007-07-31T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm</id>
+    <content type="html"><![CDATA[<p><a href="http://www.kdevelop.org/" title="The official KDevelop website.">KDevelop</a> is a full featured IDE for the <a href="http://www.kde.org/" title="The official K Desktop Environment website.">K Desktop Environment</a>.</p>
+
+<p>In order to take full advantage of the facilities KDevelop has to offer, we&#8217;re going to take an existing template based project, and import it as a Makefile project in KDevelop. In order to do this, first <a href="http://coderjoe.net/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Instructions on setting up a template based project.">create a template based project</a> as described in the &#8221;<a href="http://coderjoe.net/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">Using the provided template Makefile</a>&#8221; tutorial.</p>
+
+<p>Now that you have your project directory set up it&#8217;s time to import the directory into KDevelop and make a KDevelop project file.</p>
+
+<p>To do this, click the &#8220;Project&#8221; menu, and then the &#8220;Import Existing&#8230;&#8221; to bring up the import existing project dialog. Select the project directory you made in the first part of this tutorial and give the project a name.</p>
+
+<p>For project type you&#8217;re going to want to select either &#8220;Generic C Project (Custom Makefiles)&#8221; or &#8220;Generic C++ Project (Custom Makefiles)&#8221; your choice of C or C++ doesn&#8217;t matter too much at this juncture, so just stick with C. We select &#8220;Custom Makefiles&#8221; because we want to use the provided nds-example template makefile.</p>
+
+<p>Finally enter your name and e-mail address and click next. When it asks you if you want to populate the project with files from the source, go ahead and click yes.</p>
+
+<p>You now have a project file for your project directory!</p>
+
+<p>Unfortunately you&#8217;re not done yet. If you attempted to compile your project now you&#8217;d notice that you wouldn&#8217;t get very far. KDevelop will start with a clean environment for the project, so we need to set DEVKITARM and DEVKITPRO in our project.</p>
+
+<p>To do this click &#8220;Project&#8221; then &#8220;Project Options&#8221; then select &#8220;Build Options&#8221; and finally the &#8220;Make&#8221; tab. There will be a section for environment variables. Add the appropriate variables for DEVKITARM and DEVKITPRO and click &#8220;Ok&#8221;. At this point your project should now successfully compile!</p>
+
+<p>You could start developing right now, but you&#8217;d quickly notice that code completion doesn&#8217;t work for types and functions. This is because KDevelop needs to be told where the devkitARM and libnds include files reside.</p>
+
+<p>To set this select &#8220;Project&#8221; then &#8220;Project Options&#8221; and choose &#8220;C++ Support&#8221;. At the bottom of the dialog there is a section for custom &#8220;Code Completion Databases&#8221; this is really just a collection of paths to the include files you&#8217;ll be using to develop your application.</p>
+
+<p>Create one of type &#8220;KDevelop Custom Directory PCS Importer&#8221; and provide the paths to the devkitARM and libnds include directories. If you followed the environment instructions exactly these should be:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    /usr/local/devkitPRO/devkitARM/include
+</span><span class='line'>    /usr/local/devkitPRO/libnds/include
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Click next and name the PCS importer something witty and original like&#8230; oh&#8230; &#8220;NDS Homebrew Includes&#8221;.</p>
+
+<p>Click ok and you should now have working code completion!A word of warning, there is a known issue with the current stable KDevelop (3. 2 tree) which causes typedefs for structs of the form below not to work.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    typedef struct <span class="o">{</span>
+</span><span class='line'>        struct members
+</span><span class='line'>    <span class="o">}</span> typeName;
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Any structs declared as such will not complete correctly. In addition, KDevelop will not code complete #define variables such as the VRAM_A_* types. I have yet to find a way to fix this.</p>
+
+<p>So you can compile and code complete. But I&#8217;ll bet my dinner that you want to be able to actually EXECUTE our compiled source so that the &#8220;Run&#8221; command does what you would expect right? Well, if you&#8217;ve installed an emulator you can tell KDevelop to use that emulator to execute your nds file.</p>
+
+<p>To set the emulator as your executable click &#8220;Project&#8221; and &#8220;Project Options&#8221; then select &#8220;Run Options&#8221; enter the full path to your emulator on the executable line, and in the arguments line give the full path to your project NDS file. In most cases this will just be the name of your project directory with .nds at the end. For our helloworld project the resulting file will be &#8220;helloworld.nds&#8221;.</p>
+
+<p>You now have a full featured KDevelop project!</p>
+
+<p><strong>One word of warning: If you did set an executable in the Run Options, then every time you open up the project options KDevelop will screw this section up. You&#8217;ll need to edit the file to remove the &#8220;file://&#8221; that KDevelop inserts at the beginning.</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

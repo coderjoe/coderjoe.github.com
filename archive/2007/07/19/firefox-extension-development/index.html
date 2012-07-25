@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Firefox Extension Development - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="My current position gives me the opportunity to do web development on a daily basis. Thanks to tools like the Web Developer Toolbar, and Firebug &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Firefox Extension Development</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-19T00:00:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2007</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>My current position gives me the opportunity to do web development on a daily basis. Thanks to tools like the <a href="http://chrispederick.com/work/web-developer/" title="The Web Developer Toolbar extension for Firefox.">Web Developer Toolbar</a>, and <a href="http://www.getfirebug.com" title="The Firebug Javascript Debugger">Firebug</a> extensions for Mozilla Firefox, web development has been made much less painful than it once was.</p>
+
+<p>These extensions are a boon to my daily development schedule. The extensions increase my productivity by keeping me from spending a majority of my time tracking down simple problems and instead let me focus on fixing the big things. In addition they provide a number of tools that allow me to carefully tweak my pages without altering any actual backend code, experimenting on the fly, and saving precious time which might be lost to repeated &#8220;edit -&gt; page load -&gt; test&#8221; cycles.</p>
+
+<p>No matter how much I optimise my process I keep finding situations in my current development at work which could be streamlined through the careful application of custom scripting in my browser. Until recently I would satisfy my need for automation of repetitive tasks by creating a carefully crafted <a href="http://www.greasespot.net/" title="The Greasemonkey Blog.">Greasemonkey</a> script or by crafting a cleaver <a href="http://en.wikipedia.org/wiki/Bookmarklet" title="Bookmarklet description.">bookmarklet</a>. At the end of the day yesterday I decided to take stock of the tools that I had created or modified to help speed up the majority of my repetitive day-to-day development tasks. Needless to say, there were more than a few.</p>
+
+<p>Inspired by the web developer toolbar I&#8217;ve decided to develop my own Firefox extension. This extension would provide a number of tools to simplify my life when developing within Oracle&#8217;s Application Express which will provide a number of customization options to the existing Application Express editor, as well as a number of shortcuts for common development tasks.</p>
+
+<p>I&#8217;ve only just begun development, but I&#8217;m hoping the end result will be a benefit to more than just myself.</p>
+
+<p>My initial experience with extension development has been full of swinging mixed emotions.</p>
+
+<p>At this point I have a number of thoughts on Firefox Extension Development:</p>
+
+<ol>
+<li>I love XUL&#8230; well.. I love XML, so it isn&#8217;t that much of a stretch. XUL&#8217;s simplicity and ability to extend the browser through overlays is amazing.</li>
+<li>I hate the default directory structure that the majority of the tutorials out there tell you to use.</li>
+<li>I hate that the default tutorial on <a href="http://www.xulplanet.com" title="The XulPlanet website: The Ultimate XUL Resource.">XulPlanet</a> makes note of required directory structure, but lacks any mention of the proper structure for extension development.</li>
+<li>I love that <a href="http://kb.mozillazine.org/Bash_build_script" title="The Bash build script is probably the most useful script out there for XUL Development.">someone created a build script</a> for extensions that follows a defined directory structure so I don&#8217;t have to worry about number 3.</li>
+<li>I love the built in localization functionality.</li>
+<li>I hate the <a href="http://developer.mozilla.org/en/docs/Chrome_Registration" title="The chrome. manifest file is how you register chrome packages with the chrome registry. It's important.  I love the registry... but I hate the manifest.">chrome.manifest</a> file. The only reason I can stand it is because the build script mentioned above will allow you to write it in such a way that it will work in both development and packaged form.</li>
+</ol>
+
+
+<p>All and all I&#8217;ve learned a whole bunch about Firefox extension development over the past two days.</p>
+
+<p>Maybe once I&#8217;m finished I&#8217;ll write my own Firefox extension development tutorial since I&#8217;ve found the majority of the tutorials on the internet to be severely lacking (with the exception of the <a href="http://www.xulplanet.com/tutorials/" title="The XulPlanet XUL tutorials. If you want to learn XUL this is the place to go.">XUL Tutorials</a> from XulPlanet. Those are amazingly in depth).</p>
+
+<p>Well folks, I&#8217;m officially overloaded with projects.</p>
+
+<p>Wish me luck.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-19T00:00:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2007/07/12/the-internet-returns/" title="Previous Post: The internet returns!">&laquo; The internet returns!</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" title="Next Post: Nintendo DS Homebrew: Tools of the Trade">Nintendo DS Homebrew: Tools of the Trade &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

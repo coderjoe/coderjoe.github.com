@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Coding | coderjoe.net]]></title>
+  <link href="http://coderjoe.net/categories/coding/atom.xml" rel="self"/>
+  <link href="http://coderjoe.net/"/>
+  <updated>2012-07-25T18:51:29-04:00</updated>
+  <id>http://coderjoe.net/</id>
+  <author>
+    <name><![CDATA[Joe "coderjoe" Bauser]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[rstarcraft.info beta launch]]></title>
+    <link href="http://coderjoe.net/archive/2011/03/23/rstarcraft_info_beta_launch/"/>
+    <updated>2011-03-23T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2011/03/23/rstarcraft_info_beta_launch</id>
+    <content type="html"><![CDATA[<p><strong>The History:</strong></p>
+
+<p>Those of you who know me know that I've become a bit obsessed with this game called <a href="http://en.wikipedia.org/wiki/StarCraft_II:_Wings_of_Liberty" title="Starcraft 2">Starcraft 2</a>. Combining two of my favorite internet pass-times I've been spending a lot of my free internet time in <a href="http://reddit.com/r/starcraft" title="Reddit's /r/starcraft">Reddit's /r/starcraft</a> community.</p>
+
+<p>When I first joined the Reddit Starcraft community there was a nifty little feature which would display your Starcraft race next to your username. Unfortunately as the community grew, the CSS required to implement this feature did as well. Eventually the required CSS outgrew some subreddit filesize requirement and the icons were forced to disappear.</p>
+
+<p>A little bit later a site called <a href="http://rstarcraft.com" title="rstarcraft.com">rstarcraft.com</a> was launched by the ever helpful redditor and /r/starcraft mod <a href="http://www.reddit.com/user/Aceanuu" title="Aceanuu">Aceanuu</a>. The site allowed users to list their accounts, their ranks, their Reddit team, and some other useful information in order to relate redditors to their <a href="http://en.wikipedia.org/wiki/Battle.net" title="Battle.net">Battle.net</a> accounts.</p>
+
+<p><strong>An Impetus for Change:</strong></p>
+
+<p>Rstarcraft.com was very useful for those of us that used it, but it quickly fell out of favor with me due to a few things I perceived as shortcomings.</p>
+
+<ul>
+<li>You had to manually report and update your ranks</li>
+<li>There was no verification that the Battle.net users actually had the ranks reported</li>
+<li>There was no integration with /r/starcraft</li>
+<li>There was no explicit support for people with multiple SC2 Accounts</li>
+<li>The site's functionality was entirely javascript based, causing overly large load times</li>
+</ul>
+
+
+<p><strong>A new opportunity:</strong></p>
+
+<p>I'm a fairly "competent" software engineer and wanted to improve this situation. When a few quick attempts at offering my services for the improvement of <a href="http://rstarcraft.com" title="rstarcraft.com">rstarcraft.com</a> failed I got impatient and decided to just spin up a new site to fix the problems I saw.</p>
+
+<p>And thus <a href="http://rstarcraft.info" title="rstarcraft.info">rstarcraft.info</a> was born. The site fills exactly the same needs as rstarcraft.com but with a few important ( to me at least ) additions.</p>
+
+<ul>
+<li>The site allows you to link Battle.net profiles with redditor accounts.</li>
+<li>It supports multiple battle.net accounts per Redditor.</li>
+<li>Ranks are synced with actual Battle.net ranks via <a href="http://sc2ranks.com" title="sc2ranks.com">sc2ranks.com</a></li>
+<li>And the most fun: rank and race info can be superimposed on Reddit through the use of an rstarcraft.info<a href="http://rstarcraft.info/extension" title="Greasemonkey script or Google Chrome extension"> Greasemonkey script or Chrome extension</a>!</li>
+<li>Password recovery is done through Reddit's messaging system so if someone "steals" your identity, you can always get it back.</li>
+</ul>
+
+
+<p><a href="http://rstarcraft.info" title="The site">The site</a> is officially in open beta, and I'll be posting a link to the site with a short description on Reddit soon. I hope people enjoy it as much as Â my limited test group did.</p>
+
+<p>Get support for the site at the <a href="http://www.googlegroups.com/group/rstarcraftinfo." title="rstarcraft.info Google group.">rstarcraft.info Google group</a>.</p>
+
+<p>You can follow progress on the site by watching the Twitter account <a href="http://twitter.com/rstarcraftinfo" title="@rstarcraftinfo">@rstarcraftinfo</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[A little turkey day coding!]]></title>
+    <link href="http://coderjoe.net/archive/2008/12/01/a-little-turkey-day-coding/"/>
+    <updated>2008-12-01T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2008/12/01/a-little-turkey-day-coding</id>
+    <content type="html"><![CDATA[<p>So what does any self respecting programmer do when he finds himself awake at 2am after Thanksgiving?</p>
+
+<p>Do some coding of course!</p>
+
+<p>In this case I decided to finish up that holiday shopping budget I had been putting off. Using this simple little javascript application you can tell exactly how much you can afford to spend on each person.</p>
+
+<p><a href="http://lab.coderjoe.net/holiday-budget/budget.html" title="http://lab.coderjoe.net/holiday-budget/budget.html">http://lab.coderjoe.net/holiday-budget/budget.html</a></p>
+
+<p>Just choose your overall max budget, enter the names of all those people you will be giving gifts to, and rate them on a scale from 1 to 10!</p>
+
+<p>Easy as pie.</p>
+
+<p>Happy Holidays!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oracle Core Dump Grapher]]></title>
+    <link href="http://coderjoe.net/archive/2008/03/20/oracle-core-dump-grapher/"/>
+    <updated>2008-03-20T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2008/03/20/oracle-core-dump-grapher</id>
+    <content type="html"><![CDATA[<p>Anyone who has ever spent any significant amount of time working with an Oracle database has probably seen a ORA-600 or ORA-07445 "exception encountered: core dump" trace file.</p>
+
+<p>Unfortunately, when you come across an Oracle core dump you can't do much more than send the dump to Oracle and hope the issue is already resolved in a newer version, or that a patch is available for your current version.</p>
+
+<p>This process usually consists of three steps:</p>
+
+<ol>
+<li>Collect the trace files related to the issue.</li>
+<li>Open a Service Request on Oracle's Metalink site.</li>
+<li>Wait for a response</li>
+</ol>
+
+
+<p><em>If you're lucky</em>, the first step is an easy one.</p>
+
+<p><em>If you're lucky</em> you caught the first occurrence of the core dump and only need to shoot off a single trace file to the guys at Oracle.</p>
+
+<p>On the other hand, if you're not lucky, you might be handed 50-60 trace files spanning multiple weeks and be asked to sort them by distinct issue for reporting to Oracle.</p>
+
+<p>I'm <strong>not</strong> lucky.</p>
+
+<p>Sorting the trace files is a long process which involves searching the trace file for the dump, researching the issue on Metalink, finding similar issues on Metalink, and then sorting the trace files by those issues.</p>
+
+<p>Two trace files into the process I knew there had to be a better way. Well, what better way to organize trace files than by the stack trace that generated the dump?</p>
+
+<p>From that idea TraceFileGrapher was born. The TraceFileGrapher takes as input a directory of trace files, and creates a graph representing the call stacks of all of the trace files resulting in core dumps. The graph is then saved as any <a href="http://www.graphviz.org" title="Graphviz: The opensource graph vizualisation package.">Graphviz</a> compatible format of your choosing.</p>
+
+<p>The graphs themselves are simple. The starting nodes of the graph are colored green. The ending nodes are colored red. For a stack trace graph, the end nodes are the names of the trace files in which the core dump appeared. For a PL/SQL Call stack graph, the end nodes are the final PL/SQL function or procedure call name.</p>
+
+<p>Example Graphs</p>
+
+<ul>
+<li><a href="/images/posts/2008/03/example-stack-graph.png" title="Oracle Core Dump Stack Graph">Oracle Core Dump Stack Graph</a></li>
+<li><a href="/images/posts/2008/03/example-noloop-stack-graph.png" title="Oracle Core Dump Stack Graph without loops">Oracle Core Dump Stack Graph without loops</a></li>
+<li><a href="/images/posts/2008/03/example-plsql-graph.png" title="PL/SQL Call Stack Graph">PL/SQL Call Stack Graph</a></li>
+<li><a href="/images/posts/2008/03/example-noloop-plsql-graph.png" title="PL/SQL Call Stack Graph without loops">PL/SQL Call Stack Graph without loops</a></li>
+</ul>
+
+
+<p>In addition to graphing core dump stack traces, TraceFileGrapher can graph PL/SQL Call Stacks as well.</p>
+
+<p>The TraceFileGrapher requires <a href="http://www.perl.org" title="The offical Perl webpage.">Perl</a>, the <a href="http://search.cpan.org/~tels/Graph-Easy/" title="The Graph::Easy CPAN module for creating graphs in Perl.">Graph::Easy</a> Perl module, and the <a href="http://www.graphviz.org" title="Graphviz: The open source graph visualization project.">Graphviz</a> open source graph visualization software.</p>
+
+<p>Get the TraceFileGrapher <a href="/images/posts/2008/03/tracefilegrapher-0.1.tar.gz" title="TraceFileGrapher-0.1.tar.gz">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GoGeocode PHP Library Release]]></title>
+    <link href="http://coderjoe.net/archive/2008/02/26/gogeocode-php-library-release/"/>
+    <updated>2008-02-26T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2008/02/26/gogeocode-php-library-release</id>
+    <content type="html"><![CDATA[<p>Over the past two months or so I've been playing with an old pet project of mine that I tend to peck away at when I can't think of a better to work on.</p>
+
+<p>As part of this project I found myself needing to do a massive amount of geocoding in PHP.</p>
+
+<p>After searching through the various PHP based geocoding libraries online I came to notice that none of them seemed to make use of the APIs ability to return multiple points as well as informational data about each point.</p>
+
+<p>Thus GoGeocode was born.</p>
+
+<p>GoGeocode is an extremely small set of classes for use in querying both the Google and Yahoo geocoding APIs.</p>
+
+<p>I've released the code under the <a href="http://www.opensource.org/licenses/mit-license.php" title="MIT License">MIT License</a> and posted the code at <a href="http://code.google.com/p/gogeocode/" title="http://code.google.com/p/gogeocode/">http://code.google.com/p/gogeocode/</a></p>
+
+<p>Take and enjoy!</p>
+
+<p><strong>Update:</strong> The GoGeocode page has been updated with a description, example use case, and a tar.gz archive of the gogeocode-0.1 release tag from SVN.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[FreeRice. com and Automaton]]></title>
+    <link href="http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton/"/>
+    <updated>2007-11-19T00:00:00-05:00</updated>
+    <id>http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton</id>
+    <content type="html"><![CDATA[<p>I had recently become aware of a website named <a href="http://freerice.com" title="FreeRice.com: Learn vocabulary while feeding the hungry.">FreeRice. com</a>. This site provides a vocabulary game where one identifies synonyms for words with an ever increasing difficulty. Since I could always use a better vocabulary the site intrigued me. I played the game for a few hours but was in no way satisfied with my progress. At roughly one correct answer every two seconds I'd rank up 18,000 grains of rice an hour. Unfortunately, once I reached the higher levels I was averaging only 3 out of every 4 questions right.</p>
+
+<p>While 13,500 (75% of my estimated optimal efficiency) grains of rice is a lot, it was nowhere near satisfactory. After joking about my "horrible rice metrics" at work, I mused that I should write a <a href="http://www.greasespot.net/" title="The Greasemonkey Firefox Extension.">Greasemonkey</a> script which would play the game better than I could possibly hope to. As the rest of my work day rolled on I became more and more intrigued by the idea. There was absolutely no reason why I couldn't write a very simple AI to play the FreeRice.com game.</p>
+
+<p>Were there reasons why I shouldn't?</p>
+
+<p>I knew the most obvious reason:</p>
+
+<p>This wasn't a controlled experiment. If the script spun out of control and was allowed to play over and over I could risk exhausting FreeRice.com's funds.</p>
+
+<p>Because I didn't want to be responsible for the downfall of a potentially lucrative source of food for impoverished children  I initially abandoned my bot. Despite my fears, curiosity eventually got the best of me and I began implementing my bot. I started by implementing a simple timing method limiting page requests to once every 10 seconds for debugging purposes, just in case.</p>
+
+<!--more-->
+
+
+<p>Flash forward a day or so and I had a working FreeRice.com bot named "Automarice". The bot had a number of interesting features which I found fun. First and foremost the bot kept statistics on its "correctness" per level it visited. These statistics were provided both over every answer given for a single level, as well as for the last hundred answers. These answers were provided as a simple HTML table benieth the FreeRice. com advertisements.</p>
+
+<p><a href="/images/posts/2007/11/freerice-stats.jpg" title="Automarice - Statistics"><img src="/images/posts/2007/11/freerice-stats.jpg" alt="Automarice - Statistics" /></a></p>
+
+<p>The AI behind Automarice was simplistic at best. I have no formal training in Artificial Intelligence and as such I just tried to make the bot behave as I would. To implement the AI the bot was given a few things. First, the bot was given a dictionary which it could use to store words and definitions. Second, the bot was set to record the associations it remembered learning from playing the game. In this way the bot was given a "memory" of previous correct answers. The bot started out with random play. If the bot was unsure of the answer it would select one answer at random, and would record the result. In this way the bot would slowly build a large vocabulary and increase its level.</p>
+
+<p>The algorithm was improved on slightly by allowing the bot to reduce it's probable correct answer set by excluding potential answers which it already knew that did not match the given question word. This did introduce incorrect answers when new synonyms were learned, but since it improved the general case it was considered a good thing. The thought process of the bot was identified in the UI by striking through answers it believed were incorrect, and underlining the answer it would chose. If the answer was a guess it would append a question mark to that answer.</p>
+
+<p><a href="/images/posts/2007/11/freerice-list.jpg" title="Automarice - List Changes"><img src="/images/posts/2007/11/freerice-list.jpg" alt="Automarice - List Changes" /></a></p>
+
+<p>Finally, I implemented a dictionary and statistics exporter and importer. An export would generate an HTML page containing JSON representations of the internal dictionary and statistics. When this export file was opened it would trigger Automarice to import the data.</p>
+
+<p>My bot contained a number of functional bugs. For example, if both the bot and the user played at the same time, the bot would produce script errors. However, since my bot was able to play the game successfully these errors didn't really bother me.</p>
+
+<p>After reducing the wait time from 10 seconds to a random number between 2 to 10 seconds per question I let my bot go for a few hours. After my bot gained an accuracy of 78% on level one, it looked like it would gain 1 or 2 levels every hour or so.</p>
+
+<p>Satisfied with my progress I retired my bot. While I am interested in releasing the source code I do not want to provide a plug and play method for taking down FreeRice.com. As such the source code will remain locked up.</p>
+
+<p><a href="/images/posts/2007/11/freerice-full.jpg" title="Automarice - Full View"><img src="/images/posts/2007/11/freerice-full.thumbnail.jpg" alt="Automarice - Full View" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>FreeRice. com and Automaton - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="I had recently become aware of a website named FreeRice. com. This site provides a vocabulary game where one identifies synonyms for words with an &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">FreeRice. Com and Automaton</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-19T00:00:00-05:00" pubdate data-updated="true">Nov 19<span>th</span>, 2007</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I had recently become aware of a website named <a href="http://freerice.com" title="FreeRice.com: Learn vocabulary while feeding the hungry.">FreeRice. com</a>. This site provides a vocabulary game where one identifies synonyms for words with an ever increasing difficulty. Since I could always use a better vocabulary the site intrigued me. I played the game for a few hours but was in no way satisfied with my progress. At roughly one correct answer every two seconds I&#8217;d rank up 18,000 grains of rice an hour. Unfortunately, once I reached the higher levels I was averaging only 3 out of every 4 questions right.</p>
+
+<p>While 13,500 (75% of my estimated optimal efficiency) grains of rice is a lot, it was nowhere near satisfactory. After joking about my &#8220;horrible rice metrics&#8221; at work, I mused that I should write a <a href="http://www.greasespot.net/" title="The Greasemonkey Firefox Extension.">Greasemonkey</a> script which would play the game better than I could possibly hope to. As the rest of my work day rolled on I became more and more intrigued by the idea. There was absolutely no reason why I couldn&#8217;t write a very simple AI to play the FreeRice.com game.</p>
+
+<p>Were there reasons why I shouldn&#8217;t?</p>
+
+<p>I knew the most obvious reason:</p>
+
+<p>This wasn&#8217;t a controlled experiment. If the script spun out of control and was allowed to play over and over I could risk exhausting FreeRice.com&#8217;s funds.</p>
+
+<p>Because I didn&#8217;t want to be responsible for the downfall of a potentially lucrative source of food for impoverished children  I initially abandoned my bot. Despite my fears, curiosity eventually got the best of me and I began implementing my bot. I started by implementing a simple timing method limiting page requests to once every 10 seconds for debugging purposes, just in case.</p>
+
+<!--more-->
+
+
+<p>Flash forward a day or so and I had a working FreeRice.com bot named &#8220;Automarice&#8221;. The bot had a number of interesting features which I found fun. First and foremost the bot kept statistics on its &#8220;correctness&#8221; per level it visited. These statistics were provided both over every answer given for a single level, as well as for the last hundred answers. These answers were provided as a simple HTML table benieth the FreeRice. com advertisements.</p>
+
+<p><a href="/images/posts/2007/11/freerice-stats.jpg" title="Automarice - Statistics"><img src="/images/posts/2007/11/freerice-stats.jpg" alt="Automarice - Statistics" /></a></p>
+
+<p>The AI behind Automarice was simplistic at best. I have no formal training in Artificial Intelligence and as such I just tried to make the bot behave as I would. To implement the AI the bot was given a few things. First, the bot was given a dictionary which it could use to store words and definitions. Second, the bot was set to record the associations it remembered learning from playing the game. In this way the bot was given a &#8220;memory&#8221; of previous correct answers. The bot started out with random play. If the bot was unsure of the answer it would select one answer at random, and would record the result. In this way the bot would slowly build a large vocabulary and increase its level.</p>
+
+<p>The algorithm was improved on slightly by allowing the bot to reduce it&#8217;s probable correct answer set by excluding potential answers which it already knew that did not match the given question word. This did introduce incorrect answers when new synonyms were learned, but since it improved the general case it was considered a good thing. The thought process of the bot was identified in the UI by striking through answers it believed were incorrect, and underlining the answer it would chose. If the answer was a guess it would append a question mark to that answer.</p>
+
+<p><a href="/images/posts/2007/11/freerice-list.jpg" title="Automarice - List Changes"><img src="/images/posts/2007/11/freerice-list.jpg" alt="Automarice - List Changes" /></a></p>
+
+<p>Finally, I implemented a dictionary and statistics exporter and importer. An export would generate an HTML page containing JSON representations of the internal dictionary and statistics. When this export file was opened it would trigger Automarice to import the data.</p>
+
+<p>My bot contained a number of functional bugs. For example, if both the bot and the user played at the same time, the bot would produce script errors. However, since my bot was able to play the game successfully these errors didn&#8217;t really bother me.</p>
+
+<p>After reducing the wait time from 10 seconds to a random number between 2 to 10 seconds per question I let my bot go for a few hours. After my bot gained an accuracy of 78% on level one, it looked like it would gain 1 or 2 levels every hour or so.</p>
+
+<p>Satisfied with my progress I retired my bot. While I am interested in releasing the source code I do not want to provide a plug and play method for taking down FreeRice.com. As such the source code will remain locked up.</p>
+
+<p><a href="/images/posts/2007/11/freerice-full.jpg" title="Automarice - Full View"><img src="/images/posts/2007/11/freerice-full.thumbnail.jpg" alt="Automarice - Full View" /></a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-11-19T00:00:00-05:00" pubdate data-updated="true">Nov 19<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/11/19/freericecom-and-automaton/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2007/10/30/more-fun-with-greasemonkey/" title="Previous Post: More Fun with Greasemonkey">&laquo; More Fun with Greasemonkey</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2008/01/11/road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested/" title="Next Post: Road Runner High Speed Internet HTTP Redirecting All Invalid Domains Requested">Road Runner High Speed Internet HTTP Redirecting All Invalid Domains Requested &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

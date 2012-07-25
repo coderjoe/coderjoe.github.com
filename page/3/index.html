@@ -1,0 +1,1025 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="Of the different methods for setting up a project, using the provided template Makefiles is by far the easiest. Packaged with the Nintendo DS &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/page/3/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/">Using the Libnds Example Template Makefiles</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-30T00:00:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Of the different methods for setting up a project, using the provided template Makefiles is by far the easiest.</p>
+
+<p>Packaged with the <a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=159894" title="NDS Examples. Windows users should NOT use this. Use the auto updater instead.">Nintendo DS examples</a> package that you downloaded (you did download the examples package at <a href="/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" title="How to set up a Nintendo DS Homebrew tool chain.">my suggestion</a>&#8230; didn&#8217;t you?) there is a directory called &#8220;templates&#8221;.</p>
+
+<p>This directory contains a number of template project directories, each designed to make use of the environment variables set during the tool chain install step.</p>
+
+<p>Using these templates is a very simple process.
+I will describe how to do this both in Linux and in Windows.
+Following in the grandest of programming traditions, lets call our project &#8220;helloworld&#8221;.</p>
+
+<p><strong>In Linux:</strong></p>
+
+<p>First lets create a directory for our project in our home directory:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    mkdir ~/helloworld
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next lets copy over the arm9 template ( I assume you&#8217;ve extracted the examples archive to your devkitPRO directory ):</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    cp -R <span class="k">${</span><span class="nv">DEVKITPRO</span><span class="k">}</span>/examples/templates/arm9/* ~/helloworld/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s all there is to it!</p>
+
+<p>Each template already comes with a default main.c file containing the equivelent of a hello world application, so you&#8217;re ready to go!</p>
+
+<p>To test it, change to the helloworld directory and type make.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">cd</span> ~/helloworld/make
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>In Windows:</strong></p>
+
+<p>The instructions for Windows are almost identical to the instructions for Linux. The only differences between the two are really the Windows style commands and paths.</p>
+
+<p>Create a new folder for your project.</p>
+
+<p><em><strong>Note: You must make sure that your project directory path does not contain any spaces!</strong></em></p>
+
+<p>For this reason I would suggest creating a directory under c:devkitPro called &#8220;projects&#8221; in which you will put all of your NDS Homebrew Projects.</p>
+
+<p>Once the directory has been created, copy everything inside the directory &#8220;C:\devkitPro\examples\ndstemplates\arm9&#8221; into your new project directory.</p>
+
+<p>To build your project open a command shell</p>
+
+<p>Start -&gt; Run -&gt; Type &#8220;cmd&#8221; -&gt; click &#8216;Ok&#8217;</p>
+
+<p>Change directories to your project directory</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">cd </span>c:<span class="se">\d</span>evkitPro<span class="se">\p</span>rojects<span class="se">\h</span>elloworld
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>type &#8216;make&#8217;</p>
+
+<p>If all is set up correctly in either operating system, when your make process is complete you should find two files one called helloworld. nds and one called helloworld. ds. gba. These two files are for the different respective types of NDS Flash Carts.</p>
+
+<p>If you boot up your new NDS program you will see the <a href="http://www.drunkencoders.com/" title="The Drunkencoders. com website.">drunkencoders.com</a> &#8220;Hello DS dev&#8217;rs&#8221; hello world app!</p>
+
+<p>Congratulations, you have your first project.</p>
+
+<p>For more information read the documentation provided with the example templates, and poke around the provided example code.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/30/using-devkitarm-and-libnds-with-visual-studio-2005/">Using devkitARM and Libnds With Visual Studio 2005</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-30T00:00:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/30/using-devkitarm-and-libnds-with-visual-studio-2005/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m primarily a Linux user, as such I do almost all of my development in Linux either using <a href="http://www.vim.org/" title="Vim's home online. Home to all the various flavors of vim.">gVim</a> or <a href="http://www.kdevelop.org/" title="The official KDevelop website.">KDevelop</a>. Despite my affinity for the aforementioned IDEs and OS I would still be hard pressed to find an IDE better than <a href="http://en.wikipedia.org/wiki/Microsoft_Visual_Studio" title="Wikipedia entry for Microsoft Visual Studio.">Microsoft Visual Studio 2005</a>.</p>
+
+<p>This being said, using Visual Studio 2005 with devkitARM and libnds is both simple and a joy. The setup procedure can seem a little daunting (especially if you&#8217;ve never had to configure your own Visual Studio project before) but it&#8217;s not too bad.</p>
+
+<p>Note: The <a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=159894" title="NDS Examples. Windows users should NOT use this. Use the auto updater instead.">NDS Example files</a> do come with a Visual C++ project which can be imported, and can be used as a good building block to start a full solution from, however, if we did that we wouldn&#8217;t learn anything. ;)</p>
+
+<p>First follow the instructions for <a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">creating a template based project</a>.</p>
+
+<p>In order to create a solution you&#8217;re going to have to open Visual Studio and import our existing template as a project. Luckily for us Microsoft Visual Studio 2005 has a nifty wizard which will help us with just that.</p>
+
+<p>Click the &#8220;File&#8221; menu, select &#8220;New&#8221;, and click &#8220;Project from Existing Code&#8230;&#8221;.</p>
+
+<p>You will be presented with the dialog shown below. You&#8217;re going to want to select Visual C++ project as the type and click next.</p>
+
+<p><a href="/images/posts/2007/07/fromexistingcode.png" title="Visual Studio 2005 Setup - Step 1"><img src="/images/posts/2007/07/fromexistingcode.png" alt="Visual Studio 2005 Setup - Step 1" /></a></p>
+
+<p>The next screen allows us to select our project name and directory. Choose the project template directory mentioned earlier as the project directory, ensure that &#8220;Add files to the project from these folders&#8221; is checked. The project wizard will automatically add the project directory to the list of directories to populate the project with.</p>
+
+<p><a href="/images/posts/2007/07/createnewproject-2.png" title="Visual Studio 2005 Setup - Step 2"><img src="/images/posts/2007/07/createnewproject-2.png" alt="Visual Studio 2005 Setup - Step 2" /></a></p>
+
+<p>Next we get to chose our build system. Make sure to chose external make system and select next.</p>
+
+<p><a href="/images/posts/2007/07/createnewproject-externalbuild.png" title="Visual Studio 2005 Setup - Step 3"><img src="/images/posts/2007/07/createnewproject-externalbuild.png" alt="Visual Studio 2005 Setup - Step 3" /></a></p>
+
+<p>This screen is where the build magic happens. Lucky for us the amazing people over at <a href="http://www.devkitPro.org" title="The devkitPro website.">devkitPro. org</a> have already devised a simple make/sed combo which will allow the make output to be interpreted by visual studio as error reports it can understand.</p>
+
+<p>The string is: make -r 2&gt;&amp;1 | sed -e &#8216;s/(.[a-zA-Z]+):([0-9]+):/1(2):/&#8217;This string should be used as both the build command line, as well as the rebuild command line. Use &#8220;make clean&#8221; for the clean command line. Finally use the name of the project directory with .nds at the end as the Debugging output.</p>
+
+<p><a href="/images/posts/2007/07/createnewproject-debugsettings.png" title="Visual Studio 2005 Setup - Step 4"><img src="/images/posts/2007/07/createnewproject-debugsettings.png" alt="Visual Studio 2005 Setup - Step 4" /></a></p>
+
+<p>Click next, select same as Debug settings, and click finish!</p>
+
+<p>You should now have a working project solution!</p>
+
+<p>You can now build your project and watch as Visual Studio chugs along and builds with our magic build command line. This is fine and dandy, but after a little development you&#8217;ll notice that <a href="http://en.wikipedia.org/wiki/IntelliSense" title="Microsoft IntelliSense Wikipedia article.">IntelliSense</a> (Microsoft&#8217;s proprietary code-completion) doesn&#8217;t completely work. In addition you have no way to effectively debug the Nintendo DS applications that have been built.</p>
+
+<p>With a little bit of project configuration you can make IntelliSense work and cause debugging to launch your application in your emulator of choice.</p>
+
+<p><strong>Configuring IntelliSense</strong></p>
+
+<p>To configure IntelliSense you&#8217;ll need to add your devkitARM and libnds directories to both the project include directory list.</p>
+
+<p>To get to the list, right click the project icon ( it will be located under the solution in the &#8220;Solution Explorer&#8221; sidebar ) and select &#8220;Properties&#8221;.</p>
+
+<p>Once inside of the properties window make sure to select &#8220;All Configurations&#8221; from the configurations drop-down. Not doing so will cause the changes only to be applied to the Debug release, and changing the setting to Release will produce unexpected results.</p>
+
+<p><a href="/images/posts/2007/07/createnewproject-intellisensesetup.png" title="Visual Studio 2005 Setup - Step 5"><img src="/images/posts/2007/07/createnewproject-intellisensesetup.png" alt="Visual Studio 2005 Setup - Step 5" /></a></p>
+
+<p><strong>Executing your emulator of choice on application debugging</strong></p>
+
+<p>Select the &#8220;NMake&#8221; category under &#8220;Configuration Properties&#8221; and select &#8220;Include Search Path&#8221;. Clicking &#8220;Include Search Path&#8221; should make a &#8220;&#8230;&#8221; button visible. Click the &#8220;&#8230;&#8221; to open the Include Search Path edit dialog. Add your Devkit Pro directories to the search path and click ok.</p>
+
+<p>Finally, to set up your emulator to launch on project debug select the &#8220;Debugging Category&#8221; under &#8220;Configuration Properties&#8221;.</p>
+
+<p>In this section you should be able to select your emulator command, arguments, and working directory.</p>
+
+<p>Set &#8220;Command&#8221; to the emulator executable, set the &#8220;Command Arguments&#8221; to &#8220;$(TargetPath)&#8221; and set the &#8220;Working Directory&#8221; to the full path to the executable.</p>
+
+<p><a href="/images/posts/2007/07/createnewproject-emulatorconfig.png" title="Visual Studio 2005 Setup - Step 5"><img src="/images/posts/2007/07/createnewproject-emulatorconfig.png" alt="Visual Studio 2005 Setup - Step 5" /></a></p>
+
+<p>Click ok and you should now have a fully functional Solution complete with IntelliSense and debug to emulator!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/">Setting Up an NDS Homebrew Tool Chain in Linux and Mac OSX! (Ok&#8230; Windows Too&#8230;)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-23T00:00:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p><strong>UPDATE:</strong> Given the updates made in the DevkitPro project since this article was written, it is quite out of date. For Linux, there is a little bit of hope! Commenter Namoul has created an installer script which can be used to get your development environment up and running. Find it here: <a href="http://lmn.mooo.com/projects/devkitpro-sh">http://lmn.mooo.com/projects/devkitpro-sh</a></p></blockquote>
+
+<p>Well, I realize I had promised to give instructions for both Windows and Linux, but as it turns out, the instructions for Windows are so simple it&#8217;s almost laughable.</p>
+
+<p>Are you windows users ready?</p>
+
+<p><strong>Installing devkitARM and setting up your environment in Windows.</strong>
+1. Run the updater script you downloaded in the previous section.
+2. Select devkitARM, libnds, the examples, programmers notepad
+3. Finish the install</p>
+
+<p>That&#8217;s right. That&#8217;s it. You&#8217;re done Windows users. Now go have a coffee while us linux users get ourselves up and running. :)</p>
+
+<p><strong>Installing devkitARM and setting up your environment in Linux and Mac OSX.</strong></p>
+
+<p>To be honest, the process isn&#8217;t all that much more complex, but it does assume you know a little bit about setting environment variables.</p>
+
+<p>The first thing you&#8217;ll need to do is make sure you&#8217;ve downloaded the devkitARM binary package, the libnds source package, and the example code package mentioned in the previous post.</p>
+
+<p><strong>Step 1) Setting up the directory structure: </strong></p>
+
+<p>First we need to set up a development path. This path can be anywhere, but for the sake of this tutorial we&#8217;ll assume you&#8217;re installing to /usr/local/devkitPRO/.</p>
+
+<p>The first thing we need to do is create our directory structure:</p>
+
+<p>For now this is as simple as</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    mkdir /usr/local/devkitPRO
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>But by the time we&#8217;re finished it should look something like</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    /usr/local/devkitPRO
+</span><span class='line'>    /usr/local/devkitPRO/devkitARM/
+</span><span class='line'>    /usr/local/devkitPRO/libnds/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Step 2) Installing the devkitPro binaries:</strong></p>
+
+<p>Next we&#8217;ll want to uncompress our devkitARM tar. bz2. Assuming you&#8217;ve downloaded the devkitARM archive to your home directory, this can be acomplished by changing to the devkitPRO directory we&#8217;ve just created and running:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">cd</span> /usr/local/devkitPRO/
+</span><span class='line'>    tar -xjvf ~/devkitARM_r20-linux.tar.bz2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>the devkitARM tar.bz2contains a root directory called devkitARM which when compressed will contain the toolchain and a series of helpful binaries located within its &#8220;bin&#8221; directory.</p>
+
+<p><strong>Step 3) Decompress the libnds source:</strong></p>
+
+<p>Next we&#8217;ll need to decompress libnds. Unlike the devkitARM archive, libnds does not contain it&#8217;s own base directory, so we should create one for it now, and decompress to that directory.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    mkdir /usr/local/devkitPRO/libnds
+</span><span class='line'>    <span class="nb">cd</span> /usr/local/devkitPRO/libnds
+</span><span class='line'>    tar -xzvf ~/libnds-20070503.tar.bz2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you have the source and tool chain necessary to build libnds into a fully fledged library for your linking pleasure. Unfortunately, if you&#8217;re at all familiar with Linux, you&#8217;ve likely already typed make, and to your surprise you&#8217;ve received a warning!</p>
+
+<p>We need to set up some environment variables so the makefiles know where the tool chain and other libraries live.</p>
+
+<p><strong>Step 4) Set some environment variables:</strong></p>
+
+<p>First we need to set the DEVKITPRO variable to point to our devkitPRO install directory:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">export </span><span class="nv">DEVKITPRO</span><span class="o">=</span>/usr/local/devkitPRO
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then we need to set DEVKITARM to point to our devkitARM install location</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">export </span><span class="nv">DEVKITARM</span><span class="o">=</span><span class="k">${</span><span class="nv">DEVKITPRO</span><span class="k">}</span>/devkitARM
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To make things easier for me, I just added the following three lines to the bottom of my ~/. bashrc file so every interactive shell would have access to these environment variables.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="c">#Set Variables for DEVKIT_PRO</span>
+</span><span class='line'>    <span class="nb">export </span><span class="nv">DEVKITPRO</span><span class="o">=</span>/usr/local/devkitPRO
+</span><span class='line'>    <span class="nb">export </span><span class="nv">DEVKITARM</span><span class="o">=</span><span class="k">${</span><span class="nv">DEVKITPRO</span><span class="k">}</span>/devkitARM
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Step 5) Compile libnds</strong>:</p>
+
+<p>Now that we have our environment variable set, we can compile libnds.
+Just go back to our libnds directory and type make!</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">cd</span> /usr/local/devkitPRO/libnds
+</span><span class='line'>    make
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If all went well, you should see a bunch of text fly by, and eventually successful completion!</p>
+
+<p><strong>Step 6) Bake until golden brown:</strong></p>
+
+<p>Congratulations, you now have a successfully built Nintendo DS development tool chain and libraries.</p>
+
+<p>If you&#8217;d like to test your toolchain you can extract the example source tarball that I suggested you download in the previous tutorial, and type make in it&#8217;s root directory. If everything is correctly set up, it should create a Nintendo DS ROM for each example in the examples directory.</p>
+
+<p>The examples may not make much sense now, but make sure to poke around the examples. They&#8217;re one of the most useful resources a Nintendo DS homebrew developer has at his or her disposal.</p>
+
+<p><strong>Final Notes:</strong></p>
+
+<p>A final suggestion would be to install a Nintendo DS Emulator on your computer if you haven&#8217;t already. This way you can begin experimenting with your Nintendo DS examples even if you don&#8217;t yet have a DS or development hardware. However, when it comes to testing your shiny new Nintendo DS programs, nothing beats booting them on a Nintendo DS.</p>
+
+<p>I would highly recommend that every budding Nintendo DS developer own at least one Nintendo DS. Besides&#8230; when you&#8217;re not developing you can pop in your Mario Kart or Tetris cartridge and enjoy Nintendo&#8217;s awesome handy-work!</p>
+
+<p>Now that you have a working tool chain set up, you should go on to <a href="/archive/2007/07/10/so-you-want-to-make-nintendo-ds-homebrew/" title="Tutorial index with links to setting up devkitARM and libnds for various IDEs.">configure your IDE of choice</a> to use devkitARM and libnds.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/">Nintendo DS Homebrew: Tools of the Trade</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-23T00:00:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>How the heck do you do this?</strong></p>
+
+<p>There are few things more essential to the budding homebrew developer than their development environment. As we&#8217;re just starting out, we have yet to even get our environment together. As such our first task should be to gather our tools and get ready to install.</p>
+
+<p>There are two very important packages every homebrew developer should be aware of.</p>
+
+<p>The first of these two is a package called devkitARM. DevkitARM is a full compiler toolchain for the ARM chipset on which all Nintendo DS games run.</p>
+
+<p><strong>Why do you need a toolchain?</strong></p>
+
+<p>Because executables differ from platform to platform. If you just take your home Visual Studio install and compile a &#8220;hello world&#8221; application, it will compile for your host operating system and architecture. Unfortunately the set of instructions that your (likely intel) CPU and the instructions that the Nintendo DS&#8217;s ARM CPUs understand are not very similar at all. As such you need a set of tools which can create executables for your target platform.</p>
+
+<p><strong>Getting devkitARM.</strong></p>
+
+<p><a href="http://www.devkitpro.org" title="The devkitPro official website.">DevkitARM</a> provides just those tools, as well as an additional set of tools which should make your homebrew development that much more fun.</p>
+
+<p>Now that you&#8217;re excited to get those files, devkitARM can be found at the following addreses:</p>
+
+<p>For windows, you&#8217;ll want the devkitPro updater, which is a full installer for windows, and will get you up and running with minimal work.</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=160396" title="A link to the devkitProUpdater for Windows. The BEST way to install devkitPro in Windows!">Download the devkitProUpdater for Windows from Sourceforge.</a></p>
+
+<p>For Linux or Mac OSX, you&#8217;ll want to grab the binaries for devkitARM at the following address:</p>
+
+<p>(There are windows binaries as well, but windows users should just use the super spiffy auto updater.. it&#8217;s much easier.)</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=124207" title="A link to the devkitArm binaries for Linux, and Mac OSX,">Download the devkitARM binary archive from Sourceforge</a></p>
+
+<p>Now that your programming arsenal has increased by one cool package, it&#8217;s time to get your Nintendo DS development library.</p>
+
+<p><strong>Getting libnds.</strong></p>
+
+<p>The only library you should concern yourself with at this point is libnds. Libnds began as a series of useful #define statements to make Nintendo DS development a bit easier. Over time it evolved into a full development library with support for most of the functionality of the Nintendo DS. Through libnds, the enterprising developer even has support for 3d through a series of functions which look incredibly similar to OpenGL.</p>
+
+<p>If you&#8217;re running Linux or Mac OSX you can get the library here:</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=151608" title="Download libnds source to build in Linux or Mac OSX.">Download the libnds source archive from Sourceforge</a></p>
+
+<p>If you&#8217;re running Windows, don&#8217;t fret, the auto updater will fetch libnds for you!</p>
+
+<p><strong>Example code anyone?</strong></p>
+
+<p>The final archive I would suggest everybody have on hand is the latest copy of the nds examples. This archive contains a series of example code showing most of the implemented functionality within libnds.</p>
+
+<p>As above, Linux and OSX users use the below URL. Windows programmers should use the auto updater to get these files.</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=159894" title="Download the NDS example code source here!">Download the Nintendo DS example code from Sourceforge</a></p>
+
+<p>Tune in later for information on how to <a href="/archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/" title="The next in the tutorial series: Setting up the toolchain!">turn these archives into a full fledged development environment</a>!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/19/firefox-extension-development/">Firefox Extension Development</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-19T00:00:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/19/firefox-extension-development/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>My current position gives me the opportunity to do web development on a daily basis. Thanks to tools like the <a href="http://chrispederick.com/work/web-developer/" title="The Web Developer Toolbar extension for Firefox.">Web Developer Toolbar</a>, and <a href="http://www.getfirebug.com" title="The Firebug Javascript Debugger">Firebug</a> extensions for Mozilla Firefox, web development has been made much less painful than it once was.</p>
+
+<p>These extensions are a boon to my daily development schedule. The extensions increase my productivity by keeping me from spending a majority of my time tracking down simple problems and instead let me focus on fixing the big things. In addition they provide a number of tools that allow me to carefully tweak my pages without altering any actual backend code, experimenting on the fly, and saving precious time which might be lost to repeated &#8220;edit -&gt; page load -&gt; test&#8221; cycles.</p>
+
+<p>No matter how much I optimise my process I keep finding situations in my current development at work which could be streamlined through the careful application of custom scripting in my browser. Until recently I would satisfy my need for automation of repetitive tasks by creating a carefully crafted <a href="http://www.greasespot.net/" title="The Greasemonkey Blog.">Greasemonkey</a> script or by crafting a cleaver <a href="http://en.wikipedia.org/wiki/Bookmarklet" title="Bookmarklet description.">bookmarklet</a>. At the end of the day yesterday I decided to take stock of the tools that I had created or modified to help speed up the majority of my repetitive day-to-day development tasks. Needless to say, there were more than a few.</p>
+
+<p>Inspired by the web developer toolbar I&#8217;ve decided to develop my own Firefox extension. This extension would provide a number of tools to simplify my life when developing within Oracle&#8217;s Application Express which will provide a number of customization options to the existing Application Express editor, as well as a number of shortcuts for common development tasks.</p>
+
+<p>I&#8217;ve only just begun development, but I&#8217;m hoping the end result will be a benefit to more than just myself.</p>
+
+<p>My initial experience with extension development has been full of swinging mixed emotions.</p>
+
+<p>At this point I have a number of thoughts on Firefox Extension Development:</p>
+
+<ol>
+<li>I love XUL&#8230; well.. I love XML, so it isn&#8217;t that much of a stretch. XUL&#8217;s simplicity and ability to extend the browser through overlays is amazing.</li>
+<li>I hate the default directory structure that the majority of the tutorials out there tell you to use.</li>
+<li>I hate that the default tutorial on <a href="http://www.xulplanet.com" title="The XulPlanet website: The Ultimate XUL Resource.">XulPlanet</a> makes note of required directory structure, but lacks any mention of the proper structure for extension development.</li>
+<li>I love that <a href="http://kb.mozillazine.org/Bash_build_script" title="The Bash build script is probably the most useful script out there for XUL Development.">someone created a build script</a> for extensions that follows a defined directory structure so I don&#8217;t have to worry about number 3.</li>
+<li>I love the built in localization functionality.</li>
+<li>I hate the <a href="http://developer.mozilla.org/en/docs/Chrome_Registration" title="The chrome. manifest file is how you register chrome packages with the chrome registry. It's important.  I love the registry... but I hate the manifest.">chrome.manifest</a> file. The only reason I can stand it is because the build script mentioned above will allow you to write it in such a way that it will work in both development and packaged form.</li>
+</ol>
+
+
+<p>All and all I&#8217;ve learned a whole bunch about Firefox extension development over the past two days.</p>
+
+<p>Maybe once I&#8217;m finished I&#8217;ll write my own Firefox extension development tutorial since I&#8217;ve found the majority of the tutorials on the internet to be severely lacking (with the exception of the <a href="http://www.xulplanet.com/tutorials/" title="The XulPlanet XUL tutorials. If you want to learn XUL this is the place to go.">XUL Tutorials</a> from XulPlanet. Those are amazingly in depth).</p>
+
+<p>Well folks, I&#8217;m officially overloaded with projects.</p>
+
+<p>Wish me luck.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/12/the-internet-returns/">The Internet Returns!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-12T00:00:00-04:00" pubdate data-updated="true">Jul 12<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/12/the-internet-returns/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>For the past week or so I&#8217;ve been without a reliable internet connection. But now, I&#8217;m proud to say we have a reliable means of digital communication!</p>
+
+<p>Now that I can get on the web I can get back to work on my Nintendo DS development and tutorial writing.</p>
+
+<p>For those of you who I know are waiting on my tutorials keep in mind that the <a href="http://www.devkitpro.org" title="The Devkit Pro Website.">devkitPro website</a> contains a good many tutorials in their <a href="http://www.devkitpro.org/faq.shtml" title="The Devkit Pro FAQ page.">FAQ</a> and <a href="http://www.devkitpro.org/setup.shtml" title="The Devkit Pro \&quot;Setting Up\&quot; website.">Setting Up</a> websites (which I will be citing information from). So if you just can&#8217;t wait to get up and running, I highly suggest visiting their site.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/10/so-you-want-to-make-nintendo-ds-homebrew/">So You Want to Make Nintendo DS Homebrew&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-10T00:00:00-04:00" pubdate data-updated="true">Jul 10<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/10/so-you-want-to-make-nintendo-ds-homebrew/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>If you&#8217;re like me, and you&#8217;re new to the Nintendo DS scene, the first thing you&#8217;ll notice is that you have a long road ahead of you before you can call yourself an expert homebrew developer. You&#8217;ve probably scoured message boards, websites, IRC channels, and source code soaking up as much information as you could so you could be somewhat ready to begin developing.</p>
+
+<p>Well you&#8217;re ready to start&#8230; but how do you do that? Where are the tools? How do you install them?</p>
+
+<p>Never fear folks, I&#8217;ve collected this information and will provide you with step by step instructions for getting your development information up and running!</p>
+
+<p>Over the next few days I&#8217;ll be posting these how-to tutorials on my site which should explain every step you need in order to start developing for your Nintendo DS.</p>
+
+<p>Topics which will be covered are as follows:</p>
+
+<ol>
+<li><a href="/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" title="The first in the NDS Homebrew Tutorial Series: Getting the tools of the trade!">Getting the tools of the trade</a>.
+
+<ul>
+<li>devkitARM</li>
+<li>libnds</li>
+</ul>
+</li>
+<li><a href="/archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/" title="The second in the NDS Homebrew Tutorial Series: Setting up your development tool chain.">Setting up your development tool chain</a>.
+
+<ul>
+<li>In Windows</li>
+<li>In Linux</li>
+</ul>
+</li>
+<li>Creating your first Nintendo DS development project
+
+<ul>
+<li><a href="/archive/2007/07/31/using-notepad-with-devkitarm-and-libnds/" title="Using devkitARM and libnds with Notepad++.">Using Notepad++</a></li>
+<li><a href="/archive/2007/07/30/using-devkitarm-and-libnds-with-visual-studio-2005/" title="Set up a project with Visual Studio 2005">Using Visual Studio 2905</a></li>
+<li><a href="/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/" title="Using devkitARM and libnds with KDevelop.">Using KDevelop</a></li>
+<li><a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Use the provided template makefiles as a project.">Using the provided template Makefiles</a></li>
+</ul>
+</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/09/youve-won-a-new-job/">You&#8217;ve Won a New Job!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-09T00:00:00-04:00" pubdate data-updated="true">Jul 9<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/09/youve-won-a-new-job/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m excited to announce that I&#8217;ve officially been selected for, and have started working as a Software Engineer, Associate, position at <a href="http://www.paetec.com" title="The Paetec Communications website.">Paetec Communication&#8217;s</a> Software Division <a href="http://www.pinnsoft.com/" title="Pinnacle's website.">Pinnacle</a>.</p>
+
+<p>I will return to work with my colleagues from my first and second co-op blocks. I&#8217;m happy to be back with everybody and I&#8217;ll keep those who care posted on my progress and exciting adventures in Pinnacle land!</p>
+
+<p>For those of you who are interested in tracking my job progress feel free to click my <a href="http://www.linkedin.com/in/josephbauser" title="My LinkedIn profile.">profile link</a> for the corporate social networking tool <a href="http://www.linkedin.com" title="LinkedIn business social networking.">LinkedIn</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/09/a-plethora-of-summer-projects/">A Plethora of Summer Projects</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-09T00:00:00-04:00" pubdate data-updated="true">Jul 9<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/09/a-plethora-of-summer-projects/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>As is always the case, when I&#8217;m not studying, I&#8217;m working on my own little projects.</p>
+
+<p>Last summer I set up this blog, developed my <a href="http://www.josephbauser.net" title="My resume website!">resume website</a>, and learned <a href="http://www.ruby-lang.org" title="The Ruby programming language.">Ruby</a>. This summer I have my eyes set on something a little bit loftier.</p>
+
+<p>Near the end of last summer I broke down and purchased a <a href="http://en.wikipedia.org/wiki/Nintendo_DS" title="Nintendo DS wikipedia entry.">Nintendo DS</a>. Rumored to stand for &#8220;developers system&#8221; I purchased the console for five very distinct reasons.</p>
+
+<ol>
+<li>New Super Mario Brothers (A new 2D side scrolling Mario game?! I&#8217;m in!)</li>
+<li>Mario Kart DS. (Mario Kart in your pocket! Who could say no!)</li>
+<li>Tetris DS. (Fit the blocks into rows&#8230; the 8bit music compels you!)</li>
+<li>The prospect of a new Zelda game (Still waiting for this to come out.)</li>
+<li>Homebrew Nintendo DS Development</li>
+</ol>
+
+
+<p>That&#8217;s right, you read the last one correctly. Ever since I saw one of my friends complete his Computer Graphics 2 coursework on a Game Boy Advance I&#8217;ve wanted to write something for a Nintendo video game system. On one of my various expeditions onto the internet I stumbled across <a href="http://www.dev-scene.com" title="The Dev-Scene website.">www.dev-scene.com</a> which in turn pointed me to a whole host of homebrew Nintendo DS development resources. Well, 70 dollars of development hardware later I have a working homebrew <a href="http://www.devkitpro.org/" title="devKit Pro: A series of development toolchains and libraries for homebrew development.">Nintendo DS SDK</a>.</p>
+
+<p>Now it would be a shame to go through all that trouble to get my SDK working and not do anything with it, right?</p>
+
+<p>Well as it would happen, I&#8217;ve had an idea for a console game which would work very nicely on a Nintendo DS! All I needed was the time, and the incentive. Now that I&#8217;m working full time again, I have quite a few weekday nights where I won&#8217;t be working on school projects! As for incentive, if I manage to complete this game maybe I&#8217;ll become famous! (Unlikely&#8230; but as good an incentive as any.)</p>
+
+<p>As the weeks go on you should be able to find an ever growing number of posts about my progress in developing this game, as well as a chronicle of the things I&#8217;ll learn as I do my best to develop a Nintendo DS game.</p>
+
+<p>Here goes nothing!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2007/07/08/graduation/">Graduation!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-08T00:00:00-04:00" pubdate data-updated="true">Jul 8<span>th</span>, 2007</time>
+        
+         | <a href="/archive/2007/07/08/graduation/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I knew this day would come, but I never would have guessed it would come so quickly. I guess the old saying is true. Time really flies when you&#8217;re having fun.</p>
+
+<p>That&#8217;s right folks. I&#8217;ve finished my studies and passed my exams. I&#8217;m officially a <a href="http://www.coderjoe.net/images/posts/2007/07/imagraduate.jpg" title="college graduate">college graduate</a>! (Real world beware&#8230;)</p>
+
+<p>You may hear yourself asking: &#8220;Wait a second, Joe graduated a month ago! Why is he posting now? He must be really lazy.&#8221;</p>
+
+<p><strong>Better Late than Never.</strong></p>
+
+<p>Well you&#8217;re wrong! I am lazy, but that&#8217;s not why I&#8217;m graduating now. As part of my final studies I was fortunate enough to be involved in multidisciplinary project run through the Information Technology department under a course named &#8221;<a href="http://vega.%20it.%20rit.%20edu/~iandiblog/" title="Innovation and Invention">Innovation and Invention</a>&#8221;. Because I am a Computer Science graduate, and because my successful graduation hinged on completing a final computer science elective, I was forced to enroll in the aforementioned totally awesome class as a &#8220;computer science independent study&#8221;.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/archive/2007/07/08/graduation/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/4/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/2/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome&#8217;s Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

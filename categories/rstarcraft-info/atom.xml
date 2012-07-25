@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rstarcraft.info | coderjoe.net]]></title>
+  <link href="http://coderjoe.net/categories/rstarcraft-info/atom.xml" rel="self"/>
+  <link href="http://coderjoe.net/"/>
+  <updated>2012-07-25T18:51:29-04:00</updated>
+  <id>http://coderjoe.net/</id>
+  <author>
+    <name><![CDATA[Joe "coderjoe" Bauser]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Official Rstarcraft.info Firefox Extension]]></title>
+    <link href="http://coderjoe.net/archive/2011/04/03/official-rstarcraft-info-firefox-extension/"/>
+    <updated>2011-04-03T00:00:00-04:00</updated>
+    <id>http://coderjoe.net/archive/2011/04/03/official-rstarcraft-info-firefox-extension</id>
+    <content type="html"><![CDATA[<p>When <a href="http://rstarcraft.info" title="rstarcraft.info">rstarcraft.info</a> was <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/" title="launched">launched</a> a little over a week ago, it wasÂ accompaniedÂ by both a Greasemonkey script and a Chrome extension.</p>
+
+<p>This was made very simple thanks to the fact that the structure of Greasemonkey scripts and Chrome extensions are very similar. However, this left me with a few small problems.</p>
+
+<ol>
+<li>A good number of Firefox users wanting to use my extensions had no idea what Greasemonkey was.</li>
+<li>There is no really decent way to handle automatic updating of Greaemonkey scripts... meaning there isn't a good way to migrate my users forward as the site evolves.</li>
+</ol>
+
+
+<p>Combined, these two factors create an unacceptable situation for my Firefox users, so I'm happy to announce that there is now a <a href="https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/" title="dedicated rstarcraft.info extension for Firefox">dedicated rstarcraft.info extension for Firefox</a>!</p>
+
+<p>As a result of this switch, the greasemonkey script should be considered deprecated and unmaintained. No further updates to the Greasemonkey script will be made.</p>
+
+<p>The Firefox extension can be found at: <a href="https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/">https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/</a> and is the preferred method for enhancing your experience in Firefox.</p>
+
+<p>The Chrome extension, as always, can be found at: <a href="https://chrome.google.com/webstore/detail/bnhmcekcpdihlgpmaglmapfjapafaljn">https://chrome.google.com/webstore/detail/bnhmcekcpdihlgpmaglmapfjapafaljn</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

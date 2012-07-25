@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Nintendo DS Homebrew: Tools of the Trade - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="How the heck do you do this? There are few things more essential to the budding homebrew developer than their development environment. As we&#8217;re &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Nintendo DS Homebrew: Tools of the Trade</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-23T00:00:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2007</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><strong>How the heck do you do this?</strong></p>
+
+<p>There are few things more essential to the budding homebrew developer than their development environment. As we&#8217;re just starting out, we have yet to even get our environment together. As such our first task should be to gather our tools and get ready to install.</p>
+
+<p>There are two very important packages every homebrew developer should be aware of.</p>
+
+<p>The first of these two is a package called devkitARM. DevkitARM is a full compiler toolchain for the ARM chipset on which all Nintendo DS games run.</p>
+
+<p><strong>Why do you need a toolchain?</strong></p>
+
+<p>Because executables differ from platform to platform. If you just take your home Visual Studio install and compile a &#8220;hello world&#8221; application, it will compile for your host operating system and architecture. Unfortunately the set of instructions that your (likely intel) CPU and the instructions that the Nintendo DS&#8217;s ARM CPUs understand are not very similar at all. As such you need a set of tools which can create executables for your target platform.</p>
+
+<p><strong>Getting devkitARM.</strong></p>
+
+<p><a href="http://www.devkitpro.org" title="The devkitPro official website.">DevkitARM</a> provides just those tools, as well as an additional set of tools which should make your homebrew development that much more fun.</p>
+
+<p>Now that you&#8217;re excited to get those files, devkitARM can be found at the following addreses:</p>
+
+<p>For windows, you&#8217;ll want the devkitPro updater, which is a full installer for windows, and will get you up and running with minimal work.</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=160396" title="A link to the devkitProUpdater for Windows. The BEST way to install devkitPro in Windows!">Download the devkitProUpdater for Windows from Sourceforge.</a></p>
+
+<p>For Linux or Mac OSX, you&#8217;ll want to grab the binaries for devkitARM at the following address:</p>
+
+<p>(There are windows binaries as well, but windows users should just use the super spiffy auto updater.. it&#8217;s much easier.)</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=124207" title="A link to the devkitArm binaries for Linux, and Mac OSX,">Download the devkitARM binary archive from Sourceforge</a></p>
+
+<p>Now that your programming arsenal has increased by one cool package, it&#8217;s time to get your Nintendo DS development library.</p>
+
+<p><strong>Getting libnds.</strong></p>
+
+<p>The only library you should concern yourself with at this point is libnds. Libnds began as a series of useful #define statements to make Nintendo DS development a bit easier. Over time it evolved into a full development library with support for most of the functionality of the Nintendo DS. Through libnds, the enterprising developer even has support for 3d through a series of functions which look incredibly similar to OpenGL.</p>
+
+<p>If you&#8217;re running Linux or Mac OSX you can get the library here:</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=151608" title="Download libnds source to build in Linux or Mac OSX.">Download the libnds source archive from Sourceforge</a></p>
+
+<p>If you&#8217;re running Windows, don&#8217;t fret, the auto updater will fetch libnds for you!</p>
+
+<p><strong>Example code anyone?</strong></p>
+
+<p>The final archive I would suggest everybody have on hand is the latest copy of the nds examples. This archive contains a series of example code showing most of the implemented functionality within libnds.</p>
+
+<p>As above, Linux and OSX users use the below URL. Windows programmers should use the auto updater to get these files.</p>
+
+<p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=159894" title="Download the NDS example code source here!">Download the Nintendo DS example code from Sourceforge</a></p>
+
+<p>Tune in later for information on how to <a href="/archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/" title="The next in the tutorial series: Setting up the toolchain!">turn these archives into a full fledged development environment</a>!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-23T00:00:00-04:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2007/07/19/firefox-extension-development/" title="Previous Post: Firefox Extension Development">&laquo; Firefox Extension Development</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/" title="Next Post: Setting up an NDS Homebrew tool chain in Linux and Mac OSX! (Ok... Windows too...)">Setting up an NDS Homebrew tool chain in Linux and Mac OSX! (Ok... Windows too...) &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

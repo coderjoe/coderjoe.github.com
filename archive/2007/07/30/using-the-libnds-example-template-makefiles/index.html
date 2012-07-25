@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Using the libnds example template Makefiles - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="Of the different methods for setting up a project, using the provided template Makefiles is by far the easiest. Packaged with the Nintendo DS &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/30/using-the-libnds-example-template-makefiles/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Using the Libnds Example Template Makefiles</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-30T00:00:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2007</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Of the different methods for setting up a project, using the provided template Makefiles is by far the easiest.</p>
+
+<p>Packaged with the <a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=159894" title="NDS Examples. Windows users should NOT use this. Use the auto updater instead.">Nintendo DS examples</a> package that you downloaded (you did download the examples package at <a href="/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" title="How to set up a Nintendo DS Homebrew tool chain.">my suggestion</a>&#8230; didn&#8217;t you?) there is a directory called &#8220;templates&#8221;.</p>
+
+<p>This directory contains a number of template project directories, each designed to make use of the environment variables set during the tool chain install step.</p>
+
+<p>Using these templates is a very simple process.
+I will describe how to do this both in Linux and in Windows.
+Following in the grandest of programming traditions, lets call our project &#8220;helloworld&#8221;.</p>
+
+<p><strong>In Linux:</strong></p>
+
+<p>First lets create a directory for our project in our home directory:</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    mkdir ~/helloworld
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Next lets copy over the arm9 template ( I assume you&#8217;ve extracted the examples archive to your devkitPRO directory ):</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    cp -R <span class="k">${</span><span class="nv">DEVKITPRO</span><span class="k">}</span>/examples/templates/arm9/* ~/helloworld/
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s all there is to it!</p>
+
+<p>Each template already comes with a default main.c file containing the equivelent of a hello world application, so you&#8217;re ready to go!</p>
+
+<p>To test it, change to the helloworld directory and type make.</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">cd</span> ~/helloworld/make
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>In Windows:</strong></p>
+
+<p>The instructions for Windows are almost identical to the instructions for Linux. The only differences between the two are really the Windows style commands and paths.</p>
+
+<p>Create a new folder for your project.</p>
+
+<p><em><strong>Note: You must make sure that your project directory path does not contain any spaces!</strong></em></p>
+
+<p>For this reason I would suggest creating a directory under c:devkitPro called &#8220;projects&#8221; in which you will put all of your NDS Homebrew Projects.</p>
+
+<p>Once the directory has been created, copy everything inside the directory &#8220;C:\devkitPro\examples\ndstemplates\arm9&#8221; into your new project directory.</p>
+
+<p>To build your project open a command shell</p>
+
+<p>Start -&gt; Run -&gt; Type &#8220;cmd&#8221; -&gt; click &#8216;Ok&#8217;</p>
+
+<p>Change directories to your project directory</p>
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>    <span class="nb">cd </span>c:<span class="se">\d</span>evkitPro<span class="se">\p</span>rojects<span class="se">\h</span>elloworld
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>type &#8216;make&#8217;</p>
+
+<p>If all is set up correctly in either operating system, when your make process is complete you should find two files one called helloworld. nds and one called helloworld. ds. gba. These two files are for the different respective types of NDS Flash Carts.</p>
+
+<p>If you boot up your new NDS program you will see the <a href="http://www.drunkencoders.com/" title="The Drunkencoders. com website.">drunkencoders.com</a> &#8220;Hello DS dev&#8217;rs&#8221; hello world app!</p>
+
+<p>Congratulations, you have your first project.</p>
+
+<p>For more information read the documentation provided with the example templates, and poke around the provided example code.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-07-30T00:00:00-04:00" pubdate data-updated="true">Jul 30<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/30/using-the-libnds-example-template-makefiles/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/30/using-the-libnds-example-template-makefiles/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2007/07/30/using-devkitarm-and-libnds-with-visual-studio-2005/" title="Previous Post: Using devkitARM and libnds with Visual Studio 2005">&laquo; Using devkitARM and libnds with Visual Studio 2005</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/" title="Next Post: Using KDevelop with libnds and devkitARM">Using KDevelop with libnds and devkitARM &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

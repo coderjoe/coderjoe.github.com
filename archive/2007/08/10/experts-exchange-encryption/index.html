@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Experts Exchange Encryption - coderjoe.net</title>
+  <meta name="author" content="Joe "coderjoe" Bauser">
+
+  
+  <meta name="description" content="NOTE: The methods listed below are no longer necessary! Experts Exchange has moved to providing the answers in plain text at the bottom of the page. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-526253-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">coderjoe.net</a></h1>
+  
+    <h2>Me, myself, and my code</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:coderjoe.net" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Experts Exchange Encryption</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-10T00:00:00-04:00" pubdate data-updated="true">Aug 10<span>th</span>, 2007</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><blockquote><p><strong>NOTE: The methods listed below are no longer necessary! Experts Exchange has moved to providing the answers in plain text at the bottom of the page. Just look past the first set of &#8220;answers&#8221;, past the advertisements and link farm, and you&#8217;ll see them.</strong></p></blockquote>
+
+<p><strong>What is Experts Exchange?</strong></p>
+
+<p>If you&#8217;ve ever tried to look up some sort of technical information on the internet, you&#8217;ve likely come across the <a href="http://www.experts-exchange.com" title="The Experts Exchange website.">Experts Exchange</a>. Experts Exchange is a site on which people can ask questions about a variably infinite number of technical topics and receive a range of answers from experts purported experts.</p>
+
+<p>The site then allows the user to select a &#8220;best answer&#8221; earning the answer&#8217;s author extra points. Points can be redeemed for a better type of account and access to other things on the site.</p>
+
+<p>In this way the site is user supported, without the experts there would be no exchange of answers.</p>
+
+<p><strong>What&#8217;s your problem with Experts Exchange?</strong></p>
+
+<p>As an incentive to sign up, the questions asked on experts exchange are visible to all, however, the answers are obscured in two rather tricky ways.</p>
+
+<ol>
+<li>The answers are obscured by a transparent gif with alternating pixels of solid and transparent, making the words a fuzzy haze.</li>
+<li>The answer text itself is encrypted using a basic and fairly famous encryption scheme called <a href="http://en.wikipedia.org/wiki/Rot13" title="Wikipedia article about Rot13.">Rot13</a></li>
+</ol>
+
+
+<p>As a person just looking for the answer to my question I&#8217;m often frustrated by the number of times I stumble across an experts exchange thread which might answer my question, but is obscured.</p>
+
+<p><strong>What are you going to do about it?</strong></p>
+
+<p>Well I hate to be bothered with unnecessary prompts to log in as much as the next guy.  With that in mind, I present to you:</p>
+
+<p><a href="/images/posts/2007/08/unhide_experts_exchange.user.js" title="The Unhide Experts Exchange Greasemonkey Script">The Unhide Experts Exchange Greasemonkey Script</a></p>
+
+<p>This script does what it says, it removes the image which blurs the answer text, and then Rot13 decrypts the answers for your viewing pleasure.</p>
+
+<p>As the title implies, you will need to be using <a href="http://www.getfirefox.com" title="Download firefox your your web browsing pleasure!">Firefox</a>, and you will need the <a href="http://www.greasespot.net/" title="The official Greasemonkey blog.">Greasemonkey</a> plug-in to use this script.</p>
+
+<p><strong>Will this destroy Experts Exchange?</strong></p>
+
+<p>For those of you worried that this might just ruin the Experts Exchange, fear not. In their infinite wisdom they decided to completely omit the &#8220;selected answers&#8221; for the questions unless you&#8217;re logged in.</p>
+
+<p>In this way there is still incentive to get an account and contribute!</p>
+
+<p>In addition, I do not believe that my little <a href="http://www.greasespot.net/" title="The Greasemonkey blog.">Greasemonkey</a> script will ever gain enough momentum to offset a significant portion of potential Experts Exchange visitors. If it ever did, all they would have to do is change their cypher or insert dummy text.</p>
+
+<p>Any change to the cypher algorithm will be taken as a hint. (Also I&#8217;m way too lazy to implement anything other than rot13 instead of just logging in.)</p>
+
+<p>However, if you&#8217;re as lazy as I (or rather as lazy as one needs to be to write a Greasemonkey script to avoid logging in&#8230;), and would prefer not to manage yet another user name and password combination, you may use the script above.</p>
+
+<p>Note: The Greasemonkey script was updated on Sunday August 12th at 1:00am. It now properly takes care of the &lt;br&gt; characters that they do not rot13.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Joe "coderjoe" Bauser</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-08-10T00:00:00-04:00" pubdate data-updated="true">Aug 10<span>th</span>, 2007</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/coding/'>Coding</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/08/10/experts-exchange-encryption/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/archive/2007/08/08/a-list-of-nintendo-ds-homebrew-resources/" title="Previous Post: A list of Nintendo DS Homebrew Resources">&laquo; A list of Nintendo DS Homebrew Resources</a>
+      
+      
+        <a class="basic-alignment right" href="/archive/2007/08/17/foxnightnet-is-dead-anybody-want-it/" title="Next Post: Foxnight. net is dead... anybody want it?">Foxnight. net is dead... anybody want it? &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2009/02/14/earth-hour/">Earth Hour</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome's Terms of Service: They want your stuff?</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'coderjoe',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("coderjoe", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
+  
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'coderjoenet';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
