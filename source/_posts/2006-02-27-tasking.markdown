@@ -1,0 +1,32 @@
+--- 
+layout: post
+title: Tasking
+wordpress_id: 3
+wordpress_url: http://www.coderjoe.net/2006/02/27/tasking/
+categories: 
+- Coding
+tags: 
+- projects
+- josephbauser.net
+- foxnight.net
+---
+
+One more week. 
+
+That's it, one more week and my status as a co-op employed student ends. I have a lot of things to work out, tasks, ideas, plans, and project ideas. First, however, I'll need to flesh out the layouts for my project sites. I'm setting my tentative release dates for Foxnight. net and JosephBauser. net today. After all, if you don't start you can't finish. I have a week of break which I'm taking mostly to myself between quarters, I need to produce something.
+
+<!--more-->
+
+I said this blog would be used mostly as a task reminder for myself so here it goes. Today is Monday the 27th. I plan to have at least a preliminary layout and functional backend for both JosephBauser. net and Foxnight. net finished by 1am on Saturday, March 11th. This is a fairly optimistic date but I believe it's doable.
+
+Preliminary schedule:
+
+Today &rarr; Sunday the 5th - Work on JosephBauser. net
+
+Monday &rarr; Friday the 10th at 1am - Work on Foxnight. net
+
+Friday &rarr; Saturday at 1am - Debug Foxnight. net
+
+The hardest part by far will be preliminary design and layout design/concept as I've always been weak in areas involving art.
+
+However, it will most definitely be worth it.
