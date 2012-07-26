@@ -3,6 +3,7 @@ layout: post
 title: The internet returns!
 wordpress_id: 82
 wordpress_url: /archive/2007/07/12/the-internet-returns/
+comments: true
 categories: 
 - Life
 tags: []

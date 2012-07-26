@@ -3,6 +3,7 @@ layout: post
 title: Get Legal
 wordpress_id: 8
 wordpress_url: http://www.coderjoe.net/2006/05/04/get-legal/
+comments: true
 categories: 
 - Life
 tags: 

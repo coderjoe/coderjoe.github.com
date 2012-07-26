@@ -3,6 +3,7 @@ layout: post
 title: When Recruiting Goes Wonderfully Wrong
 wordpress_id: 132
 wordpress_url: http://www.coderjoe.net/?p=132
+comments: true
 categories: 
 - Other Interesting Links
 - Life

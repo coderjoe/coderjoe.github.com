@@ -3,6 +3,7 @@ layout: post
 title: Road Runner High Speed Internet HTTP Redirecting All Invalid Domains Requested
 wordpress_id: 111
 wordpress_url: /archive/2008/01/11/road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested/
+comments: true
 categories: 
 - Life
 tags: 

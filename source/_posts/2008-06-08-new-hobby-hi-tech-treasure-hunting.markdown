@@ -3,6 +3,7 @@ layout: post
 title: "New Hobby: Hi-Tech Treasure Hunting!"
 wordpress_id: 128
 wordpress_url: http://www.coderjoe.net/?p=128
+comments: true
 categories: 
 - Uncategorized
 - Life

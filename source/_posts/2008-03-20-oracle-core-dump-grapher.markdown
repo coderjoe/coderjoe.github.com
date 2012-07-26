@@ -3,6 +3,7 @@ layout: post
 title: Oracle Core Dump Grapher
 wordpress_id: 119
 wordpress_url: /archive/2008/03/20/oracle-core-dump-grapher/
+comments: true
 categories: 
 - Coding
 - Work

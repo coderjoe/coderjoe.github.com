@@ -3,6 +3,7 @@ layout: post
 title: Foundations of 2D Graphics Journal GO!
 wordpress_id: 22
 wordpress_url: /archive/2006/12/05/foundations-of-2d-graphics-journal-go/
+comments: true
 categories: 
 - Coding
 tags: 

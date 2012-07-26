@@ -3,6 +3,7 @@ layout: post
 title: My First Adventures in Windows Land
 wordpress_id: 24
 wordpress_url: /archive/2006/12/14/my-first-adventures-in-windows-land/
+comments: true
 categories: 
 - Coding
 tags: 

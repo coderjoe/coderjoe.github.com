@@ -3,6 +3,7 @@ layout: post
 title: Font sizing, the constant battlefield
 wordpress_id: 11
 wordpress_url: /archive/2006/07/05/font-sizing-the-constant-battlefield/
+comments: true
 categories: 
 - Coding
 tags: 

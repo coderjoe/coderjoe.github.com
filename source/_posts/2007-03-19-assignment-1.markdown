@@ -3,6 +3,7 @@ layout: post
 title: Assignment 1
 wordpress_id: 31
 wordpress_url: /archive/2007/03/19/assignment-1/
+comments: true
 categories: 
 - Coding
 tags: 

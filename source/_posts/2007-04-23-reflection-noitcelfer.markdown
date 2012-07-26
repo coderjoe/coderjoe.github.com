@@ -3,6 +3,7 @@ layout: post
 title: Reflection | noitcelfeR
 wordpress_id: 44
 wordpress_url: /archive/2007/04/23/reflection-noitcelfer/
+comments: true
 categories: 
 - Coding
 tags: 

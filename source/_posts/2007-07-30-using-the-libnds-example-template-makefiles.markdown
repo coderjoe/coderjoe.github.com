@@ -3,6 +3,7 @@ layout: post
 title: Using the libnds example template Makefiles
 wordpress_id: 88
 wordpress_url: /archive/2007/07/30/using-the-libnds-example-template-makefiles/
+comments: true
 categories: 
 - Coding
 tags: 

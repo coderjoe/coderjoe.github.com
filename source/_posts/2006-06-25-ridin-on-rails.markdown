@@ -3,6 +3,7 @@ layout: post
 title: Ridin' on Rails
 wordpress_id: 10
 wordpress_url: /archive/2006/06/25/ridin-on-rails/
+comments: true
 categories: 
 - Coding
 tags: 

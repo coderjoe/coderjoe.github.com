@@ -3,6 +3,7 @@ layout: post
 title: The RND Benchmark Update Redux
 wordpress_id: 19
 wordpress_url: /archive/2006/08/13/the-rnd-benchmark-update-redux/
+comments: true
 categories: 
 - Coding
 tags: []
