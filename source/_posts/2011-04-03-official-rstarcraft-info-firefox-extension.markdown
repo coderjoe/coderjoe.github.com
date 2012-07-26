@@ -14,7 +14,7 @@ tags:
 - firefox extension
 ---
 
-When [rstarcraft.info](http://rstarcraft.info "rstarcraft.info") was [launched](/archive/2011/03/23/rstarcraft_info_beta_launch/ "launched") a little over a week ago, it wasÂ accompaniedÂ by both a Greasemonkey script and a Chrome extension. 
+When [rstarcraft.info](http://rstarcraft.info "rstarcraft.info") was [launched](/archive/2011/03/23/rstarcraft_info_beta_launch/ "launched") a little over a week ago, it was accompanied by both a Greasemonkey script and a Chrome extension. 
 
 This was made very simple thanks to the fact that the structure of Greasemonkey scripts and Chrome extensions are very similar. However, this left me with a few small problems.
 

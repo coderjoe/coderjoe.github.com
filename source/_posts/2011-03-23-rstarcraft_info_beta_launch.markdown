@@ -46,7 +46,7 @@ And thus [rstarcraft.info](http://rstarcraft.info "rstarcraft.info") was born. T
 - And the most fun: rank and race info can be superimposed on Reddit through the use of an rstarcraft.info[ Greasemonkey script or Chrome extension](http://rstarcraft.info/extension "Greasemonkey script or Google Chrome extension")!
 - Password recovery is done through Reddit's messaging system so if someone "steals" your identity, you can always get it back.
 
-[The site](http://rstarcraft.info "The site") is officially in open beta, and I'll be posting a link to the site with a short description on Reddit soon. I hope people enjoy it as much as Â my limited test group did.
+[The site](http://rstarcraft.info "The site") is officially in open beta, and I'll be posting a link to the site with a short description on Reddit soon. I hope people enjoy it as much as  my limited test group did.
 
 Get support for the site at the [rstarcraft.info Google group](http://www.googlegroups.com/group/rstarcraftinfo. "rstarcraft.info Google group."). 
 
