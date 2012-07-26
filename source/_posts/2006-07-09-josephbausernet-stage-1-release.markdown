@@ -3,6 +3,7 @@ layout: post
 title: JosephBauser.net Stage 1 Release!
 wordpress_id: 12
 wordpress_url: /archive/2006/07/09/josephbausernet-stage-1-release/
+comments: true
 categories: 
 - Coding
 tags: 

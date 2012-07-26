@@ -3,6 +3,7 @@ layout: post
 title: And another one down
 wordpress_id: 7
 wordpress_url: http://www.coderjoe.net/2006/04/15/and-another-one-down/
+comments: true
 categories: 
 - Coding
 tags: 

@@ -3,6 +3,7 @@ layout: post
 title: FreeRice. com and Automaton
 wordpress_id: 107
 wordpress_url: /archive/2007/11/19/freericecom-and-automaton/
+comments: true
 categories: 
 - Coding
 tags: 

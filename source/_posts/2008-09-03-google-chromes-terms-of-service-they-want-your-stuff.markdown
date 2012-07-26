@@ -3,6 +3,7 @@ layout: post
 title: "Google Chrome's Terms of Service: They want your stuff?"
 wordpress_id: 142
 wordpress_url: http://www.coderjoe.net/?p=142
+comments: true
 categories: 
 - Life
 tags: 

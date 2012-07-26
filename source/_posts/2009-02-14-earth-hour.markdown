@@ -3,6 +3,7 @@ layout: post
 title: Earth Hour
 wordpress_id: 152
 wordpress_url: http://www.coderjoe.net/?p=152
+comments: true
 categories: 
 - Other Interesting Links
 - Life

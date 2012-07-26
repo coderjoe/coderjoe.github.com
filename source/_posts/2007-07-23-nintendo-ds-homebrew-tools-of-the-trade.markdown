@@ -3,6 +3,7 @@ layout: post
 title: "Nintendo DS Homebrew: Tools of the Trade"
 wordpress_id: 85
 wordpress_url: /archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/
+comments: true
 categories: 
 - Coding
 tags: 

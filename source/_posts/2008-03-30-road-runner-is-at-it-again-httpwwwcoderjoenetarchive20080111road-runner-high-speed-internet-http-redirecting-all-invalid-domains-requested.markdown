@@ -3,6 +3,7 @@ layout: post
 title: Road Runner is at it again...
 wordpress_id: 125
 wordpress_url: /archive/2008/03/30/road-runner-is-at-it-again-httpwwwcoderjoenetarchive20080111road-runner-high-speed-internet-http-redirecting-all-invalid-domains-requested/
+comments: true
 categories: 
 - Life
 tags: 

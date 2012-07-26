@@ -3,6 +3,7 @@ layout: post
 title: Graduation!
 wordpress_id: 69
 wordpress_url: /archive/2007/07/08/graduation/
+comments: true
 categories: 
 - Life
 tags: 

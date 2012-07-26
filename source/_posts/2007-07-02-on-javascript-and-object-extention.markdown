@@ -3,6 +3,7 @@ layout: post
 title: On Javascript and Object Extention
 wordpress_id: 67
 wordpress_url: /archive/2007/07/02/on-javascript-and-object-extention/
+comments: true
 categories: 
 - Coding
 tags: 

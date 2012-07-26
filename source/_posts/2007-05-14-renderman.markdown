@@ -3,6 +3,7 @@ layout: post
 title: Renderman
 wordpress_id: 60
 wordpress_url: /archive/2007/05/14/renderman/
+comments: true
 categories: 
 - Coding
 tags: 

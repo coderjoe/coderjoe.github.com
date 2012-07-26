@@ -3,6 +3,7 @@ layout: post
 title: Official Rstarcraft.info Firefox Extension
 wordpress_id: 192
 wordpress_url: http://www.coderjoe.net/?p=192
+comments: true
 categories: 
 - rstarcraft.info
 tags: 

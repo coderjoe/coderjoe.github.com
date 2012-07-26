@@ -3,6 +3,7 @@ layout: post
 title: Working on transmission
 wordpress_id: 49
 wordpress_url: /archive/2007/05/02/working-on-transmission/
+comments: true
 categories: 
 - Coding
 tags: 

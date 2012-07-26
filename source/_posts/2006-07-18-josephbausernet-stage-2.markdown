@@ -3,6 +3,7 @@ layout: post
 title: JosephBauser.net Stage 2!
 wordpress_id: 13
 wordpress_url: /archive/2006/07/18/josephbausernet-stage-2/
+comments: true
 categories: 
 - Coding
 tags: 

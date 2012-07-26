@@ -3,6 +3,7 @@ layout: post
 title: So you want to make Nintendo DS Homebrew...
 wordpress_id: 81
 wordpress_url: /archive/2007/07/10/so-you-want-to-make-nintendo-ds-homebrew/
+comments: true
 categories: 
 - Coding
 tags: 

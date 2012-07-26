@@ -3,6 +3,7 @@ layout: post
 title: A list of Nintendo DS Homebrew Resources
 wordpress_id: 99
 wordpress_url: /archive/2007/08/08/a-list-of-nintendo-ds-homebrew-resources/
+comments: true
 categories: 
 - Coding
 tags: 

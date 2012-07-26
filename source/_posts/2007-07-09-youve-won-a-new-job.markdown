@@ -3,6 +3,7 @@ layout: post
 title: You've won a new Job!
 wordpress_id: 79
 wordpress_url: /archive/2007/07/09/youve-won-a-new-job/
+comments: true
 categories: 
 - Work
 tags: 

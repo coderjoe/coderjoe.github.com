@@ -3,6 +3,7 @@ layout: post
 title: Excitement!
 wordpress_id: 50
 wordpress_url: /archive/2007/05/08/excitement/
+comments: true
 categories: 
 - Coding
 tags: 

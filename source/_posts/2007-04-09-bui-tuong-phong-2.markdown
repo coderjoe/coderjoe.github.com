@@ -3,6 +3,7 @@ layout: post
 title: "Bui Tuong Phong "
 wordpress_id: 201
 wordpress_url: /archive/2007/04/09/bui-tuong-phong/
+comments: true
 categories: 
 - Coding
 tags: 

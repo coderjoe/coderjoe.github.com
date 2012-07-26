@@ -3,6 +3,7 @@ layout: post
 title: Using KDevelop with libnds and devkitARM
 wordpress_id: 89
 wordpress_url: /archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/
+comments: true
 categories: 
 - Coding
 tags: 

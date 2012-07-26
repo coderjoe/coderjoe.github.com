@@ -3,6 +3,7 @@ layout: post
 title: A little turkey day coding!
 wordpress_id: 149
 wordpress_url: http://www.coderjoe.net/?p=149
+comments: true
 categories: 
 - Coding
 tags: 

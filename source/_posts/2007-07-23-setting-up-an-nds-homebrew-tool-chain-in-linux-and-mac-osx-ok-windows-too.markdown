@@ -3,6 +3,7 @@ layout: post
 title: Setting up an NDS Homebrew tool chain in Linux and Mac OSX! (Ok... Windows too...)
 wordpress_id: 86
 wordpress_url: /archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/
+comments: true
 categories: 
 - Coding
 tags: 
