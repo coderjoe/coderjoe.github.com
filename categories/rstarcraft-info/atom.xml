@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rstarcraft.info | coderjoe.net]]></title>
   <link href="http://coderjoe.net/categories/rstarcraft-info/atom.xml" rel="self"/>
   <link href="http://coderjoe.net/"/>
-  <updated>2012-07-25T23:25:58-04:00</updated>
+  <updated>2012-07-25T23:31:05-04:00</updated>
   <id>http://coderjoe.net/</id>
   <author>
     <name><![CDATA[Joe "coderjoe" Bauser]]></name>
@@ -18,7 +18,7 @@
     <link href="http://coderjoe.net/archive/2011/04/03/official-rstarcraft-info-firefox-extension/"/>
     <updated>2011-04-03T00:00:00-04:00</updated>
     <id>http://coderjoe.net/archive/2011/04/03/official-rstarcraft-info-firefox-extension</id>
-    <content type="html"><![CDATA[<p>When <a href="http://rstarcraft.info" title="rstarcraft.info">rstarcraft.info</a> was <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/" title="launched">launched</a> a little over a week ago, it wasÂ accompaniedÂ by both a Greasemonkey script and a Chrome extension.</p>
+    <content type="html"><![CDATA[<p>When <a href="http://rstarcraft.info" title="rstarcraft.info">rstarcraft.info</a> was <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/" title="launched">launched</a> a little over a week ago, it was accompanied by both a Greasemonkey script and a Chrome extension.</p>
 
 <p>This was made very simple thanks to the fact that the structure of Greasemonkey scripts and Chrome extensions are very similar. However, this left me with a few small problems.</p>
 
