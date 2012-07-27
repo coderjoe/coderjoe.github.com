@@ -4,7 +4,7 @@
   <title><![CDATA[Category: contests | coderjoe.net]]></title>
   <link href="http://coderjoe.net/categories/contests/atom.xml" rel="self"/>
   <link href="http://coderjoe.net/"/>
-  <updated>2012-07-27T15:02:03-04:00</updated>
+  <updated>2012-07-27T15:37:24-04:00</updated>
   <id>http://coderjoe.net/</id>
   <author>
     <name><![CDATA[Joe "coderjoe" Bauser]]></name>
@@ -26,7 +26,7 @@
 
 <p>What I didn't expect was that I'd end up <a href="http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/">winning the competition</a>!</p>
 
-<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscating my code step-by-step.</p>
+<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.</p>
 
 <!--more-->
 
