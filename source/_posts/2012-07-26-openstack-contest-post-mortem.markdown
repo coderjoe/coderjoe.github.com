@@ -19,7 +19,7 @@ Anticipating that I'd be up against stiff competition I chose to place some addi
 
 What I didn't expect was that I'd end up [winning the competition](http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/)!
 
-I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscating my code step-by-step.
+I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.
 
 <!--more-->
 
