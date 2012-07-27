@@ -4,7 +4,7 @@ title: And it has begun...
 wordpress_id: 1
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - coderjoe.net

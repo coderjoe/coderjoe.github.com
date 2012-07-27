@@ -5,7 +5,7 @@ wordpress_id: 106
 wordpress_url: /archive/2007/10/30/more-fun-with-greasemonkey/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - experts-exchange
 - greasemonkey

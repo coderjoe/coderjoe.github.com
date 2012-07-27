@@ -5,7 +5,7 @@ wordpress_id: 101
 wordpress_url: /archive/2007/08/10/experts-exchange-encryption/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - JavaScript
 - experts-exchange

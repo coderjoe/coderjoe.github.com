@@ -5,7 +5,7 @@ wordpress_id: 104
 wordpress_url: /archive/2007/09/07/continuations-what-is-the-deal/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - school
 - computer-science

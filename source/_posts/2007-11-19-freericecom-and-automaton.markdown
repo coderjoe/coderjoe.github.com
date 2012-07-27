@@ -5,7 +5,7 @@ wordpress_id: 107
 wordpress_url: /archive/2007/11/19/freericecom-and-automaton/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - JavaScript
 - greasemonkey

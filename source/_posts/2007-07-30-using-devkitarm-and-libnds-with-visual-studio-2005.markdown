@@ -5,7 +5,7 @@ wordpress_id: 92
 wordpress_url: /archive/2007/07/30/using-devkitarm-and-libnds-with-visual-studio-2005/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - C/C++
 - nintendo-ds-homebrew

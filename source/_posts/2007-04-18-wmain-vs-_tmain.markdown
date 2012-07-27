@@ -5,7 +5,7 @@ wordpress_id: 43
 wordpress_url: /archive/2007/04/18/wmain-vs-_tmain/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - C/C++
 - windows

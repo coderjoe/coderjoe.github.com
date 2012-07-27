@@ -5,7 +5,7 @@ wordpress_id: 81
 wordpress_url: /archive/2007/07/10/so-you-want-to-make-nintendo-ds-homebrew/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - nintendo-ds-homebrew

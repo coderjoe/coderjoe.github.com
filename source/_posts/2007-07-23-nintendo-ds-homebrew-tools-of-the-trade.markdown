@@ -5,7 +5,7 @@ wordpress_id: 85
 wordpress_url: /archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - nintendo-ds-homebrew

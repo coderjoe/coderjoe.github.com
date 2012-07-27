@@ -5,7 +5,7 @@ wordpress_id: 118
 wordpress_url: /archive/2008/02/26/gogeocode-php-library-release/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - PHP

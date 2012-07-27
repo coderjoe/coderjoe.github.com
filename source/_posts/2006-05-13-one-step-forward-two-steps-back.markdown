@@ -5,7 +5,7 @@ wordpress_id: 9
 wordpress_url: /archive/2006/05/13/one-step-forward-two-steps-back/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - school

@@ -5,7 +5,7 @@ wordpress_id: 187
 wordpress_url: http://www.coderjoe.net/?p=187
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - JavaScript
 - greasemonkey

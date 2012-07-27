@@ -5,7 +5,7 @@ wordpress_id: 66
 wordpress_url: /archive/2007/05/15/moar-bloom/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - school

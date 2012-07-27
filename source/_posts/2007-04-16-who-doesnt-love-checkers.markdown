@@ -5,7 +5,7 @@ wordpress_id: 42
 wordpress_url: /archive/2007/04/16/who-doesnt-love-checkers/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - school
