@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The OpenStack Birthday Contest"
+title: "How I Won the OpenStack Birthday Contest"
 date: 2012-07-26 19:01
 comments: true
 published: true
