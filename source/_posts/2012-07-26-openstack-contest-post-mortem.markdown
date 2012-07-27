@@ -3,6 +3,7 @@ layout: post
 title: "The OpenStack Birthday Contest"
 date: 2012-07-26 19:01
 comments: true
+published: false
 categories: 
 - coding
 - contests
