@@ -5,7 +5,7 @@ wordpress_id: 90
 wordpress_url: /archive/2007/07/31/using-notepad-with-devkitarm-and-libnds/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - C/C++
 - nintendo-ds-homebrew

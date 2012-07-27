@@ -5,7 +5,7 @@ wordpress_id: 149
 wordpress_url: http://www.coderjoe.net/?p=149
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - JavaScript
 - budget

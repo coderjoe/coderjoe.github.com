@@ -5,7 +5,7 @@ wordpress_id: 86
 wordpress_url: /archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - nintendo-ds-homebrew

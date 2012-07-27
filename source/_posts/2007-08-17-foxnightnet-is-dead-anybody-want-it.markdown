@@ -5,7 +5,7 @@ wordpress_id: 103
 wordpress_url: /archive/2007/08/17/foxnightnet-is-dead-anybody-want-it/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - foxnight. net
 ---

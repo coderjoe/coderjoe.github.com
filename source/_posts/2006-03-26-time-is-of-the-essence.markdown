@@ -5,7 +5,7 @@ wordpress_id: 6
 wordpress_url: http://www.coderjoe.net/2006/03/26/time-is-of-the-essence/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - josephbauser.net

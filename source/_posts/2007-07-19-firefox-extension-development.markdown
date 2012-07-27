@@ -5,7 +5,7 @@ wordpress_id: 84
 wordpress_url: /archive/2007/07/19/firefox-extension-development/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - Oracle-Application-Express
 - extensions

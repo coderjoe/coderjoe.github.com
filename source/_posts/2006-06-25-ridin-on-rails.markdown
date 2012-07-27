@@ -5,7 +5,7 @@ wordpress_id: 10
 wordpress_url: /archive/2006/06/25/ridin-on-rails/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - josephbauser.net

@@ -5,7 +5,7 @@ wordpress_id: 17
 wordpress_url: /archive/2006/08/12/updated-rnd-benchmarks/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - JavaScript
 - Benchmarks

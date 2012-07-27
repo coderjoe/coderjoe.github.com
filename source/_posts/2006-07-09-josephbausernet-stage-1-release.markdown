@@ -5,7 +5,7 @@ wordpress_id: 12
 wordpress_url: /archive/2006/07/09/josephbausernet-stage-1-release/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - josephbauser.net

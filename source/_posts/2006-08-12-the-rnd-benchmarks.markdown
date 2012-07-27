@@ -5,7 +5,7 @@ wordpress_id: 14
 wordpress_url: /archive/2006/08/12/the-rnd-benchmarks/
 comments: true
 categories: 
-- Coding
+- coding
 tags: []
 
 ---

@@ -5,7 +5,7 @@ wordpress_id: 80
 wordpress_url: /archive/2007/07/09/a-plethora-of-summer-projects/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - nintendo-ds-homebrew

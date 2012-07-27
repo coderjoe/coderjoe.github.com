@@ -5,7 +5,7 @@ wordpress_id: 99
 wordpress_url: /archive/2007/08/08/a-list-of-nintendo-ds-homebrew-resources/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - C/C++
 - nintendo-ds-homebrew

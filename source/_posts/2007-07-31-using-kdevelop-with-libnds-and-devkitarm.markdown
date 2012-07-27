@@ -5,7 +5,7 @@ wordpress_id: 89
 wordpress_url: /archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - C/C++
 - nintendo-ds-homebrew

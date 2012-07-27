@@ -5,7 +5,7 @@ wordpress_id: 33
 wordpress_url: /archive/2007/04/01/checkpoint-2-lines-are-so-exciting/
 comments: true
 categories: 
-- Coding
+- coding
 tags: 
 - projects
 - school
