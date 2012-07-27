@@ -3,7 +3,7 @@ layout: post
 title: "The OpenStack Birthday Contest"
 date: 2012-07-26 19:01
 comments: true
-published: false
+published: true
 categories: 
 - coding
 - contests
@@ -13,20 +13,20 @@ categories:
 
 Last week I stumbled across the ["AppFog OpenStack Birthday Contest"](http://openstack.appfog.com) via Twitter.
 
-I'd been quietly following AppFog's progress since I received a PHPFog beta invite a year or two ago. At the time I hadn't had a reason to give their service a try since I wasn't a PHP guy. Now, however, spurred by the allure of a coding contest and the large number of platforms AppFog supports I finally had a reason to poke around!
+I'd been quietly following AppFog's progress since I received a PHPFog beta invite a year or two ago. At the time I hadn't had a reason to give their service a try since I wasn't a PHP guy. However, spurred by the allure of a coding contest and the large number of platforms AppFog supports, I finally had a reason to poke around!
 
 Anticipating that I'd be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog [recently showed](http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/) I wasn't wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.
 
 What I didn't expect was that I'd end up [winning the competition](http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/)!
 
-I feel very honored that my code was chosen as the winning submission. As a small show of thanks I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscating my code step-by-step.
+I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscating my code step-by-step.
 
 <!--more-->
 
 An AppFog First Impression
 --------------------------
 
-My first concern was getting an AppFog instance configured on which to develop. Though I have a little bit of experience dealing with shared hosting and VPS services I have only minimal exposure to PaaS providers such as [AppFog](http://www.appfog.com). At first I was worried about the work required to configure an application, but AppFog's simple interface had me finished with the process before I knew I had started!
+My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as [AppFog](http://www.appfog.com). At first I was worried about the work required to configure an application, but AppFog's simple interface had me finished with the process before I knew I had started!
 
 After cloning an [example project](https://github.com/appfog/af-ruby-sinatra) published by AppFog on github, installing the [AppFog gem](http://rubygems.org/gems/af), and running a deploy I was done! Zero to functioning application in almost exactly 2 minutes!
 
@@ -35,9 +35,9 @@ Thanks to the simple in AppFog deployment process I was able to concentrate enti
 Some Speed Bumps
 ----------------
 
-Unfortunately I can't say that AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.
+Unfortunately I can't say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.
 
-For the more difficult problems, the AppFog support team met or exceeded the customer service I'd grown accustom to from both [Dreamhost](http://dreamhost.com) and [Linode](http://linode.com). With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn't payed them a cent!
+For the more difficult problems, the AppFog support team met or exceeded the customer service I'd grown accustom to from both [Dreamhost](http://dreamhost.com) and [Linode](http://linode.com). With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn't paid them a cent!
 
 Enough about problems... on to the code!
 
@@ -52,7 +52,7 @@ Now, I love obfuscation just as much as the next guy, but I wanted my submission
 
 In order to understand how I achieved these objectives lets walk backwards through the obfuscation steps to reveal the original source code.
 
-**Note:** What follows is a step-by-step analysis of the code itself, performed through the lens of someone de-obfuscating my submission. The contents of this analysis is targeted at someone with minimal Ruby experience. If you feel you understand Ruby you may get more enjoyment out of attempting the de-obfuscation yourself!
+**Note:** What follows is a step-by-step analysis of the code itself, performed through the lens of someone de-obfuscating my submission. The contents of this analysis are targeted at someone with minimal Ruby experience. If you feel you understand Ruby you may get more enjoyment out of attempting the de-obfuscation yourself!
 
 Understanding the Obfuscation
 -----------------------------
@@ -214,7 +214,7 @@ end.join
 
 {% codeblock Array code 2 lang:ruby %}
 # Gets the name of the local variables defined in the scope of the method
-# Looks for one which, when comebined with the values from above represents
+# Looks for one which, when combined with the values from above represents
 # a reversed base64 zlib compressed string, and returns that value
 l = local_variables
 l.each do |v|
