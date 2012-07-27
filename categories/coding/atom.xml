@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Coding | coderjoe.net]]></title>
+  <title><![CDATA[Category: coding | coderjoe.net]]></title>
   <link href="http://coderjoe.net/categories/coding/atom.xml" rel="self"/>
   <link href="http://coderjoe.net/"/>
-  <updated>2012-07-26T18:55:42-04:00</updated>
+  <updated>2012-07-27T00:12:09-04:00</updated>
   <id>http://coderjoe.net/</id>
   <author>
     <name><![CDATA[Joe "coderjoe" Bauser]]></name>
