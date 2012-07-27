@@ -9,7 +9,7 @@
   <meta name="author" content="Joe "coderjoe" Bauser">
 
   
-  <meta name="description" content="Advertisement filled domain search sites, once the domain of shady domain squatters, have shown up on Road Runner High Speed Internet for URLs of &hellip;">
+  <meta name="description" content="Over the past two months or so I&#8217;ve been playing with an old pet project of mine that I tend to peck away at when I can&#8217;t think of a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,58 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/archive/2008/02/26/gogeocode-php-library-release/">GoGeocode PHP Library Release</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-26T00:00:00-05:00" pubdate data-updated="true">Feb 26<span>th</span>, 2008</time>
+        
+         | <a href="/archive/2008/02/26/gogeocode-php-library-release/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Over the past two months or so I&#8217;ve been playing with an old pet project of mine that I tend to peck away at when I can&#8217;t think of a better to work on.</p>
+
+<p>As part of this project I found myself needing to do a massive amount of geocoding in PHP.</p>
+
+<p>After searching through the various PHP based geocoding libraries online I came to notice that none of them seemed to make use of the APIs ability to return multiple points as well as informational data about each point.</p>
+
+<p>Thus GoGeocode was born.</p>
+
+<p>GoGeocode is an extremely small set of classes for use in querying both the Google and Yahoo geocoding APIs.</p>
+
+<p>I&#8217;ve released the code under the <a href="http://www.opensource.org/licenses/mit-license.php" title="MIT License">MIT License</a> and posted the code at <a href="http://code.google.com/p/gogeocode/" title="http://code.google.com/p/gogeocode/">http://code.google.com/p/gogeocode/</a></p>
+
+<p>Take and enjoy!</p>
+
+<p><strong>Update:</strong> The GoGeocode page has been updated with a description, example use case, and a tar.gz archive of the gogeocode-0.1 release tag from SVN.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -625,96 +677,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/">Using KDevelop With Libnds and devkitARM</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-07-31T00:00:00-04:00" pubdate data-updated="true">Jul 31<span>st</span>, 2007</time>
-        
-         | <a href="/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://www.kdevelop.org/" title="The official KDevelop website.">KDevelop</a> is a full featured IDE for the <a href="http://www.kde.org/" title="The official K Desktop Environment website.">K Desktop Environment</a>.</p>
-
-<p>In order to take full advantage of the facilities KDevelop has to offer, we&#8217;re going to take an existing template based project, and import it as a Makefile project in KDevelop. In order to do this, first <a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Instructions on setting up a template based project.">create a template based project</a> as described in the &#8221;<a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">Using the provided template Makefile</a>&#8221; tutorial.</p>
-
-<p>Now that you have your project directory set up it&#8217;s time to import the directory into KDevelop and make a KDevelop project file.</p>
-
-<p>To do this, click the &#8220;Project&#8221; menu, and then the &#8220;Import Existing&#8230;&#8221; to bring up the import existing project dialog. Select the project directory you made in the first part of this tutorial and give the project a name.</p>
-
-<p>For project type you&#8217;re going to want to select either &#8220;Generic C Project (Custom Makefiles)&#8221; or &#8220;Generic C++ Project (Custom Makefiles)&#8221; your choice of C or C++ doesn&#8217;t matter too much at this juncture, so just stick with C. We select &#8220;Custom Makefiles&#8221; because we want to use the provided nds-example template makefile.</p>
-
-<p>Finally enter your name and e-mail address and click next. When it asks you if you want to populate the project with files from the source, go ahead and click yes.</p>
-
-<p>You now have a project file for your project directory!</p>
-
-<p>Unfortunately you&#8217;re not done yet. If you attempted to compile your project now you&#8217;d notice that you wouldn&#8217;t get very far. KDevelop will start with a clean environment for the project, so we need to set DEVKITARM and DEVKITPRO in our project.</p>
-
-<p>To do this click &#8220;Project&#8221; then &#8220;Project Options&#8221; then select &#8220;Build Options&#8221; and finally the &#8220;Make&#8221; tab. There will be a section for environment variables. Add the appropriate variables for DEVKITARM and DEVKITPRO and click &#8220;Ok&#8221;. At this point your project should now successfully compile!</p>
-
-<p>You could start developing right now, but you&#8217;d quickly notice that code completion doesn&#8217;t work for types and functions. This is because KDevelop needs to be told where the devkitARM and libnds include files reside.</p>
-
-<p>To set this select &#8220;Project&#8221; then &#8220;Project Options&#8221; and choose &#8220;C++ Support&#8221;. At the bottom of the dialog there is a section for custom &#8220;Code Completion Databases&#8221; this is really just a collection of paths to the include files you&#8217;ll be using to develop your application.</p>
-
-<p>Create one of type &#8220;KDevelop Custom Directory PCS Importer&#8221; and provide the paths to the devkitARM and libnds include directories. If you followed the environment instructions exactly these should be:</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>    /usr/local/devkitPRO/devkitARM/include
-</span><span class='line'>    /usr/local/devkitPRO/libnds/include
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Click next and name the PCS importer something witty and original like&#8230; oh&#8230; &#8220;NDS Homebrew Includes&#8221;.</p>
-
-<p>Click ok and you should now have working code completion!A word of warning, there is a known issue with the current stable KDevelop (3. 2 tree) which causes typedefs for structs of the form below not to work.</p>
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>    typedef struct <span class="o">{</span>
-</span><span class='line'>        struct members
-</span><span class='line'>    <span class="o">}</span> typeName;
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Any structs declared as such will not complete correctly. In addition, KDevelop will not code complete #define variables such as the VRAM_A_* types. I have yet to find a way to fix this.</p>
-
-<p>So you can compile and code complete. But I&#8217;ll bet my dinner that you want to be able to actually EXECUTE our compiled source so that the &#8220;Run&#8221; command does what you would expect right? Well, if you&#8217;ve installed an emulator you can tell KDevelop to use that emulator to execute your nds file.</p>
-
-<p>To set the emulator as your executable click &#8220;Project&#8221; and &#8220;Project Options&#8221; then select &#8220;Run Options&#8221; enter the full path to your emulator on the executable line, and in the arguments line give the full path to your project NDS file. In most cases this will just be the name of your project directory with .nds at the end. For our helloworld project the resulting file will be &#8220;helloworld.nds&#8221;.</p>
-
-<p>You now have a full featured KDevelop project!</p>
-
-<p><strong>One word of warning: If you did set an executable in the Run Options, then every time you open up the project options KDevelop will screw this section up. You&#8217;ll need to edit the file to remove the &#8220;file://&#8221; that KDevelop inserts at the beginning.</strong></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/3/">&larr; Older</a>
@@ -732,6 +694,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/archive/2012/07/26/openstack-contest-post-mortem/">The OpenStack Birthday Contest</a>
+      </li>
+    
+      <li class="post">
         <a href="/archive/2011/04/03/official-rstarcraft-info-firefox-extension/">Official Rstarcraft.info Firefox Extension</a>
       </li>
     
@@ -745,10 +711,6 @@
     
       <li class="post">
         <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/archive/2008/09/03/google-chromes-terms-of-service-they-want-your-stuff/">Google Chrome&#8217;s Terms of Service: They want your stuff?</a>
       </li>
     
   </ul>
