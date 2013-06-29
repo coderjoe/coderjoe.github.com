@@ -9,7 +9,7 @@
   <meta name="author" content="Joe "coderjoe" Bauser">
 
   
-  <meta name="description" content="Over the past two months or so I&#8217;ve been playing with an old pet project of mine that I tend to peck away at when I can&#8217;t think of a &hellip;">
+  <meta name="description" content="Over the past two months or so I&rsquo;ve been playing with an old pet project of mine that I tend to peck away at when I can&rsquo;t think of a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://coderjoe.net/page/2/">
+  <link rel="canonical" href="http://coderjoe.net/page/2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -121,7 +122,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Over the past two months or so I&#8217;ve been playing with an old pet project of mine that I tend to peck away at when I can&#8217;t think of a better to work on.</p>
+  <div class="entry-content"><p>Over the past two months or so I&rsquo;ve been playing with an old pet project of mine that I tend to peck away at when I can&rsquo;t think of a better to work on.</p>
 
 <p>As part of this project I found myself needing to do a massive amount of geocoding in PHP.</p>
 
@@ -131,7 +132,7 @@
 
 <p>GoGeocode is an extremely small set of classes for use in querying both the Google and Yahoo geocoding APIs.</p>
 
-<p>I&#8217;ve released the code under the <a href="http://www.opensource.org/licenses/mit-license.php" title="MIT License">MIT License</a> and posted the code at <a href="http://code.google.com/p/gogeocode/" title="http://code.google.com/p/gogeocode/">http://code.google.com/p/gogeocode/</a></p>
+<p>I&rsquo;ve released the code under the <a href="http://www.opensource.org/licenses/mit-license.php" title="MIT License">MIT License</a> and posted the code at <a href="http://code.google.com/p/gogeocode/" title="http://code.google.com/p/gogeocode/">http://code.google.com/p/gogeocode/</a></p>
 
 <p>Take and enjoy!</p>
 
@@ -220,17 +221,17 @@
   </header>
 
 
-  <div class="entry-content"><p>I had recently become aware of a website named <a href="http://freerice.com" title="FreeRice.com: Learn vocabulary while feeding the hungry.">FreeRice. com</a>. This site provides a vocabulary game where one identifies synonyms for words with an ever increasing difficulty. Since I could always use a better vocabulary the site intrigued me. I played the game for a few hours but was in no way satisfied with my progress. At roughly one correct answer every two seconds I&#8217;d rank up 18,000 grains of rice an hour. Unfortunately, once I reached the higher levels I was averaging only 3 out of every 4 questions right.</p>
+  <div class="entry-content"><p>I had recently become aware of a website named <a href="http://freerice.com" title="FreeRice.com: Learn vocabulary while feeding the hungry.">FreeRice. com</a>. This site provides a vocabulary game where one identifies synonyms for words with an ever increasing difficulty. Since I could always use a better vocabulary the site intrigued me. I played the game for a few hours but was in no way satisfied with my progress. At roughly one correct answer every two seconds I&rsquo;d rank up 18,000 grains of rice an hour. Unfortunately, once I reached the higher levels I was averaging only 3 out of every 4 questions right.</p>
 
-<p>While 13,500 (75% of my estimated optimal efficiency) grains of rice is a lot, it was nowhere near satisfactory. After joking about my &#8220;horrible rice metrics&#8221; at work, I mused that I should write a <a href="http://www.greasespot.net/" title="The Greasemonkey Firefox Extension.">Greasemonkey</a> script which would play the game better than I could possibly hope to. As the rest of my work day rolled on I became more and more intrigued by the idea. There was absolutely no reason why I couldn&#8217;t write a very simple AI to play the FreeRice.com game.</p>
+<p>While 13,500 (75% of my estimated optimal efficiency) grains of rice is a lot, it was nowhere near satisfactory. After joking about my &ldquo;horrible rice metrics&rdquo; at work, I mused that I should write a <a href="http://www.greasespot.net/" title="The Greasemonkey Firefox Extension.">Greasemonkey</a> script which would play the game better than I could possibly hope to. As the rest of my work day rolled on I became more and more intrigued by the idea. There was absolutely no reason why I couldn&rsquo;t write a very simple AI to play the FreeRice.com game.</p>
 
-<p>Were there reasons why I shouldn&#8217;t?</p>
+<p>Were there reasons why I shouldn&rsquo;t?</p>
 
 <p>I knew the most obvious reason:</p>
 
-<p>This wasn&#8217;t a controlled experiment. If the script spun out of control and was allowed to play over and over I could risk exhausting FreeRice.com&#8217;s funds.</p>
+<p>This wasn&rsquo;t a controlled experiment. If the script spun out of control and was allowed to play over and over I could risk exhausting FreeRice.com&rsquo;s funds.</p>
 
-<p>Because I didn&#8217;t want to be responsible for the downfall of a potentially lucrative source of food for impoverished children  I initially abandoned my bot. Despite my fears, curiosity eventually got the best of me and I began implementing my bot. I started by implementing a simple timing method limiting page requests to once every 10 seconds for debugging purposes, just in case.</p>
+<p>Because I didn&rsquo;t want to be responsible for the downfall of a potentially lucrative source of food for impoverished children  I initially abandoned my bot. Despite my fears, curiosity eventually got the best of me and I began implementing my bot. I started by implementing a simple timing method limiting page requests to once every 10 seconds for debugging purposes, just in case.</p>
 
 </div>
   
@@ -273,17 +274,17 @@
   </header>
 
 
-  <div class="entry-content"><p>The past month has been a difficult one. Between readying the apartment for winter, various chores, and social obligations, I&#8217;ve had little time for my own personal projects. Recently however I came across a few things that I just couldn&#8217;t pass up.</p>
+  <div class="entry-content"><p>The past month has been a difficult one. Between readying the apartment for winter, various chores, and social obligations, I&rsquo;ve had little time for my own personal projects. Recently however I came across a few things that I just couldn&rsquo;t pass up.</p>
 
 <p><strong>More fun with Experts Exchange</strong></p>
 
-<p>I was recently informed that my <a href="/archive/2007/08/10/experts-exchange-encryption/" title="Unhide Experts Exchange script">Unhide Experts Exchange Greasemonkey script</a> had become obsolete. Reader <a href="http://community.zdnet.co.uk/blog/0,1000000567,2000342184b,00.htm" title="nico5038's blog covering issues with Experts Exchange">nico5038</a> points out in a comment that Experts Exchange now hides all comments from users unless they&#8217;re logged in.</p>
+<p>I was recently informed that my <a href="/archive/2007/08/10/experts-exchange-encryption/" title="Unhide Experts Exchange script">Unhide Experts Exchange Greasemonkey script</a> had become obsolete. Reader <a href="http://community.zdnet.co.uk/blog/0,1000000567,2000342184b,00.htm" title="nico5038's blog covering issues with Experts Exchange">nico5038</a> points out in a comment that Experts Exchange now hides all comments from users unless they&rsquo;re logged in.</p>
 
-<p>I would have been content to leave it at that until my friend <a href="http://www.seancolombo.com" title="Sean Colombo's blog.">Sean</a> pointed out that Experts Exchange seems to be “<a href="http://en.wikipedia.org/wiki/Cloaking" title="Wikipedia article on Cloaking">cloaking</a>” its answer pages. What this means is that when a search spider visits the site Experts-Exchange they will present a page that has all comments visible. However, if you or I go visit the site, the comments are hidden. This isn&#8217;t exactly the nicest thing to do on the web these days, so I&#8217;ve decided to write a new Experts-Exchange Greasemonkey script to fetch the hidden text from one of many different potential sources and replace the hidden text with the text that we should all be able to see.</p>
+<p>I would have been content to leave it at that until my friend <a href="http://www.seancolombo.com" title="Sean Colombo's blog.">Sean</a> pointed out that Experts Exchange seems to be “<a href="http://en.wikipedia.org/wiki/Cloaking" title="Wikipedia article on Cloaking">cloaking</a>” its answer pages. What this means is that when a search spider visits the site Experts-Exchange they will present a page that has all comments visible. However, if you or I go visit the site, the comments are hidden. This isn&rsquo;t exactly the nicest thing to do on the web these days, so I&rsquo;ve decided to write a new Experts-Exchange Greasemonkey script to fetch the hidden text from one of many different potential sources and replace the hidden text with the text that we should all be able to see.</p>
 
-<p>Edit: They aren&#8217;t cloaking they&#8217;re just appending the comments to the end of their page. In any case grabbing a cached version of the page will help stave off any other awkward practices they use in the future.</p>
+<p>Edit: They aren&rsquo;t cloaking they&rsquo;re just appending the comments to the end of their page. In any case grabbing a cached version of the page will help stave off any other awkward practices they use in the future.</p>
 
-<p>I&#8217;ll update again tomorrow with the script once its been tested.</p>
+<p>I&rsquo;ll update again tomorrow with the script once its been tested.</p>
 
 <p>In the mean time enjoy a Happy Halloween!</p>
 </div>
@@ -325,11 +326,11 @@
 
   <div class="entry-content"><p>It would seem that Experts Exchange has changed their free access strategy. Where they would once display the normal solutions to a question hidden under a weak <a href="/archive/2007/08/10/experts-exchange-encryption/" title="Expets Exchange Encryption">rot13</a> encryption, they have finally chosen to hide the articles all out unless one signs up for an account.</p>
 
-<p>I for one welcome the change. Since it was their intention to only provide answers to registered users in the first place, moving away from obfuscated text helps clarify the site&#8217;s goals.</p>
+<p>I for one welcome the change. Since it was their intention to only provide answers to registered users in the first place, moving away from obfuscated text helps clarify the site&rsquo;s goals.</p>
 
-<p>As a result of this site change I&#8217;ve been asked by a number of anonymous visitors to my site to rewrite my script to fetch the answers to an article so they don&#8217;t have to log in. I would like to make it clear that given the sites new design, that a script to display the answers is no longer possible. As such no effort will be put forth to do so.</p>
+<p>As a result of this site change I&rsquo;ve been asked by a number of anonymous visitors to my site to rewrite my script to fetch the answers to an article so they don&rsquo;t have to log in. I would like to make it clear that given the sites new design, that a script to display the answers is no longer possible. As such no effort will be put forth to do so.</p>
 
-<p>Sorry to anybody who had their hopes up, but you can&#8217;t un-hide what isn&#8217;t there.</p>
+<p>Sorry to anybody who had their hopes up, but you can&rsquo;t un-hide what isn&rsquo;t there.</p>
 </div>
   
   
@@ -367,15 +368,15 @@
   </header>
 
 
-  <div class="entry-content"><p>Over the past few weeks I&#8217;ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I&#8217;m curious about how useful they will turn out to be. I&#8217;ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
+  <div class="entry-content"><p>Over the past few weeks I&rsquo;ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I&rsquo;m curious about how useful they will turn out to be. I&rsquo;ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
 
 <p>With such a positive opinion about the potential use of continuations, it surprises my colleagues to learn that I am very wary of their actual use. I find myself asking, or being asked, the same question again and again.</p>
 
-<p><strong>What&#8217;s wrong with continuations?</strong></p>
+<p><strong>What&rsquo;s wrong with continuations?</strong></p>
 
-<p>Quite frankly, continuations remind me too much of the &#8220;GOTO&#8221; statement. Continuations, as with GOTOs, have their potential uses. However, I feel that the problems inherent in using continuations outweigh the benefits.</p>
+<p>Quite frankly, continuations remind me too much of the &ldquo;GOTO&rdquo; statement. Continuations, as with GOTOs, have their potential uses. However, I feel that the problems inherent in using continuations outweigh the benefits.</p>
 
-<p>From what I&#8217;ve gathered from my individual conversations, continuations are useful in a numer of ways.</p>
+<p>From what I&rsquo;ve gathered from my individual conversations, continuations are useful in a numer of ways.</p>
 
 <ul>
 <li>First, in generators.</li>
@@ -384,23 +385,23 @@
 </ul>
 
 
-<p>Their use as a part of generators is obvious, even if only made evident through the number of times the Python Fibonacci generator has been published as an example of the use of a continuation. Despite this, I don&#8217;t find myself creating and using generators in my every day code. Generators may be helpful, but using one seems like more of an occasional convenience than the rule.</p>
+<p>Their use as a part of generators is obvious, even if only made evident through the number of times the Python Fibonacci generator has been published as an example of the use of a continuation. Despite this, I don&rsquo;t find myself creating and using generators in my every day code. Generators may be helpful, but using one seems like more of an occasional convenience than the rule.</p>
 
-<p>Closures on the other hand are something I use every day. My job involves a fair amount of web application development which results in a good deal of Javascript development. I will openly admit that I would be lost without  closures. Closures are invaluable when dealing with things such as binding execution to event handling. Without closures, some of the things I do might very well be impossible given Javascript&#8217;s event system design. Then again, Javascript was designed with closures in mind, so one could very well consider their use a moot point.</p>
+<p>Closures on the other hand are something I use every day. My job involves a fair amount of web application development which results in a good deal of Javascript development. I will openly admit that I would be lost without  closures. Closures are invaluable when dealing with things such as binding execution to event handling. Without closures, some of the things I do might very well be impossible given Javascript&rsquo;s event system design. Then again, Javascript was designed with closures in mind, so one could very well consider their use a moot point.</p>
 
-<p>The use of continuations for state management may not be as apparent as the previous examples. For an example, one need only look as far as the <a href="http://www.seaside.st/" title="Seaside: A Continuation Based Web Framework">Seaside</a> web framework. Seaside is a continuation based web framework which takes the stance that one should <a href="http://www.seaside.st/documentation/videos?16&amp;_k=jWLNbTUu&amp;_n&amp;_s=URoqQLYxrnXYKHZb" title="As stated by Lukas Renggli in his talk ">&#8220;share as much state as possible&#8221;</a>. In essence, the web framework itself keeps track of the sessions. These sessions are tied to a hash of continuations, each representing a state in the current application&#8217;s logical flow. The web application URL is not meaningful and contains little more than a reference ID to the current continuation. When you render a new page, a new continuation is generated and a reference to it is pushed into a hash somewhere for fetching later. That way if you hit the back button, going back to a previous page, the page will reference the previous continuation. When that continuation is used, your application flow would start from where you left off on that previous page.</p>
+<p>The use of continuations for state management may not be as apparent as the previous examples. For an example, one need only look as far as the <a href="http://www.seaside.st/" title="Seaside: A Continuation Based Web Framework">Seaside</a> web framework. Seaside is a continuation based web framework which takes the stance that one should <a href="http://www.seaside.st/documentation/videos?16&amp;_k=jWLNbTUu&amp;_n&amp;_s=URoqQLYxrnXYKHZb" title="As stated by Lukas Renggli in his talk ">&ldquo;share as much state as possible&rdquo;</a>. In essence, the web framework itself keeps track of the sessions. These sessions are tied to a hash of continuations, each representing a state in the current application&rsquo;s logical flow. The web application URL is not meaningful and contains little more than a reference ID to the current continuation. When you render a new page, a new continuation is generated and a reference to it is pushed into a hash somewhere for fetching later. That way if you hit the back button, going back to a previous page, the page will reference the previous continuation. When that continuation is used, your application flow would start from where you left off on that previous page.</p>
 
 <p>All of a sudden the back button is useful!</p>
 
-<p>Seaside has found an incredibly ingenious way to manage session state. At the same time, I believe it&#8217;s important to remember that while you gain automatic session state management, you lose some rather nice perks. The first thing I would miss while using Seaside would be meaningful URLs. In addition, your web framework is maintaining an ever increasing amount of state for each session. For some reason I get the feeling that this solution isn&#8217;t as great as it initially seemed.</p>
+<p>Seaside has found an incredibly ingenious way to manage session state. At the same time, I believe it&rsquo;s important to remember that while you gain automatic session state management, you lose some rather nice perks. The first thing I would miss while using Seaside would be meaningful URLs. In addition, your web framework is maintaining an ever increasing amount of state for each session. For some reason I get the feeling that this solution isn&rsquo;t as great as it initially seemed.</p>
 
 <p><strong>With so many good examples, why be so wary of continuations?</strong></p>
 
-<p>It is true that there are many examples of continuations used for some very interesting, and often ingenious tasks. However, I still remember seeing GOTOs used in some of the most interesting and ingenious examples of code I have ever seen. For a proper example of the type of &#8220;ingenious&#8221; and &#8220;interesting&#8221; code I speak of, I refer you to <a href="http://catb.org/jargon/html/story-of-mel.html" title="The Story of Mel from The Jargon File.">&#8220;The Story of Mel&#8221;</a>.</p>
+<p>It is true that there are many examples of continuations used for some very interesting, and often ingenious tasks. However, I still remember seeing GOTOs used in some of the most interesting and ingenious examples of code I have ever seen. For a proper example of the type of &ldquo;ingenious&rdquo; and &ldquo;interesting&rdquo; code I speak of, I refer you to <a href="http://catb.org/jargon/html/story-of-mel.html" title="The Story of Mel from The Jargon File.">&ldquo;The Story of Mel&rdquo;</a>.</p>
 
 <p>So Internet, I ask you, what is the deal? Are continuations just the current topic fad that they seem to be to me? Or are continuations something people are actually very excited about? Should I look forward to finding more examples of good continuation practice? Or will I soon be suggesting that programmers avoid both GOTOs and continuations because they encourage lazy or hard to manage code? Could their possibly be a happy medium?</p>
 
-<p>Forgive me for remaining skeptical, but I just can&#8217;t shake the feeling that continuations aren&#8217;t the magical entity that people seem to keep telling me they are.  I&#8217;ll leave it up to history (or the Internet) to decide&#8230;</p>
+<p>Forgive me for remaining skeptical, but I just can&rsquo;t shake the feeling that continuations aren&rsquo;t the magical entity that people seem to keep telling me they are.  I&rsquo;ll leave it up to history (or the Internet) to decide&hellip;</p>
 
 <p>Addendum: It would seem that <a href="http://www.wikipedia.org/wiki/Continuation#Disadvantages" title="Wikipedia Continuations Article - Disadvantages">Wikipedia already agrees</a> with me that continuations are really just “the functional expression of the GOTO statement&#8221;.</p>
 </div>
@@ -446,7 +447,7 @@
 
 <p>Then I realized that my idea sucked harder than a vacuum.</p>
 
-<p>Since then the domain has been sitting around gathering dust, and generally wasting space. People have suggested that I sell the domain, but I&#8217;ve decided to just give it to the first person to  give me a good reason why it should be theirs.</p>
+<p>Since then the domain has been sitting around gathering dust, and generally wasting space. People have suggested that I sell the domain, but I&rsquo;ve decided to just give it to the first person to  give me a good reason why it should be theirs.</p>
 
 <p><strong>How can I get it from you?</strong></p>
 
@@ -456,15 +457,15 @@
 </ul>
 
 
-<p>Ok, so the reason doesn&#8217;t have to be amazing. Your reason just needs to beat the many &#8220;because I want it&#8221; reasons I&#8217;ve been receiving.</p>
+<p>Ok, so the reason doesn&rsquo;t have to be amazing. Your reason just needs to beat the many &ldquo;because I want it&rdquo; reasons I&rsquo;ve been receiving.</p>
 
 <p>Want to do something good with the domain? Going to start a business? Want to own your first domain and think it sounds neat?</p>
 
 <p>Let me know!</p>
 
-<p>Contact me via my e-mail address at coderjoe[squiggily-a]coderjoe.net with your reason, and if I like it we&#8217;ll get the transfer process started.</p>
+<p>Contact me via my e-mail address at coderjoe[squiggily-a]coderjoe.net with your reason, and if I like it we&rsquo;ll get the transfer process started.</p>
 
-<p>I&#8217;ll leave this post up for as long as it takes to catch someones interest.  Once the domain has a new owner I&#8217;ll note it at the top of this post.</p>
+<p>I&rsquo;ll leave this post up for as long as it takes to catch someones interest.  Once the domain has a new owner I&rsquo;ll note it at the top of this post.</p>
 </div>
   
   
@@ -502,17 +503,17 @@
   </header>
 
 
-  <div class="entry-content"><blockquote><p><strong>NOTE: The methods listed below are no longer necessary! Experts Exchange has moved to providing the answers in plain text at the bottom of the page. Just look past the first set of &#8220;answers&#8221;, past the advertisements and link farm, and you&#8217;ll see them.</strong></p></blockquote>
+  <div class="entry-content"><blockquote><p><strong>NOTE: The methods listed below are no longer necessary! Experts Exchange has moved to providing the answers in plain text at the bottom of the page. Just look past the first set of &ldquo;answers&rdquo;, past the advertisements and link farm, and you&rsquo;ll see them.</strong></p></blockquote>
 
 <p><strong>What is Experts Exchange?</strong></p>
 
-<p>If you&#8217;ve ever tried to look up some sort of technical information on the internet, you&#8217;ve likely come across the <a href="http://www.experts-exchange.com" title="The Experts Exchange website.">Experts Exchange</a>. Experts Exchange is a site on which people can ask questions about a variably infinite number of technical topics and receive a range of answers from experts purported experts.</p>
+<p>If you&rsquo;ve ever tried to look up some sort of technical information on the internet, you&rsquo;ve likely come across the <a href="http://www.experts-exchange.com" title="The Experts Exchange website.">Experts Exchange</a>. Experts Exchange is a site on which people can ask questions about a variably infinite number of technical topics and receive a range of answers from experts purported experts.</p>
 
-<p>The site then allows the user to select a &#8220;best answer&#8221; earning the answer&#8217;s author extra points. Points can be redeemed for a better type of account and access to other things on the site.</p>
+<p>The site then allows the user to select a &ldquo;best answer&rdquo; earning the answer&rsquo;s author extra points. Points can be redeemed for a better type of account and access to other things on the site.</p>
 
 <p>In this way the site is user supported, without the experts there would be no exchange of answers.</p>
 
-<p><strong>What&#8217;s your problem with Experts Exchange?</strong></p>
+<p><strong>What&rsquo;s your problem with Experts Exchange?</strong></p>
 
 <p>As an incentive to sign up, the questions asked on experts exchange are visible to all, however, the answers are obscured in two rather tricky ways.</p>
 
@@ -522,7 +523,7 @@
 </ol>
 
 
-<p>As a person just looking for the answer to my question I&#8217;m often frustrated by the number of times I stumble across an experts exchange thread which might answer my question, but is obscured.</p>
+<p>As a person just looking for the answer to my question I&rsquo;m often frustrated by the number of times I stumble across an experts exchange thread which might answer my question, but is obscured.</p>
 
 <p><strong>What are you going to do about it?</strong></p>
 
@@ -536,15 +537,15 @@
 
 <p><strong>Will this destroy Experts Exchange?</strong></p>
 
-<p>For those of you worried that this might just ruin the Experts Exchange, fear not. In their infinite wisdom they decided to completely omit the &#8220;selected answers&#8221; for the questions unless you&#8217;re logged in.</p>
+<p>For those of you worried that this might just ruin the Experts Exchange, fear not. In their infinite wisdom they decided to completely omit the &ldquo;selected answers&rdquo; for the questions unless you&rsquo;re logged in.</p>
 
 <p>In this way there is still incentive to get an account and contribute!</p>
 
 <p>In addition, I do not believe that my little <a href="http://www.greasespot.net/" title="The Greasemonkey blog.">Greasemonkey</a> script will ever gain enough momentum to offset a significant portion of potential Experts Exchange visitors. If it ever did, all they would have to do is change their cypher or insert dummy text.</p>
 
-<p>Any change to the cypher algorithm will be taken as a hint. (Also I&#8217;m way too lazy to implement anything other than rot13 instead of just logging in.)</p>
+<p>Any change to the cypher algorithm will be taken as a hint. (Also I&rsquo;m way too lazy to implement anything other than rot13 instead of just logging in.)</p>
 
-<p>However, if you&#8217;re as lazy as I (or rather as lazy as one needs to be to write a Greasemonkey script to avoid logging in&#8230;), and would prefer not to manage yet another user name and password combination, you may use the script above.</p>
+<p>However, if you&rsquo;re as lazy as I (or rather as lazy as one needs to be to write a Greasemonkey script to avoid logging in&hellip;), and would prefer not to manage yet another user name and password combination, you may use the script above.</p>
 
 <p>Note: The Greasemonkey script was updated on Sunday August 12th at 1:00am. It now properly takes care of the &lt;br&gt; characters that they do not rot13.</p>
 </div>
@@ -586,30 +587,30 @@
 
   <div class="entry-content"><p>I was asked recently what resources I use as references while developing Nintendo DS homebrew.</p>
 
-<p>As such I&#8217;ve decided to collect my favorite links in a single post for your enjoyment.  ( Please keep in mind that I am also new to the Ninendo DS development scene, and as such this post is by no means a complete list of all of the resources available to you. )</p>
+<p>As such I&rsquo;ve decided to collect my favorite links in a single post for your enjoyment.  ( Please keep in mind that I am also new to the Ninendo DS development scene, and as such this post is by no means a complete list of all of the resources available to you. )</p>
 
-<p>If you know of any killer resources that I&#8217;m missing please feel free to let me know and I&#8217;ll add them to the list.</p>
+<p>If you know of any killer resources that I&rsquo;m missing please feel free to let me know and I&rsquo;ll add them to the list.</p>
 
 <p><strong> Hardware References:</strong></p>
 
 <ul>
-<li><a href="http://www.bottledlight.com/ds/" title="More information than you'd ever need to know about the Nintendo DS's hardware.">NDSTech Wiki</a> - The de-facto Nintendo DS Hardware Doc.</li>
-<li><a href="http://www.work.de/nocash/gbatek.htm" title="The GBATek GBA hardware documentation, with a little bit of information about the NDS as well.">GBATek Specifications</a> - The de-facto GBA Hardware doc (with some NDS thrown in for good measure)</li>
+<li><a href="http://www.bottledlight.com/ds/" title="More information than you'd ever need to know about the Nintendo DS's hardware.">NDSTech Wiki</a> &ndash; The de-facto Nintendo DS Hardware Doc.</li>
+<li><a href="http://www.work.de/nocash/gbatek.htm" title="The GBATek GBA hardware documentation, with a little bit of information about the NDS as well.">GBATek Specifications</a> &ndash; The de-facto GBA Hardware doc (with some NDS thrown in for good measure)</li>
 </ul>
 
 
 <p><strong>Tutorials: </strong></p>
 
 <ul>
-<li><a href="http://www.dev-scene.com/NDS/Tutorials" title="Dev-Scene. com's programming tutorials. While incomplete, the sections that are finished are very useful.">dev-scene. com tutorials</a> - The official dev-scene. com tutorials. Incomplete but thorough.</li>
-<li><a href="http://www.patatersoft.info/manual.php" title="Provides a step by step look into Nintendo DS 2D game programming with example code.">PataterSoft Introduction to NDS Programming</a> - A step-by-step introduction to Nintendo DS 2D game development with examples.</li>
+<li><a href="http://www.dev-scene.com/NDS/Tutorials" title="Dev-Scene. com's programming tutorials. While incomplete, the sections that are finished are very useful.">dev-scene. com tutorials</a> &ndash; The official dev-scene. com tutorials. Incomplete but thorough.</li>
+<li><a href="http://www.patatersoft.info/manual.php" title="Provides a step by step look into Nintendo DS 2D game programming with example code.">PataterSoft Introduction to NDS Programming</a> &ndash; A step-by-step introduction to Nintendo DS 2D game development with examples.</li>
 </ul>
 
 
 <p><strong>Library References:</strong></p>
 
 <ul>
-<li><a href="http://devkitpro.sourceforge.net/devkitProWiki/libnds/index.html" title="The libnds doxygen documentation.">libnds documentation</a> - Libnds documentation as generated by doxygen. Excellent autodocs.</li>
+<li><a href="http://devkitpro.sourceforge.net/devkitProWiki/libnds/index.html" title="The libnds doxygen documentation.">libnds documentation</a> &ndash; Libnds documentation as generated by doxygen. Excellent autodocs.</li>
 </ul>
 
 
@@ -617,11 +618,11 @@
 
 <ul>
 <li><a href="http://www.dev-scene.com" title="The dev-scene. com website.">dev-scene.com</a></li>
-<li><a href="http://www.drunkencoders.com" title="The Drunken Coders website.">Drunken Coders</a> - The guys who brought you many (if not all) of the nds-examples code!</li>
+<li><a href="http://www.drunkencoders.com" title="The Drunken Coders website.">Drunken Coders</a> &ndash; The guys who brought you many (if not all) of the nds-examples code!</li>
 </ul>
 
 
-<p>That&#8217;s all I&#8217;ve got for now. If you feel I&#8217;m missing something important please let me know!</p>
+<p>That&rsquo;s all I&rsquo;ve got for now. If you feel I&rsquo;m missing something important please let me know!</p>
 
 <p>Code away.</p>
 </div>
@@ -663,21 +664,21 @@
 
   <div class="entry-content"><p>First follow the instructions for creating a <a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">template based project</a>.</p>
 
-<p>Once you have that set up you&#8217;re almost finished.</p>
+<p>Once you have that set up you&rsquo;re almost finished.</p>
 
 <p>All you need to do is set up the relevant application binds so you can build your project from within <a href="http://notepad-plus.sourceforge.net/" title="Get Notepad++ here!">Notepad++</a>.</p>
 
 <p>Unfortunately Notepad++ is not an IDE, as such it was not designed to compile applications. In order to do this we need a few helper scripts that Notepad++ can call to build and clean our project.</p>
 
-<p>I&#8217;ve taken the liberty of creating a &#8220;build script&#8221; to help in this process.</p>
+<p>I&rsquo;ve taken the liberty of creating a &ldquo;build script&rdquo; to help in this process.</p>
 
-<p>Download the <a href="/images/posts/2007/07/npp-buildscript.zip" title="The Notepad++ Project Build Helper Script">Notepad++ Project Build Helper Script</a> file <a href="/images/posts/2007/07/npp-buildscript.zip" title="The Notepad++ Project Build Helper Script">here</a> and extract its contents to &#8220;c:\Program Files\Notepad++&#8221;.</p>
+<p>Download the <a href="/images/posts/2007/07/npp-buildscript.zip" title="The Notepad++ Project Build Helper Script">Notepad++ Project Build Helper Script</a> file <a href="/images/posts/2007/07/npp-buildscript.zip" title="The Notepad++ Project Build Helper Script">here</a> and extract its contents to &ldquo;c:\Program Files\Notepad++&rdquo;.</p>
 
 <p><strong> Note: Extracting this archive will remove any existing NppExec scripts you already have defined! Merge the configuration files together if you wish to maintain your existing scripts.</strong></p>
 
-<p>Extracting the archive will set up two NppExec scripts called &#8220;Build Project&#8221; and &#8220;Clean Project&#8221;. These two scripts will build and clean the project respectively. In addition it will bind the NppExec run dialog to F8.</p>
+<p>Extracting the archive will set up two NppExec scripts called &ldquo;Build Project&rdquo; and &ldquo;Clean Project&rdquo;. These two scripts will build and clean the project respectively. In addition it will bind the NppExec run dialog to F8.</p>
 
-<p>Now to compile your project just open a file in your projects source directory, hit F8, select &#8220;Build Project&#8221;, and click &#8220;Ok&#8221;</p>
+<p>Now to compile your project just open a file in your projects source directory, hit F8, select &ldquo;Build Project&rdquo;, and click &ldquo;Ok&rdquo;</p>
 
 <p>When you run the build script a command console will open in Notepad++ which will display the result of the build.</p>
 
@@ -716,7 +717,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info Beta Launch</a>
       </li>
     
       <li class="post">
@@ -724,7 +725,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A Little Turkey Day Coding!</a>
       </li>
     
   </ul>
@@ -739,7 +740,7 @@
   <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -760,29 +761,15 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("coderjoe", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
-  
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
 </section>
 
-
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
-<noscript>
-  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
-</noscript>
 
 
 <section>
@@ -795,7 +782,7 @@
     var coderwall = (function(){
       function render(options, badges){
         var fragment = '',
-            t = $(options.target)[0],
+            t = $(options.target),
             height = 65,
             width = 65,
             index;
@@ -806,13 +793,13 @@
           fragment += '</a>';
         }
 
-        t.innerHTML = fragment;
+        t.html(fragment);
       }
       return {
         showBadges: function(options){
           $.ajax({
               url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
+            , dataType: 'jsonp'
             , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
             , success: function(res) {
                 render(options, res.data.badges);
@@ -822,21 +809,7 @@
       };
     })();
 
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
+    $(document).ready(function(){
       coderwall.showBadges({
         user: 'coderjoe',
         target: '#cw_badges'
@@ -856,15 +829,12 @@
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/110889592930310051971?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
+<noscript>
+  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+  </a>
+</noscript>
 
 
   
@@ -873,7 +843,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  Copyright &copy; 2013 - Joe "coderjoe" Bauser -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -912,7 +882,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

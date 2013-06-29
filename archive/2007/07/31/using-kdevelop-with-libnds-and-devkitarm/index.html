@@ -9,7 +9,7 @@
   <meta name="author" content="Joe "coderjoe" Bauser">
 
   
-  <meta name="description" content="KDevelop is a full featured IDE for the K Desktop Environment. In order to take full advantage of the facilities KDevelop has to offer, we&#8217;re &hellip;">
+  <meta name="description" content="KDevelop is a full featured IDE for the K Desktop Environment. In order to take full advantage of the facilities KDevelop has to offer, we&rsquo;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/">
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -120,27 +121,27 @@
 
 <div class="entry-content"><p><a href="http://www.kdevelop.org/" title="The official KDevelop website.">KDevelop</a> is a full featured IDE for the <a href="http://www.kde.org/" title="The official K Desktop Environment website.">K Desktop Environment</a>.</p>
 
-<p>In order to take full advantage of the facilities KDevelop has to offer, we&#8217;re going to take an existing template based project, and import it as a Makefile project in KDevelop. In order to do this, first <a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Instructions on setting up a template based project.">create a template based project</a> as described in the &#8221;<a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">Using the provided template Makefile</a>&#8221; tutorial.</p>
+<p>In order to take full advantage of the facilities KDevelop has to offer, we&rsquo;re going to take an existing template based project, and import it as a Makefile project in KDevelop. In order to do this, first <a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Instructions on setting up a template based project.">create a template based project</a> as described in the &ldquo;<a href="/archive/2007/07/30/using-the-libnds-example-template-makefiles/" title="Using the provided Makefile based templates.">Using the provided template Makefile</a>&rdquo; tutorial.</p>
 
-<p>Now that you have your project directory set up it&#8217;s time to import the directory into KDevelop and make a KDevelop project file.</p>
+<p>Now that you have your project directory set up it&rsquo;s time to import the directory into KDevelop and make a KDevelop project file.</p>
 
-<p>To do this, click the &#8220;Project&#8221; menu, and then the &#8220;Import Existing&#8230;&#8221; to bring up the import existing project dialog. Select the project directory you made in the first part of this tutorial and give the project a name.</p>
+<p>To do this, click the &ldquo;Project&rdquo; menu, and then the &ldquo;Import Existing&hellip;&rdquo; to bring up the import existing project dialog. Select the project directory you made in the first part of this tutorial and give the project a name.</p>
 
-<p>For project type you&#8217;re going to want to select either &#8220;Generic C Project (Custom Makefiles)&#8221; or &#8220;Generic C++ Project (Custom Makefiles)&#8221; your choice of C or C++ doesn&#8217;t matter too much at this juncture, so just stick with C. We select &#8220;Custom Makefiles&#8221; because we want to use the provided nds-example template makefile.</p>
+<p>For project type you&rsquo;re going to want to select either &ldquo;Generic C Project (Custom Makefiles)&rdquo; or &ldquo;Generic C++ Project (Custom Makefiles)&rdquo; your choice of C or C++ doesn&rsquo;t matter too much at this juncture, so just stick with C. We select &ldquo;Custom Makefiles&rdquo; because we want to use the provided nds-example template makefile.</p>
 
 <p>Finally enter your name and e-mail address and click next. When it asks you if you want to populate the project with files from the source, go ahead and click yes.</p>
 
 <p>You now have a project file for your project directory!</p>
 
-<p>Unfortunately you&#8217;re not done yet. If you attempted to compile your project now you&#8217;d notice that you wouldn&#8217;t get very far. KDevelop will start with a clean environment for the project, so we need to set DEVKITARM and DEVKITPRO in our project.</p>
+<p>Unfortunately you&rsquo;re not done yet. If you attempted to compile your project now you&rsquo;d notice that you wouldn&rsquo;t get very far. KDevelop will start with a clean environment for the project, so we need to set DEVKITARM and DEVKITPRO in our project.</p>
 
-<p>To do this click &#8220;Project&#8221; then &#8220;Project Options&#8221; then select &#8220;Build Options&#8221; and finally the &#8220;Make&#8221; tab. There will be a section for environment variables. Add the appropriate variables for DEVKITARM and DEVKITPRO and click &#8220;Ok&#8221;. At this point your project should now successfully compile!</p>
+<p>To do this click &ldquo;Project&rdquo; then &ldquo;Project Options&rdquo; then select &ldquo;Build Options&rdquo; and finally the &ldquo;Make&rdquo; tab. There will be a section for environment variables. Add the appropriate variables for DEVKITARM and DEVKITPRO and click &ldquo;Ok&rdquo;. At this point your project should now successfully compile!</p>
 
-<p>You could start developing right now, but you&#8217;d quickly notice that code completion doesn&#8217;t work for types and functions. This is because KDevelop needs to be told where the devkitARM and libnds include files reside.</p>
+<p>You could start developing right now, but you&rsquo;d quickly notice that code completion doesn&rsquo;t work for types and functions. This is because KDevelop needs to be told where the devkitARM and libnds include files reside.</p>
 
-<p>To set this select &#8220;Project&#8221; then &#8220;Project Options&#8221; and choose &#8220;C++ Support&#8221;. At the bottom of the dialog there is a section for custom &#8220;Code Completion Databases&#8221; this is really just a collection of paths to the include files you&#8217;ll be using to develop your application.</p>
+<p>To set this select &ldquo;Project&rdquo; then &ldquo;Project Options&rdquo; and choose &ldquo;C++ Support&rdquo;. At the bottom of the dialog there is a section for custom &ldquo;Code Completion Databases&rdquo; this is really just a collection of paths to the include files you&rsquo;ll be using to develop your application.</p>
 
-<p>Create one of type &#8220;KDevelop Custom Directory PCS Importer&#8221; and provide the paths to the devkitARM and libnds include directories. If you followed the environment instructions exactly these should be:</p>
+<p>Create one of type &ldquo;KDevelop Custom Directory PCS Importer&rdquo; and provide the paths to the devkitARM and libnds include directories. If you followed the environment instructions exactly these should be:</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -149,7 +150,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Click next and name the PCS importer something witty and original like&#8230; oh&#8230; &#8220;NDS Homebrew Includes&#8221;.</p>
+<p>Click next and name the PCS importer something witty and original like&hellip; oh&hellip; &ldquo;NDS Homebrew Includes&rdquo;.</p>
 
 <p>Click ok and you should now have working code completion!A word of warning, there is a known issue with the current stable KDevelop (3. 2 tree) which causes typedefs for structs of the form below not to work.</p>
 
@@ -164,13 +165,13 @@
 
 <p>Any structs declared as such will not complete correctly. In addition, KDevelop will not code complete #define variables such as the VRAM_A_* types. I have yet to find a way to fix this.</p>
 
-<p>So you can compile and code complete. But I&#8217;ll bet my dinner that you want to be able to actually EXECUTE our compiled source so that the &#8220;Run&#8221; command does what you would expect right? Well, if you&#8217;ve installed an emulator you can tell KDevelop to use that emulator to execute your nds file.</p>
+<p>So you can compile and code complete. But I&rsquo;ll bet my dinner that you want to be able to actually EXECUTE our compiled source so that the &ldquo;Run&rdquo; command does what you would expect right? Well, if you&rsquo;ve installed an emulator you can tell KDevelop to use that emulator to execute your nds file.</p>
 
-<p>To set the emulator as your executable click &#8220;Project&#8221; and &#8220;Project Options&#8221; then select &#8220;Run Options&#8221; enter the full path to your emulator on the executable line, and in the arguments line give the full path to your project NDS file. In most cases this will just be the name of your project directory with .nds at the end. For our helloworld project the resulting file will be &#8220;helloworld.nds&#8221;.</p>
+<p>To set the emulator as your executable click &ldquo;Project&rdquo; and &ldquo;Project Options&rdquo; then select &ldquo;Run Options&rdquo; enter the full path to your emulator on the executable line, and in the arguments line give the full path to your project NDS file. In most cases this will just be the name of your project directory with .nds at the end. For our helloworld project the resulting file will be &ldquo;helloworld.nds&rdquo;.</p>
 
 <p>You now have a full featured KDevelop project!</p>
 
-<p><strong>One word of warning: If you did set an executable in the Run Options, then every time you open up the project options KDevelop will screw this section up. You&#8217;ll need to edit the file to remove the &#8220;file://&#8221; that KDevelop inserts at the beginning.</strong></p>
+<p><strong>One word of warning: If you did set an executable in the Run Options, then every time you open up the project options KDevelop will screw this section up. You&rsquo;ll need to edit the file to remove the &ldquo;file://&rdquo; that KDevelop inserts at the beginning.</strong></p>
 </div>
 
 
@@ -207,23 +208,11 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
-  
-  
-    <a class="FlattrButton" style="display:none;"
-  title="Using KDevelop with libnds and devkitARM"
-  data-flattr-uid="coderjoe"
-  data-flattr-tags="C/C++nintendo-ds-homebrewtutorialdevkitprodevkitarmkdeveloplinuxsdk"
-  data-flattr-button="compact"
-  data-flattr-category="text"
-  href="http://coderjoe.net/archive/2007/07/31/using-kdevelop-with-libnds-and-devkitarm/">
-  
-</a>
-
   
 </div>
 
@@ -262,7 +251,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info Beta Launch</a>
       </li>
     
       <li class="post">
@@ -270,7 +259,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A Little Turkey Day Coding!</a>
       </li>
     
   </ul>
@@ -285,7 +274,7 @@
   <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -306,29 +295,15 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("coderjoe", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
-  
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
 </section>
 
-
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
-<noscript>
-  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
-</noscript>
 
 
 <section>
@@ -341,7 +316,7 @@
     var coderwall = (function(){
       function render(options, badges){
         var fragment = '',
-            t = $(options.target)[0],
+            t = $(options.target),
             height = 65,
             width = 65,
             index;
@@ -352,13 +327,13 @@
           fragment += '</a>';
         }
 
-        t.innerHTML = fragment;
+        t.html(fragment);
       }
       return {
         showBadges: function(options){
           $.ajax({
               url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
+            , dataType: 'jsonp'
             , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
             , success: function(res) {
                 render(options, res.data.badges);
@@ -368,21 +343,7 @@
       };
     })();
 
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
+    $(document).ready(function(){
       coderwall.showBadges({
         user: 'coderjoe',
         target: '#cw_badges'
@@ -402,15 +363,12 @@
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/110889592930310051971?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
+<noscript>
+  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+  </a>
+</noscript>
 
 
   
@@ -420,7 +378,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  Copyright &copy; 2013 - Joe "coderjoe" Bauser -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -462,7 +420,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

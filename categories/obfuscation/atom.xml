@@ -4,7 +4,7 @@
   <title><![CDATA[Category: obfuscation | coderjoe.net]]></title>
   <link href="http://coderjoe.net/categories/obfuscation/atom.xml" rel="self"/>
   <link href="http://coderjoe.net/"/>
-  <updated>2012-10-28T14:12:02-04:00</updated>
+  <updated>2013-06-29T18:22:52-04:00</updated>
   <id>http://coderjoe.net/</id>
   <author>
     <name><![CDATA[Joe "coderjoe" Bauser]]></name>
@@ -18,22 +18,22 @@
     <link href="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/"/>
     <updated>2012-07-26T19:01:00-04:00</updated>
     <id>http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem</id>
-    <content type="html"><![CDATA[<p>Last week I stumbled across the <a href="http://openstack.appfog.com">"AppFog OpenStack Birthday Contest"</a> via Twitter.</p>
+    <content type="html"><![CDATA[<p>Last week I stumbled across the <a href="http://openstack.appfog.com">&ldquo;AppFog OpenStack Birthday Contest&rdquo;</a> via Twitter.</p>
 
-<p>I'd been quietly following AppFog's progress since I received a PHPFog beta invite a year or two ago. At the time I hadn't had a reason to give their service a try since I wasn't a PHP guy. However, spurred by the allure of a coding contest and the large number of platforms AppFog supports, I finally had a reason to poke around!</p>
+<p>I&rsquo;d been quietly following AppFog&rsquo;s progress since I received a PHPFog beta invite a year or two ago. At the time I hadn&rsquo;t had a reason to give their service a try since I wasn&rsquo;t a PHP guy. However, spurred by the allure of a coding contest and the large number of platforms AppFog supports, I finally had a reason to poke around!</p>
 
-<p>Anticipating that I'd be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog <a href="http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/">recently showed</a> I wasn't wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.</p>
+<p>Anticipating that I&rsquo;d be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog <a href="http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/">recently showed</a> I wasn&rsquo;t wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.</p>
 
-<p>What I didn't expect was that I'd end up <a href="http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/">winning the competition</a>!</p>
+<p>What I didn&rsquo;t expect was that I&rsquo;d end up <a href="http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/">winning the competition</a>!</p>
 
-<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.</p>
+<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I&rsquo;ve decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.</p>
 
 <!--more-->
 
 
 <h2>An AppFog First Impression</h2>
 
-<p>My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as <a href="http://www.appfog.com">AppFog</a>. At first I was worried about the work required to configure an application, but AppFog's simple interface had me finished with the process before I knew I had started!</p>
+<p>My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as <a href="http://www.appfog.com">AppFog</a>. At first I was worried about the work required to configure an application, but AppFog&rsquo;s simple interface had me finished with the process before I knew I had started!</p>
 
 <p>After cloning an <a href="https://github.com/appfog/af-ruby-sinatra">example project</a> published by AppFog on github, installing the <a href="http://rubygems.org/gems/af">AppFog gem</a>, and running a deploy I was done! Zero to functioning application in almost exactly 2 minutes!</p>
 
@@ -41,11 +41,11 @@
 
 <h2>Some Speed Bumps</h2>
 
-<p>Unfortunately I can't say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.</p>
+<p>Unfortunately I can&rsquo;t say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.</p>
 
-<p>For the more difficult problems, the AppFog support team met or exceeded the customer service I'd grown accustom to from both <a href="http://dreamhost.com">Dreamhost</a> and <a href="http://linode.com">Linode</a>. With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn't paid them a cent!</p>
+<p>For the more difficult problems, the AppFog support team met or exceeded the customer service I&rsquo;d grown accustom to from both <a href="http://dreamhost.com">Dreamhost</a> and <a href="http://linode.com">Linode</a>. With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn&rsquo;t paid them a cent!</p>
 
-<p>Enough about problems... on to the code!</p>
+<p>Enough about problems&hellip; on to the code!</p>
 
 <h2>Creating a Contest Submission</h2>
 
@@ -54,7 +54,7 @@
 <ol>
 <li>The code must be pretty.</li>
 <li>The code must be obfuscated in at least two separate ways.</li>
-<li>The final "Happy Birthday OpenStack" text must exist in some way outside of the source code itself.</li>
+<li>The final &ldquo;Happy Birthday OpenStack&rdquo; text must exist in some way outside of the source code itself.</li>
 </ol>
 
 
@@ -83,9 +83,9 @@ send(%w(ale lava).reverse.join.split('').uniq.join.reverse.to_sym,c.split(/0x/)[
 c = %w(A bunch of characters with whitespace).join
 </code></p>
 
-<p>The above uses Ruby's quoted array syntax to turn a bunch of whitespace separated strings into an array of values.</p>
+<p>The above uses Ruby&rsquo;s quoted array syntax to turn a bunch of whitespace separated strings into an array of values.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Quoted Array Example - quoted_example.rb </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Quoted Array Example &ndash; quoted_example.rb </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -111,11 +111,11 @@ c = %w(A bunch of characters with whitespace).join
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;The whitespace separated tokens become strings in the array&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="sx">%w(one two three)</span> <span class="c1"># =&gt; [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]&lt;/p&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="sx">%w(one two three)</span> <span class="c1"># =&gt; [&amp;ldquo;one&amp;rdquo;, &amp;ldquo;two&amp;rdquo;, &amp;ldquo;three&amp;rdquo;]&lt;/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Both</span> <span class="n">using</span> <span class="n">an</span> <span class="n">uppercase</span> <span class="n">W</span> <span class="n">will</span> <span class="n">function</span> <span class="n">the</span> <span class="n">same</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;%W(one two three) # =&gt; [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'><span class="sr">&lt;p&gt;%W(one two three) # =&gt; [&amp;ldquo;one&amp;rdquo;, &amp;ldquo;two&amp;rdquo;, &amp;ldquo;three&amp;rdquo;]&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">If</span> <span class="n">your</span> <span class="n">tokens</span> <span class="n">need</span> <span class="n">to</span> <span class="kp">include</span> <span class="n">parentheses</span> <span class="n">the</span> <span class="n">quoted</span> <span class="n">character</span> <span class="n">can</span> <span class="n">be</span> <span class="n">almost</span> <span class="n">any</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
 </span><span class='line'>
@@ -125,9 +125,9 @@ c = %w(A bunch of characters with whitespace).join
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;the same delimiter&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="sx">%w[one two three]</span> <span class="c1"># =&gt; [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</span>
-</span><span class='line'><span class="sx">%w!one two three!</span> <span class="c1"># =&gt; [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</span>
-</span><span class='line'><span class="sx">%w|one two three|</span> <span class="c1"># =&gt; [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="sx">%w[one two three]</span> <span class="c1"># =&gt; [&amp;ldquo;one&amp;rdquo;, &amp;ldquo;two&amp;rdquo;, &amp;ldquo;three&amp;rdquo;]</span>
+</span><span class='line'><span class="sx">%w!one two three!</span> <span class="c1"># =&gt; [&amp;ldquo;one&amp;rdquo;, &amp;ldquo;two&amp;rdquo;, &amp;ldquo;three&amp;rdquo;]</span>
+</span><span class='line'><span class="sx">%w|one two three|</span> <span class="c1"># =&gt; [&amp;ldquo;one&amp;rdquo;, &amp;ldquo;two&amp;rdquo;, &amp;ldquo;three&amp;rdquo;]</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>This means that the code takes the humongous block of gibberish and turns it into a huge array of tokens. The <code>join</code> method is immediately called on the response, meaning the variable <code>c</code> contains a large string of characters.</p>
@@ -144,7 +144,7 @@ XYZZY = __FILE__
 
 <p>The last line is the meat and potatoes of this file. It has the job of interpreting the huge block of text! If we create some temporary variables we can see what is going on a little easier.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Reading the Gibberish - gibberish.rb </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Reading the Gibberish &ndash; gibberish.rb </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -183,13 +183,13 @@ XYZZY = __FILE__
 <span class='line-number'>36</span>
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;We&#39;ve seen %w() once before already so we know what that does&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'><span class="sr">&lt;h1&gt;We&amp;rsquo;ve seen %w() once before already so we know what that does&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">methods</span> <span class="n">operate</span> <span class="n">on</span> <span class="n">that</span> <span class="n">value</span> <span class="n">producing</span> <span class="n">the</span> <span class="n">symbol</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;value :eval&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">arg1</span> <span class="o">=</span> <span class="sx">%w(ale lava)</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">join</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">uniq</span><span class="o">.</span><span class="n">join</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">to_sym</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">arg1</span> <span class="o">=</span> <span class="sx">%w(ale lava)</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">join</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span><span class="o">.</span><span class="n">uniq</span><span class="o">.</span><span class="n">join</span><span class="o">.</span><span class="n">reverse</span><span class="o">.</span><span class="n">to_sym</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;The second argument gets its value from the C variable defined at the top of the file.&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -210,7 +210,7 @@ XYZZY = __FILE__
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;arg2 = arg2.join&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Now</span> <span class="n">that</span> <span class="n">we</span> <span class="n">have</span> <span class="n">our</span> <span class="n">two</span> <span class="n">arguments</span><span class="p">,</span> <span class="n">they</span><span class="err">&#39;</span><span class="n">re</span> <span class="n">used</span> <span class="k">in</span> <span class="n">the</span> <span class="no">Object</span><span class="c1">#send method.&lt;/h1&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Now</span> <span class="n">that</span> <span class="n">we</span> <span class="n">have</span> <span class="n">our</span> <span class="n">two</span> <span class="n">arguments</span><span class="p">,</span> <span class="n">they</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="n">re</span> <span class="n">used</span> <span class="k">in</span> <span class="n">the</span> <span class="no">Object</span><span class="c1">#send method.&lt;/h1&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="no">Object</span><span class="c1">#send sends a given message to an object (in our case identified by the symbol&lt;/h1&gt;</span>
 </span><span class='line'>
@@ -219,7 +219,7 @@ XYZZY = __FILE__
 </span><span class='line'><span class="sr">&lt;p&gt;send( arg1, arg2 )</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Now we know what the obfuscated code is! It's a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string '0x'. It is being used as the value to <code>send(:eval,string)</code> which means it must be more ruby code!</p>
+<p>Now we know what the obfuscated code is! It&rsquo;s a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string &lsquo;0x&rsquo;. It is being used as the value to <code>send(:eval,string)</code> which means it must be more ruby code!</p>
 
 <p>Why did I do this? I had started with simple hex conversion, but I found I needed a larger canvas on which to draw my ASCII art, so the left shifting increased the hex values enough that I had a little more text to work with!</p>
 
@@ -229,7 +229,7 @@ XYZZY = __FILE__
 
 <p>The output of which is as follows:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sinatra Enters the Building - sinatra.rb </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sinatra Enters the Building &ndash; sinatra.rb </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -269,11 +269,11 @@ XYZZY = __FILE__
 <span class='line-number'>37</span>
 <span class='line-number'>38</span>
 <span class='line-number'>39</span>
-</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">require</span> <span class="s1">&#39;zlib&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;base64&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;coderay&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;uri&#39;</span>
-</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">zlib</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">base64</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">coderay</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">uri</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span><span class='line'><span class="nb">require</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">sinatra</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;module Wizardry&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -284,7 +284,7 @@ XYZZY = __FILE__
 </span><span class='line'>        <span class="s2">&quot;Ucu1Mbw+U0DbGjZeP+3JdnhF</span><span class="se">\n</span><span class="s2">aqjeaQeBKyBy5sKhJSzbU4z+hSyYoBpZA1sOXKC4DBvCXFQnyQCXwHkTPJyP</span><span class="se">\n</span><span class="s2">vTbgExcGmPH5ZUBFH6QG0skB6npa/e+nwuW6OWIGC+AO8ODzgt+tvMqnq0pN</span><span class="se">\n</span><span class="s2">gLIjU65cteemMlpwvEDjD7qfU6ahsnP8unG81nnevf99W66TyIN21gqgkznp</span><span class="se">\n</span><span class="s2">zowRSeTJFylFUKB4mmzFhxc7eE0dksLmOaayBv13mCCSyZQCGwDworrCYbBv</span><span class="se">\n</span><span class="s2">xbuB52nsNxxNBwaC+DajTw1TZrftBFGw3wf7TR4g1LlOyomra+YbLjVVpb7Z</span><span class="se">\n</span><span class="s2">Di7Cr5gl3mwaWy/FG74Vp5PH1rdyhoz2r1R76fsKrO06/90T71Ftcz+whgLg</span><span class="se">\n</span><span class="s2">9mt+XDxf2tSqWdRdSzMVfGU89hBmvkYYxzISMj0FFG3TX/ZxUAjwP91jNqNe&quot;</span>
 </span><span class='line'>    <span class="o">]</span>
 </span><span class='line'>
-</span><span class='line'>    <span class="nb">eval</span> <span class="no">Zlib</span><span class="o">::</span><span class="no">Inflate</span><span class="o">.</span><span class="n">inflate</span><span class="p">(</span><span class="no">Base64</span><span class="o">::</span><span class="n">decode64</span><span class="p">(</span><span class="n">iywRFqowCSzrNe</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">reverse</span><span class="p">))</span>
+</span><span class='line'>    <span class="nb">eval</span> <span class="ss">Zlib</span><span class="p">:</span><span class="ss">:Inflate</span><span class="o">.</span><span class="n">inflate</span><span class="p">(</span><span class="ss">Base64</span><span class="p">:</span><span class="ss">:decode64</span><span class="p">(</span><span class="n">iywRFqowCSzrNe</span><span class="o">[</span><span class="mi">0</span><span class="o">].</span><span class="n">reverse</span><span class="p">))</span>
 </span><span class='line'><span class="k">end</span>
 </span><span class='line'><span class="o">&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
 </span><span class='line'>
@@ -292,7 +292,7 @@ XYZZY = __FILE__
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;set :protection, except: :ip_spoofing&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">get</span> <span class="s1">&#39;/src&#39;</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">get</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/</span><span class="n">src</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;response.headers[&#39;i_has_a_secret&#39;] = URI.encode(&#39;=IQCg7GAG4MTJ5yCN&#39;)</span>
 </span><span class='line'><span class="sr">response.headers[&#39;lulz&#39;] = URI.encode(&quot;lllululuulull&quot;)</span>
@@ -301,7 +301,7 @@ XYZZY = __FILE__
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;p&gt;end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">get</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">/&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="k">do</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;content_type :txt</span>
 </span><span class='line'><span class="sr">Wizardry::do_some_magic( request )</span>
@@ -312,20 +312,20 @@ XYZZY = __FILE__
 
 <p>We now have some code which looks more like a standard Sinatra application!</p>
 
-<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code>get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I've taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
+<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code>get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I&rsquo;ve taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
 
 <p>There are a few portions of this code we should make note of:</p>
 
 <ol>
 <li>The first index of the array <code>iywRFqowCSzrNe</code> is a reversed base64 encoded zlib compressed chunk of Ruby code. It is reasonable to assume that the other two array locations may be similarly encoded.</li>
-<li>The /src path sets some response headers. Their purpose isn't immediately obvious.</li>
+<li>The /src path sets some response headers. Their purpose isn&rsquo;t immediately obvious.</li>
 <li>The definition of <code>XYZZY</code> in the original file is important. The value of <code>__FILE__</code> changes when it is located inside of a string being run through <code>eval</code>. Storing the value of <code>__FILE__</code> in <code>XYZZY</code> allowed this obfuscated code to keep track of the current file name.</li>
 </ol>
 
 
 <p>If we go ahead and print the value of the first array we find that the first array value executes the second array value, which in turn executes the third. De-obfuscating this code manually we end up with code similar to the following.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Array code 0  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Array code 0 </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -337,12 +337,12 @@ XYZZY = __FILE__
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;h1&gt;Fetches the value of the HTTP response header i_has_a_secret and stores it to the array&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;http://</span><span class="si">#{</span><span class="n">request</span><span class="o">.</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">request</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2">/src&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
-</span><span class='line'><span class="n">iywRFqowCSzrNe</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get_fields</span><span class="p">(</span><span class="s1">&#39;i_has_a_secret&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pop</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://#&quot;</span><span class="o">&gt;</span><span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="c1">#&lt;/a&gt;{request.host}:#{request.port}/src&amp;rdquo;)</span>
+</span><span class='line'><span class="n">response</span> <span class="o">=</span> <span class="ss">Net</span><span class="p">:</span><span class="ss">:HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+</span><span class='line'><span class="n">iywRFqowCSzrNe</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get_fields</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">i_has_a_secret</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span><span class="o">.</span><span class="n">pop</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Array code 1  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Array code 1 </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -367,17 +367,17 @@ XYZZY = __FILE__
 <span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;Fetch the value of the &#39;lulz&#39; HTTP request header&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'><span class="sr">&lt;h1&gt;Fetch the value of the &amp;lsquo;lulz&amp;rsquo; HTTP request header&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;http://</span><span class="si">#{</span><span class="n">request</span><span class="o">.</span><span class="n">host</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">request</span><span class="o">.</span><span class="n">port</span><span class="si">}</span><span class="s2">/src&quot;</span><span class="p">)</span>
-</span><span class='line'><span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
-</span><span class='line'><span class="n">lulz</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get_fields</span><span class="p">(</span><span class="s1">&#39;lulz&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">pop</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://#&quot;</span><span class="o">&gt;</span><span class="ss">http</span><span class="p">:</span><span class="sr">//</span><span class="c1">#&lt;/a&gt;{request.host}:#{request.port}/src&amp;rdquo;)</span>
+</span><span class='line'><span class="n">response</span> <span class="o">=</span> <span class="ss">Net</span><span class="p">:</span><span class="ss">:HTTP</span><span class="o">.</span><span class="n">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+</span><span class='line'><span class="n">lulz</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">get_fields</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">lulz</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span><span class="o">.</span><span class="n">pop</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;h1&gt;Using the value of the &#39;lulz&#39; HTTP header, alter the case of the characters in the host&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+</span><span class='line'><span class="sr">&lt;h1&gt;Using the value of the &amp;lsquo;lulz&amp;rsquo; HTTP header, alter the case of the characters in the host&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="nb">name</span> <span class="n">on</span> <span class="n">which</span> <span class="n">the</span> <span class="n">application</span> <span class="n">is</span> <span class="n">running</span><span class="p">,</span> <span class="ow">and</span> <span class="n">store</span> <span class="n">the</span> <span class="n">result</span> <span class="k">in</span> <span class="n">the</span> <span class="n">second</span> <span class="n">array</span> <span class="n">location</span><span class="o">&lt;</span><span class="sr">/h1&gt;</span>
 </span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;iywRFqowCSzrNe[1] = request.host.slice(/</span><span class="o">&lt;</span><span class="n">sup</span><span class="o">&gt;[&lt;</span><span class="n">sup</span><span class="o">&gt;.]+/</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="o">&lt;</span><span class="sr">/sup&gt;&lt;/su</span><span class="nb">p</span><span class="o">&gt;</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'><span class="sr">&lt;p&gt;iywRFqowCSzrNe[1] = request.host.slice(/</span><span class="o">^[^.]+/</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;)</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|&lt;</span><span class="sr">/p&gt;</span>
 </span><span class='line'>
 </span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;if lulz.pop == &#39;u&#39; </span>
 </span><span class='line'><span class="sr">    x.upcase</span>
@@ -389,7 +389,7 @@ XYZZY = __FILE__
 </span><span class='line'><span class="sr">&lt;p&gt;end.join</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Array code 2  </span></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Array code 2 </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -441,7 +441,7 @@ XYZZY = __FILE__
 <p>These small blocks of code, which were hidden in the array <code>iywRFqowCSzrNe</code> reveal their importance.
 They also help me achieve the rest of my goals for my obfuscated code!</p>
 
-<p>When these chunks of code are run in order as a result of a request to the root path the result is the string "Happy Birthday OpenStack" being output as a text/plain document.</p>
+<p>When these chunks of code are run in order as a result of a request to the root path the result is the string &ldquo;Happy Birthday OpenStack&rdquo; being output as a text/plain document.</p>
 
 <h2>Reviewing the Objectives</h2>
 
@@ -456,7 +456,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 <li>The internal code is encoded in reversed base64 zlib compressed strings</li>
 </ul>
 </li>
-<li>The actual string "Happy Birthday OpenStack" isn't present in fully de-obfuscated code
+<li>The actual string &ldquo;Happy Birthday OpenStack&rdquo; isn&rsquo;t present in fully de-obfuscated code
 
 <ul>
 <li>The string itself is yet another reversed base64 encoded zlib compressed string split into 3 parts</li>
@@ -468,7 +468,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 </ol>
 
 
-<p>I was quite happy that I managed to come up with three distinct methods in which to store the text "Happy Birthday OpenStack". I hope you have enjoyed this de-obfuscation walk-through and post-mortem.</p>
+<p>I was quite happy that I managed to come up with three distinct methods in which to store the text &ldquo;Happy Birthday OpenStack&rdquo;. I hope you have enjoyed this de-obfuscation walk-through and post-mortem.</p>
 ]]></content>
   </entry>
   

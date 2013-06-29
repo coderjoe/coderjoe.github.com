@@ -9,7 +9,7 @@
   <meta name="author" content="Joe "coderjoe" Bauser">
 
   
-  <meta name="description" content="Last week I stumbled across the &#8220;AppFog OpenStack Birthday Contest&#8221; via Twitter. I&#8217;d been quietly following AppFog&#8217;s progress &hellip;">
+  <meta name="description" content="Last week I stumbled across the &ldquo;AppFog OpenStack Birthday Contest&rdquo; via Twitter. I&rsquo;d been quietly following AppFog&rsquo;s progress &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/">
+  <link rel="canonical" href="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -118,22 +119,22 @@
   </header>
 
 
-<div class="entry-content"><p>Last week I stumbled across the <a href="http://openstack.appfog.com">&#8220;AppFog OpenStack Birthday Contest&#8221;</a> via Twitter.</p>
+<div class="entry-content"><p>Last week I stumbled across the <a href="http://openstack.appfog.com">&ldquo;AppFog OpenStack Birthday Contest&rdquo;</a> via Twitter.</p>
 
-<p>I&#8217;d been quietly following AppFog&#8217;s progress since I received a PHPFog beta invite a year or two ago. At the time I hadn&#8217;t had a reason to give their service a try since I wasn&#8217;t a PHP guy. However, spurred by the allure of a coding contest and the large number of platforms AppFog supports, I finally had a reason to poke around!</p>
+<p>I&rsquo;d been quietly following AppFog&rsquo;s progress since I received a PHPFog beta invite a year or two ago. At the time I hadn&rsquo;t had a reason to give their service a try since I wasn&rsquo;t a PHP guy. However, spurred by the allure of a coding contest and the large number of platforms AppFog supports, I finally had a reason to poke around!</p>
 
-<p>Anticipating that I&#8217;d be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog <a href="http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/">recently showed</a> I wasn&#8217;t wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.</p>
+<p>Anticipating that I&rsquo;d be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog <a href="http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/">recently showed</a> I wasn&rsquo;t wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.</p>
 
-<p>What I didn&#8217;t expect was that I&#8217;d end up <a href="http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/">winning the competition</a>!</p>
+<p>What I didn&rsquo;t expect was that I&rsquo;d end up <a href="http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/">winning the competition</a>!</p>
 
-<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I&#8217;ve decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.</p>
+<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I&rsquo;ve decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.</p>
 
 <!--more-->
 
 
 <h2>An AppFog First Impression</h2>
 
-<p>My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as <a href="http://www.appfog.com">AppFog</a>. At first I was worried about the work required to configure an application, but AppFog&#8217;s simple interface had me finished with the process before I knew I had started!</p>
+<p>My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as <a href="http://www.appfog.com">AppFog</a>. At first I was worried about the work required to configure an application, but AppFog&rsquo;s simple interface had me finished with the process before I knew I had started!</p>
 
 <p>After cloning an <a href="https://github.com/appfog/af-ruby-sinatra">example project</a> published by AppFog on github, installing the <a href="http://rubygems.org/gems/af">AppFog gem</a>, and running a deploy I was done! Zero to functioning application in almost exactly 2 minutes!</p>
 
@@ -141,11 +142,11 @@
 
 <h2>Some Speed Bumps</h2>
 
-<p>Unfortunately I can&#8217;t say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.</p>
+<p>Unfortunately I can&rsquo;t say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.</p>
 
-<p>For the more difficult problems, the AppFog support team met or exceeded the customer service I&#8217;d grown accustom to from both <a href="http://dreamhost.com">Dreamhost</a> and <a href="http://linode.com">Linode</a>. With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn&#8217;t paid them a cent!</p>
+<p>For the more difficult problems, the AppFog support team met or exceeded the customer service I&rsquo;d grown accustom to from both <a href="http://dreamhost.com">Dreamhost</a> and <a href="http://linode.com">Linode</a>. With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn&rsquo;t paid them a cent!</p>
 
-<p>Enough about problems&#8230; on to the code!</p>
+<p>Enough about problems&hellip; on to the code!</p>
 
 <h2>Creating a Contest Submission</h2>
 
@@ -154,7 +155,7 @@
 <ol>
 <li>The code must be pretty.</li>
 <li>The code must be obfuscated in at least two separate ways.</li>
-<li>The final &#8220;Happy Birthday OpenStack&#8221; text must exist in some way outside of the source code itself.</li>
+<li>The final &ldquo;Happy Birthday OpenStack&rdquo; text must exist in some way outside of the source code itself.</li>
 </ol>
 
 
@@ -188,7 +189,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>The above uses Ruby&#8217;s quoted array syntax to turn a bunch of whitespace separated strings into an array of values.</p>
+<p>The above uses Ruby&rsquo;s quoted array syntax to turn a bunch of whitespace separated strings into an array of values.</p>
 
 <figure class='code'><figcaption><span>Quoted Array Example - quoted_example.rb </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -281,7 +282,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Now we know what the obfuscated code is! It&#8217;s a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string &#8216;0x&#8217;. It is being used as the value to <code>send(:eval,string)</code> which means it must be more ruby code!</p>
+<p>Now we know what the obfuscated code is! It&rsquo;s a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string &lsquo;0x&rsquo;. It is being used as the value to <code>send(:eval,string)</code> which means it must be more ruby code!</p>
 
 <p>Why did I do this? I had started with simple hex conversion, but I found I needed a larger canvas on which to draw my ASCII art, so the left shifting increased the hex values enough that I had a little more text to work with!</p>
 
@@ -357,20 +358,20 @@
 
 <p>We now have some code which looks more like a standard Sinatra application!</p>
 
-<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code>get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I&#8217;ve taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
+<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code>get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I&rsquo;ve taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
 
 <p>There are a few portions of this code we should make note of:</p>
 
 <ol>
 <li>The first index of the array <code>iywRFqowCSzrNe</code> is a reversed base64 encoded zlib compressed chunk of Ruby code. It is reasonable to assume that the other two array locations may be similarly encoded.</li>
-<li>The /src path sets some response headers. Their purpose isn&#8217;t immediately obvious.</li>
+<li>The /src path sets some response headers. Their purpose isn&rsquo;t immediately obvious.</li>
 <li>The definition of <code>XYZZY</code> in the original file is important. The value of <code>__FILE__</code> changes when it is located inside of a string being run through <code>eval</code>. Storing the value of <code>__FILE__</code> in <code>XYZZY</code> allowed this obfuscated code to keep track of the current file name.</li>
 </ol>
 
 
 <p>If we go ahead and print the value of the first array we find that the first array value executes the second array value, which in turn executes the third. De-obfuscating this code manually we end up with code similar to the following.</p>
 
-<figure class='code'><figcaption><span>Array code 0  </span></figcaption>
+<figure class='code'><figcaption><span>Array code 0 </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -384,7 +385,7 @@
 
 
 
-<figure class='code'><figcaption><span>Array code 1  </span></figcaption>
+<figure class='code'><figcaption><span>Array code 1 </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -418,7 +419,7 @@
 
 
 
-<figure class='code'><figcaption><span>Array code 2  </span></figcaption>
+<figure class='code'><figcaption><span>Array code 2 </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -455,7 +456,7 @@
 <p>These small blocks of code, which were hidden in the array <code>iywRFqowCSzrNe</code> reveal their importance.
 They also help me achieve the rest of my goals for my obfuscated code!</p>
 
-<p>When these chunks of code are run in order as a result of a request to the root path the result is the string &#8220;Happy Birthday OpenStack&#8221; being output as a text/plain document.</p>
+<p>When these chunks of code are run in order as a result of a request to the root path the result is the string &ldquo;Happy Birthday OpenStack&rdquo; being output as a text/plain document.</p>
 
 <h2>Reviewing the Objectives</h2>
 
@@ -470,7 +471,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 <li>The internal code is encoded in reversed base64 zlib compressed strings</li>
 </ul>
 </li>
-<li>The actual string &#8220;Happy Birthday OpenStack&#8221; isn&#8217;t present in fully de-obfuscated code
+<li>The actual string &ldquo;Happy Birthday OpenStack&rdquo; isn&rsquo;t present in fully de-obfuscated code
 
 <ul>
 <li>The string itself is yet another reversed base64 encoded zlib compressed string split into 3 parts</li>
@@ -482,7 +483,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 </ol>
 
 
-<p>I was quite happy that I managed to come up with three distinct methods in which to store the text &#8220;Happy Birthday OpenStack&#8221;. I hope you have enjoyed this de-obfuscation walk-through and post-mortem.</p>
+<p>I was quite happy that I managed to come up with three distinct methods in which to store the text &ldquo;Happy Birthday OpenStack&rdquo;. I hope you have enjoyed this de-obfuscation walk-through and post-mortem.</p>
 </div>
 
 
@@ -519,23 +520,11 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
-  
-  
-    <a class="FlattrButton" style="display:none;"
-  title="How I Won the OpenStack Birthday Contest"
-  data-flattr-uid="coderjoe"
-  data-flattr-tags=""
-  data-flattr-button="compact"
-  data-flattr-category="text"
-  href="http://coderjoe.net/archive/2012/07/26/openstack-contest-post-mortem/">
-  
-</a>
-
   
 </div>
 
@@ -572,7 +561,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
       </li>
     
       <li class="post">
-        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info Beta Launch</a>
       </li>
     
       <li class="post">
@@ -580,7 +569,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
       </li>
     
       <li class="post">
-        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A Little Turkey Day Coding!</a>
       </li>
     
   </ul>
@@ -595,7 +584,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
   <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -616,29 +605,15 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("coderjoe", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
-  
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
 </section>
 
-
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
-<noscript>
-  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
-</noscript>
 
 
 <section>
@@ -651,7 +626,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
     var coderwall = (function(){
       function render(options, badges){
         var fragment = '',
-            t = $(options.target)[0],
+            t = $(options.target),
             height = 65,
             width = 65,
             index;
@@ -662,13 +637,13 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
           fragment += '</a>';
         }
 
-        t.innerHTML = fragment;
+        t.html(fragment);
       }
       return {
         showBadges: function(options){
           $.ajax({
               url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
+            , dataType: 'jsonp'
             , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
             , success: function(res) {
                 render(options, res.data.badges);
@@ -678,21 +653,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
       };
     })();
 
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
+    $(document).ready(function(){
       coderwall.showBadges({
         user: 'coderjoe',
         target: '#cw_badges'
@@ -712,15 +673,12 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/110889592930310051971?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
+<noscript>
+  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+  </a>
+</noscript>
 
 
   
@@ -730,7 +688,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  Copyright &copy; 2013 - Joe "coderjoe" Bauser -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -772,7 +730,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

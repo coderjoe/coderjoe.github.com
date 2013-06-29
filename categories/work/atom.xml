@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Work | coderjoe.net]]></title>
   <link href="http://coderjoe.net/categories/work/atom.xml" rel="self"/>
   <link href="http://coderjoe.net/"/>
-  <updated>2012-10-28T14:12:02-04:00</updated>
+  <updated>2013-06-29T18:22:52-04:00</updated>
   <id>http://coderjoe.net/</id>
   <author>
     <name><![CDATA[Joe "coderjoe" Bauser]]></name>
@@ -18,26 +18,26 @@
     <link href="http://coderjoe.net/archive/2008/03/20/oracle-core-dump-grapher/"/>
     <updated>2008-03-20T00:00:00-04:00</updated>
     <id>http://coderjoe.net/archive/2008/03/20/oracle-core-dump-grapher</id>
-    <content type="html"><![CDATA[<p>Anyone who has ever spent any significant amount of time working with an Oracle database has probably seen a ORA-600 or ORA-07445 "exception encountered: core dump" trace file.</p>
+    <content type="html"><![CDATA[<p>Anyone who has ever spent any significant amount of time working with an Oracle database has probably seen a ORA-600 or ORA-07445 &ldquo;exception encountered: core dump&rdquo; trace file.</p>
 
-<p>Unfortunately, when you come across an Oracle core dump you can't do much more than send the dump to Oracle and hope the issue is already resolved in a newer version, or that a patch is available for your current version.</p>
+<p>Unfortunately, when you come across an Oracle core dump you can&rsquo;t do much more than send the dump to Oracle and hope the issue is already resolved in a newer version, or that a patch is available for your current version.</p>
 
 <p>This process usually consists of three steps:</p>
 
 <ol>
 <li>Collect the trace files related to the issue.</li>
-<li>Open a Service Request on Oracle's Metalink site.</li>
+<li>Open a Service Request on Oracle&rsquo;s Metalink site.</li>
 <li>Wait for a response</li>
 </ol>
 
 
-<p><em>If you're lucky</em>, the first step is an easy one.</p>
+<p><em>If you&rsquo;re lucky</em>, the first step is an easy one.</p>
 
-<p><em>If you're lucky</em> you caught the first occurrence of the core dump and only need to shoot off a single trace file to the guys at Oracle.</p>
+<p><em>If you&rsquo;re lucky</em> you caught the first occurrence of the core dump and only need to shoot off a single trace file to the guys at Oracle.</p>
 
-<p>On the other hand, if you're not lucky, you might be handed 50-60 trace files spanning multiple weeks and be asked to sort them by distinct issue for reporting to Oracle.</p>
+<p>On the other hand, if you&rsquo;re not lucky, you might be handed 50-60 trace files spanning multiple weeks and be asked to sort them by distinct issue for reporting to Oracle.</p>
 
-<p>I'm <strong>not</strong> lucky.</p>
+<p>I&rsquo;m <strong>not</strong> lucky.</p>
 
 <p>Sorting the trace files is a long process which involves searching the trace file for the dump, researching the issue on Metalink, finding similar issues on Metalink, and then sorting the trace files by those issues.</p>
 
@@ -70,9 +70,9 @@
     <link href="http://coderjoe.net/archive/2007/07/09/youve-won-a-new-job/"/>
     <updated>2007-07-09T00:00:00-04:00</updated>
     <id>http://coderjoe.net/archive/2007/07/09/youve-won-a-new-job</id>
-    <content type="html"><![CDATA[<p>I'm excited to announce that I've officially been selected for, and have started working as a Software Engineer, Associate, position at <a href="http://www.paetec.com" title="The Paetec Communications website.">Paetec Communication's</a> Software Division <a href="http://www.pinnsoft.com/" title="Pinnacle's website.">Pinnacle</a>.</p>
+    <content type="html"><![CDATA[<p>I&rsquo;m excited to announce that I&rsquo;ve officially been selected for, and have started working as a Software Engineer, Associate, position at <a href="http://www.paetec.com" title="The Paetec Communications website.">Paetec Communication&rsquo;s</a> Software Division <a href="http://www.pinnsoft.com/" title="Pinnacle's website.">Pinnacle</a>.</p>
 
-<p>I will return to work with my colleagues from my first and second co-op blocks. I'm happy to be back with everybody and I'll keep those who care posted on my progress and exciting adventures in Pinnacle land!</p>
+<p>I will return to work with my colleagues from my first and second co-op blocks. I&rsquo;m happy to be back with everybody and I&rsquo;ll keep those who care posted on my progress and exciting adventures in Pinnacle land!</p>
 
 <p>For those of you who are interested in tracking my job progress feel free to click my <a href="http://www.linkedin.com/in/josephbauser" title="My LinkedIn profile.">profile link</a> for the corporate social networking tool <a href="http://www.linkedin.com" title="LinkedIn business social networking.">LinkedIn</a>.</p>
 ]]></content>

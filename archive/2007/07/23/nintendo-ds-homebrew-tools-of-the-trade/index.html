@@ -9,7 +9,7 @@
   <meta name="author" content="Joe "coderjoe" Bauser">
 
   
-  <meta name="description" content="How the heck do you do this? There are few things more essential to the budding homebrew developer than their development environment. As we&#8217;re &hellip;">
+  <meta name="description" content="How the heck do you do this? There are few things more essential to the budding homebrew developer than their development environment. As we&rsquo;re &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/">
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -120,7 +121,7 @@
 
 <div class="entry-content"><p><strong>How the heck do you do this?</strong></p>
 
-<p>There are few things more essential to the budding homebrew developer than their development environment. As we&#8217;re just starting out, we have yet to even get our environment together. As such our first task should be to gather our tools and get ready to install.</p>
+<p>There are few things more essential to the budding homebrew developer than their development environment. As we&rsquo;re just starting out, we have yet to even get our environment together. As such our first task should be to gather our tools and get ready to install.</p>
 
 <p>There are two very important packages every homebrew developer should be aware of.</p>
 
@@ -128,35 +129,35 @@
 
 <p><strong>Why do you need a toolchain?</strong></p>
 
-<p>Because executables differ from platform to platform. If you just take your home Visual Studio install and compile a &#8220;hello world&#8221; application, it will compile for your host operating system and architecture. Unfortunately the set of instructions that your (likely intel) CPU and the instructions that the Nintendo DS&#8217;s ARM CPUs understand are not very similar at all. As such you need a set of tools which can create executables for your target platform.</p>
+<p>Because executables differ from platform to platform. If you just take your home Visual Studio install and compile a &ldquo;hello world&rdquo; application, it will compile for your host operating system and architecture. Unfortunately the set of instructions that your (likely intel) CPU and the instructions that the Nintendo DS&rsquo;s ARM CPUs understand are not very similar at all. As such you need a set of tools which can create executables for your target platform.</p>
 
 <p><strong>Getting devkitARM.</strong></p>
 
 <p><a href="http://www.devkitpro.org" title="The devkitPro official website.">DevkitARM</a> provides just those tools, as well as an additional set of tools which should make your homebrew development that much more fun.</p>
 
-<p>Now that you&#8217;re excited to get those files, devkitARM can be found at the following addreses:</p>
+<p>Now that you&rsquo;re excited to get those files, devkitARM can be found at the following addreses:</p>
 
-<p>For windows, you&#8217;ll want the devkitPro updater, which is a full installer for windows, and will get you up and running with minimal work.</p>
+<p>For windows, you&rsquo;ll want the devkitPro updater, which is a full installer for windows, and will get you up and running with minimal work.</p>
 
 <p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=160396" title="A link to the devkitProUpdater for Windows. The BEST way to install devkitPro in Windows!">Download the devkitProUpdater for Windows from Sourceforge.</a></p>
 
-<p>For Linux or Mac OSX, you&#8217;ll want to grab the binaries for devkitARM at the following address:</p>
+<p>For Linux or Mac OSX, you&rsquo;ll want to grab the binaries for devkitARM at the following address:</p>
 
-<p>(There are windows binaries as well, but windows users should just use the super spiffy auto updater.. it&#8217;s much easier.)</p>
+<p>(There are windows binaries as well, but windows users should just use the super spiffy auto updater.. it&rsquo;s much easier.)</p>
 
 <p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=124207" title="A link to the devkitArm binaries for Linux, and Mac OSX,">Download the devkitARM binary archive from Sourceforge</a></p>
 
-<p>Now that your programming arsenal has increased by one cool package, it&#8217;s time to get your Nintendo DS development library.</p>
+<p>Now that your programming arsenal has increased by one cool package, it&rsquo;s time to get your Nintendo DS development library.</p>
 
 <p><strong>Getting libnds.</strong></p>
 
 <p>The only library you should concern yourself with at this point is libnds. Libnds began as a series of useful #define statements to make Nintendo DS development a bit easier. Over time it evolved into a full development library with support for most of the functionality of the Nintendo DS. Through libnds, the enterprising developer even has support for 3d through a series of functions which look incredibly similar to OpenGL.</p>
 
-<p>If you&#8217;re running Linux or Mac OSX you can get the library here:</p>
+<p>If you&rsquo;re running Linux or Mac OSX you can get the library here:</p>
 
 <p><a href="http://sourceforge.net/project/showfiles.php?group_id=114505&amp;package_id=151608" title="Download libnds source to build in Linux or Mac OSX.">Download the libnds source archive from Sourceforge</a></p>
 
-<p>If you&#8217;re running Windows, don&#8217;t fret, the auto updater will fetch libnds for you!</p>
+<p>If you&rsquo;re running Windows, don&rsquo;t fret, the auto updater will fetch libnds for you!</p>
 
 <p><strong>Example code anyone?</strong></p>
 
@@ -203,23 +204,11 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
-  
-  
-    <a class="FlattrButton" style="display:none;"
-  title="Nintendo DS Homebrew: Tools of the Trade"
-  data-flattr-uid="coderjoe"
-  data-flattr-tags="projectsnintendo-ds-homebrewtutoriallibndsdevkitprodevkitarm"
-  data-flattr-button="compact"
-  data-flattr-category="text"
-  href="http://coderjoe.net/archive/2007/07/23/nintendo-ds-homebrew-tools-of-the-trade/">
-  
-</a>
-
   
 </div>
 
@@ -258,7 +247,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info Beta Launch</a>
       </li>
     
       <li class="post">
@@ -266,7 +255,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A Little Turkey Day Coding!</a>
       </li>
     
   </ul>
@@ -281,7 +270,7 @@
   <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -302,29 +291,15 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("coderjoe", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
-  
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
 </section>
 
-
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
-<noscript>
-  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
-</noscript>
 
 
 <section>
@@ -337,7 +312,7 @@
     var coderwall = (function(){
       function render(options, badges){
         var fragment = '',
-            t = $(options.target)[0],
+            t = $(options.target),
             height = 65,
             width = 65,
             index;
@@ -348,13 +323,13 @@
           fragment += '</a>';
         }
 
-        t.innerHTML = fragment;
+        t.html(fragment);
       }
       return {
         showBadges: function(options){
           $.ajax({
               url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
+            , dataType: 'jsonp'
             , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
             , success: function(res) {
                 render(options, res.data.badges);
@@ -364,21 +339,7 @@
       };
     })();
 
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
+    $(document).ready(function(){
       coderwall.showBadges({
         user: 'coderjoe',
         target: '#cw_badges'
@@ -398,15 +359,12 @@
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/110889592930310051971?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
+<noscript>
+  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+  </a>
+</noscript>
 
 
   
@@ -416,7 +374,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  Copyright &copy; 2013 - Joe "coderjoe" Bauser -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -458,7 +416,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

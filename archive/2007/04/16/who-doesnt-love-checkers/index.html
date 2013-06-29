@@ -9,7 +9,7 @@
   <meta name="author" content="Joe "coderjoe" Bauser">
 
   
-  <meta name="description" content="And yes, it has procedural texturing! Texturing mapping from a file is on the way, but who knows when it&#8217;ll be done&#8230; Obligatory photo! ">
+  <meta name="description" content="And yes, it has procedural texturing! Texturing mapping from a file is on the way, but who knows when it&rsquo;ll be done&hellip; Obligatory photo! ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers/">
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -120,7 +121,7 @@
 
 <div class="entry-content"><p>And yes, it has procedural texturing!</p>
 
-<p>Texturing mapping from a file is on the way, but who knows when it&#8217;ll be done&#8230;</p>
+<p>Texturing mapping from a file is on the way, but who knows when it&rsquo;ll be done&hellip;</p>
 
 <p>Obligatory photo!</p>
 
@@ -161,23 +162,11 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
-  
-  
-    <a class="FlattrButton" style="display:none;"
-  title="Who doesn't love checkers?"
-  data-flattr-uid="coderjoe"
-  data-flattr-tags="projectsschoolcomputer-graphics-2"
-  data-flattr-button="compact"
-  data-flattr-category="text"
-  href="http://coderjoe.net/archive/2007/04/16/who-doesnt-love-checkers/">
-  
-</a>
-
   
 </div>
 
@@ -216,7 +205,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info Beta Launch</a>
       </li>
     
       <li class="post">
@@ -224,7 +213,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A Little Turkey Day Coding!</a>
       </li>
     
   </ul>
@@ -239,7 +228,7 @@
   <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -260,29 +249,15 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("coderjoe", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
-  
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
 </section>
 
-
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
-<noscript>
-  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
-</noscript>
 
 
 <section>
@@ -295,7 +270,7 @@
     var coderwall = (function(){
       function render(options, badges){
         var fragment = '',
-            t = $(options.target)[0],
+            t = $(options.target),
             height = 65,
             width = 65,
             index;
@@ -306,13 +281,13 @@
           fragment += '</a>';
         }
 
-        t.innerHTML = fragment;
+        t.html(fragment);
       }
       return {
         showBadges: function(options){
           $.ajax({
               url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
+            , dataType: 'jsonp'
             , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
             , success: function(res) {
                 render(options, res.data.badges);
@@ -322,21 +297,7 @@
       };
     })();
 
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
+    $(document).ready(function(){
       coderwall.showBadges({
         user: 'coderjoe',
         target: '#cw_badges'
@@ -356,15 +317,12 @@
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/110889592930310051971?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
+<noscript>
+  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+  </a>
+</noscript>
 
 
   
@@ -374,7 +332,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  Copyright &copy; 2013 - Joe "coderjoe" Bauser -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -416,7 +374,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

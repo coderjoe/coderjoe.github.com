@@ -18,13 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/">
+  <link rel="canonical" href="http://coderjoe.net/archive/2007/07/19/firefox-extension-development">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="coderjoe.net" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -120,33 +121,33 @@
 
 <div class="entry-content"><p>My current position gives me the opportunity to do web development on a daily basis. Thanks to tools like the <a href="http://chrispederick.com/work/web-developer/" title="The Web Developer Toolbar extension for Firefox.">Web Developer Toolbar</a>, and <a href="http://www.getfirebug.com" title="The Firebug Javascript Debugger">Firebug</a> extensions for Mozilla Firefox, web development has been made much less painful than it once was.</p>
 
-<p>These extensions are a boon to my daily development schedule. The extensions increase my productivity by keeping me from spending a majority of my time tracking down simple problems and instead let me focus on fixing the big things. In addition they provide a number of tools that allow me to carefully tweak my pages without altering any actual backend code, experimenting on the fly, and saving precious time which might be lost to repeated &#8220;edit -&gt; page load -&gt; test&#8221; cycles.</p>
+<p>These extensions are a boon to my daily development schedule. The extensions increase my productivity by keeping me from spending a majority of my time tracking down simple problems and instead let me focus on fixing the big things. In addition they provide a number of tools that allow me to carefully tweak my pages without altering any actual backend code, experimenting on the fly, and saving precious time which might be lost to repeated &ldquo;edit &ndash;&gt; page load &ndash;&gt; test&rdquo; cycles.</p>
 
 <p>No matter how much I optimise my process I keep finding situations in my current development at work which could be streamlined through the careful application of custom scripting in my browser. Until recently I would satisfy my need for automation of repetitive tasks by creating a carefully crafted <a href="http://www.greasespot.net/" title="The Greasemonkey Blog.">Greasemonkey</a> script or by crafting a cleaver <a href="http://en.wikipedia.org/wiki/Bookmarklet" title="Bookmarklet description.">bookmarklet</a>. At the end of the day yesterday I decided to take stock of the tools that I had created or modified to help speed up the majority of my repetitive day-to-day development tasks. Needless to say, there were more than a few.</p>
 
-<p>Inspired by the web developer toolbar I&#8217;ve decided to develop my own Firefox extension. This extension would provide a number of tools to simplify my life when developing within Oracle&#8217;s Application Express which will provide a number of customization options to the existing Application Express editor, as well as a number of shortcuts for common development tasks.</p>
+<p>Inspired by the web developer toolbar I&rsquo;ve decided to develop my own Firefox extension. This extension would provide a number of tools to simplify my life when developing within Oracle&rsquo;s Application Express which will provide a number of customization options to the existing Application Express editor, as well as a number of shortcuts for common development tasks.</p>
 
-<p>I&#8217;ve only just begun development, but I&#8217;m hoping the end result will be a benefit to more than just myself.</p>
+<p>I&rsquo;ve only just begun development, but I&rsquo;m hoping the end result will be a benefit to more than just myself.</p>
 
 <p>My initial experience with extension development has been full of swinging mixed emotions.</p>
 
 <p>At this point I have a number of thoughts on Firefox Extension Development:</p>
 
 <ol>
-<li>I love XUL&#8230; well.. I love XML, so it isn&#8217;t that much of a stretch. XUL&#8217;s simplicity and ability to extend the browser through overlays is amazing.</li>
+<li>I love XUL&hellip; well.. I love XML, so it isn&rsquo;t that much of a stretch. XUL&rsquo;s simplicity and ability to extend the browser through overlays is amazing.</li>
 <li>I hate the default directory structure that the majority of the tutorials out there tell you to use.</li>
 <li>I hate that the default tutorial on <a href="http://www.xulplanet.com" title="The XulPlanet website: The Ultimate XUL Resource.">XulPlanet</a> makes note of required directory structure, but lacks any mention of the proper structure for extension development.</li>
-<li>I love that <a href="http://kb.mozillazine.org/Bash_build_script" title="The Bash build script is probably the most useful script out there for XUL Development.">someone created a build script</a> for extensions that follows a defined directory structure so I don&#8217;t have to worry about number 3.</li>
+<li>I love that <a href="http://kb.mozillazine.org/Bash_build_script" title="The Bash build script is probably the most useful script out there for XUL Development.">someone created a build script</a> for extensions that follows a defined directory structure so I don&rsquo;t have to worry about number 3.</li>
 <li>I love the built in localization functionality.</li>
 <li>I hate the <a href="http://developer.mozilla.org/en/docs/Chrome_Registration" title="The chrome. manifest file is how you register chrome packages with the chrome registry. It's important.  I love the registry... but I hate the manifest.">chrome.manifest</a> file. The only reason I can stand it is because the build script mentioned above will allow you to write it in such a way that it will work in both development and packaged form.</li>
 </ol>
 
 
-<p>All and all I&#8217;ve learned a whole bunch about Firefox extension development over the past two days.</p>
+<p>All and all I&rsquo;ve learned a whole bunch about Firefox extension development over the past two days.</p>
 
-<p>Maybe once I&#8217;m finished I&#8217;ll write my own Firefox extension development tutorial since I&#8217;ve found the majority of the tutorials on the internet to be severely lacking (with the exception of the <a href="http://www.xulplanet.com/tutorials/" title="The XulPlanet XUL tutorials. If you want to learn XUL this is the place to go.">XUL Tutorials</a> from XulPlanet. Those are amazingly in depth).</p>
+<p>Maybe once I&rsquo;m finished I&rsquo;ll write my own Firefox extension development tutorial since I&rsquo;ve found the majority of the tutorials on the internet to be severely lacking (with the exception of the <a href="http://www.xulplanet.com/tutorials/" title="The XulPlanet XUL tutorials. If you want to learn XUL this is the place to go.">XUL Tutorials</a> from XulPlanet. Those are amazingly in depth).</p>
 
-<p>Well folks, I&#8217;m officially overloaded with projects.</p>
+<p>Well folks, I&rsquo;m officially overloaded with projects.</p>
 
 <p>Wish me luck.</p>
 </div>
@@ -185,23 +186,11 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/" data-via="coderjoe" data-counturl="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
   
-  
-  
-    <a class="FlattrButton" style="display:none;"
-  title="Firefox Extension Development"
-  data-flattr-uid="coderjoe"
-  data-flattr-tags="Oracle-Application-ExpressextensionsFirefoxXUL"
-  data-flattr-button="compact"
-  data-flattr-category="text"
-  href="http://coderjoe.net/archive/2007/07/19/firefox-extension-development/">
-  
-</a>
-
   
 </div>
 
@@ -240,7 +229,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info beta launch</a>
+        <a href="/archive/2011/03/23/rstarcraft_info_beta_launch/">rstarcraft.info Beta Launch</a>
       </li>
     
       <li class="post">
@@ -248,7 +237,7 @@
       </li>
     
       <li class="post">
-        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A little turkey day coding!</a>
+        <a href="/archive/2008/12/01/a-little-turkey-day-coding/">A Little Turkey Day Coding!</a>
       </li>
     
   </ul>
@@ -263,7 +252,7 @@
   <a href="https://github.com/coderjoe">@coderjoe</a> on GitHub
   
   <script type="text/javascript">
-    $.domReady(function(){
+    $(document).ready(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -284,29 +273,15 @@
 </section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating...</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("coderjoe", 4, false);
-    });
-  </script>
-  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/coderjoe" class="twitter-follow-button" data-show-count="false">Follow @coderjoe</a>
-  
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/110889592930310051971?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
 </section>
 
-
-<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
-<noscript>
-  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
-  </a>
-</noscript>
 
 
 <section>
@@ -319,7 +294,7 @@
     var coderwall = (function(){
       function render(options, badges){
         var fragment = '',
-            t = $(options.target)[0],
+            t = $(options.target),
             height = 65,
             width = 65,
             index;
@@ -330,13 +305,13 @@
           fragment += '</a>';
         }
 
-        t.innerHTML = fragment;
+        t.html(fragment);
       }
       return {
         showBadges: function(options){
           $.ajax({
               url: 'http://coderwall.com/' + options.user + '.json?callback=?'
-            , type: 'jsonp'
+            , dataType: 'jsonp'
             , error: function (err) { $(options.target + ' li.loading').addClass('error').text("Error loading feed"); }
             , success: function(res) {
                 render(options, res.data.badges);
@@ -346,21 +321,7 @@
       };
     })();
 
-    $.domReady(function(){
-      if (!window.jXHR){
-        var jxhr = document.createElement('script');
-        jxhr.type = 'text/javascript';
-        jxhr.src = '/javascripts/libs/jXHR.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(jxhr, s);
-      }
-      if (!window.$){
-        var b = document.createElement('script');
-        b.type = 'text/javascript';
-        b.src = '/javascripts/ender.js';
-        var sc = document.getElementsByTagName('script')[0];
-        sc.parentNode.insertBefore(jxhr, s);
-      }
+    $(document).ready(function(){
       coderwall.showBadges({
         user: 'coderjoe',
         target: '#cw_badges'
@@ -380,15 +341,12 @@
 </section>
 
 
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/110889592930310051971?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
+<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://coderjoe.net"></a>
+<noscript>
+  <a href="http://flattr.com/thing/964097/coderjoe-net" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" />
+  </a>
+</noscript>
 
 
   
@@ -398,7 +356,7 @@
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - Joe "coderjoe" Bauser -
+  Copyright &copy; 2013 - Joe "coderjoe" Bauser -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -440,7 +398,7 @@
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>
