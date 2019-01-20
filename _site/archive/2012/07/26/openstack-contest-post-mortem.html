@@ -1,0 +1,475 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	coderjoe.net
+
+	Simples Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>How I Won the OpenStack Birthday Contest – coderjoe.net</title>
+	<meta name="description" content="<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
+
+">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="How I Won the OpenStack Birthday Contest – coderjoe.net">
+	<meta name="twitter:description" content="<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
+
+">
+	<meta name="twitter:image:src" content="http://localhost:4000">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="How I Won the OpenStack Birthday Contest – coderjoe.net" />
+	<meta property="og:description" content="<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
+
+" />
+	<meta property="og:image" content="http://localhost:4000" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="http://localhost:4000" data-page-url="/archive/2012/07/26/openstack-contest-post-mortem">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__avatar">
+			<img src="/images/avatar.jpg" class="header__avatar__img">
+		</a>
+		
+
+		
+		<a href="/" class="header__title">
+			coderjoe.net
+		</a>
+		
+
+		<p class="header__tagline">Me, myself, and my code.</p>
+
+		<div class="menu">
+			<ul class="menu__list">
+				
+				<li class="menu__list__item">
+					<a href="/" class="menu__list__item__link">Latest</a>
+				</li>
+				
+				<li class="menu__list__item">
+					<a href="/contact" class="menu__list__item__link">Contact</a>
+				</li>
+				
+			</ul>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="How I Won the OpenStack Birthday Contest – coderjoe.net" data-image="">
+
+			<section class="single">
+
+	<div class="wrap">
+
+		<h1>How I Won the OpenStack Birthday Contest</h1>
+		<p class="subtitle">26 July 2012</p>
+
+		<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
+
+<p>I’d been quietly following AppFog’s progress since I received a PHPFog beta invite a year or two ago. At the time I hadn’t had a reason to give their service a try since I wasn’t a PHP guy. However, spurred by the allure of a coding contest and the large number of platforms AppFog supports, I finally had a reason to poke around!</p>
+
+<p>Anticipating that I’d be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog <a href="http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/">recently showed</a> I wasn’t wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.</p>
+
+<p>What I didn’t expect was that I’d end up <a href="http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/">winning the competition</a>!</p>
+
+<p>I am honored that my code was chosen as the winning submission. As a small show of thanks, I’ve decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.</p>
+
+<!--more-->
+
+<h2 id="an-appfog-first-impression">An AppFog First Impression</h2>
+
+<p>My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as <a href="http://www.appfog.com">AppFog</a>. At first I was worried about the work required to configure an application, but AppFog’s simple interface had me finished with the process before I knew I had started!</p>
+
+<p>After cloning an <a href="https://github.com/appfog/af-ruby-sinatra">example project</a> published by AppFog on github, installing the <a href="http://rubygems.org/gems/af">AppFog gem</a>, and running a deploy I was done! Zero to functioning application in almost exactly 2 minutes!</p>
+
+<p>Thanks to the simple in AppFog deployment process I was able to concentrate entirely on my code, and not my hosting.</p>
+
+<h2 id="some-speed-bumps">Some Speed Bumps</h2>
+
+<p>Unfortunately I can’t say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.</p>
+
+<p>For the more difficult problems, the AppFog support team met or exceeded the customer service I’d grown accustom to from both <a href="http://dreamhost.com">Dreamhost</a> and <a href="http://linode.com">Linode</a>. With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn’t paid them a cent!</p>
+
+<p>Enough about problems… on to the code!</p>
+
+<h2 id="creating-a-contest-submission">Creating a Contest Submission</h2>
+
+<p>Now, I love obfuscation just as much as the next guy, but I wanted my submission to be slightly more than just a block of funny looking text. I wanted my submission to have a few extra (admittedly simple) levels of trickery involved. In order to satisfy this urge I added the following extra personal submission requirements:</p>
+
+<ol>
+  <li>The code must be pretty.</li>
+  <li>The code must be obfuscated in at least two separate ways.</li>
+  <li>The final “Happy Birthday OpenStack” text must exist in some way outside of the source code itself.</li>
+</ol>
+
+<p>In order to understand how I achieved these objectives lets walk backwards through the obfuscation steps to reveal the original source code.</p>
+
+<p><strong>Note:</strong> What follows is a step-by-step analysis of the code itself, performed through the lens of someone de-obfuscating my submission. The contents of this analysis are targeted at someone with minimal Ruby experience. If you feel you understand Ruby you may get more enjoyment out of attempting the de-obfuscation yourself!</p>
+
+<h2 id="understanding-the-obfuscation">Understanding the Obfuscation</h2>
+
+<p>None of the methods of code obfuscation I used are terribly complex. The <a href="https://github.com/coderjoe/happy_birthday_openstack/blob/a422a74da8b565c897079bc4b0af49490a4bdeca/app.rb">full submission</a> is plenty pretty with ASCII art declaring my affection for the people running the contest.</p>
+
+<p>The ASCII art itself was created with the help of an open source tool called <a href="http://csl.sublevel3.org/jp2a/">jp2a</a> by <a href="http://csl.sublevel3.org/">Christian Stigen Larsen</a>. The generated ASCII was then used to format the resulting block of obfuscated code. This method allowed me to obfuscate the code first, then tweak the ASCII art as I saw fit.</p>
+
+<p>Despite how complicated it may look my submission boils down to the following four lines of code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="sx">%w(A bunch of characters with lots of whitespace)</span><span class="p">.</span><span class="nf">join</span>
+<span class="n">z</span> <span class="o">=</span> <span class="s1">'Znqr_ol_Wbr_"pbqrewbr"_Onhfre'</span>
+<span class="no">XYZZY</span> <span class="o">=</span> <span class="kp">__FILE__</span>
+<span class="nb">send</span><span class="p">(</span><span class="sx">%w(ale lava)</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">join</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">''</span><span class="p">).</span><span class="nf">uniq</span><span class="p">.</span><span class="nf">join</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_sym</span><span class="p">,</span><span class="n">c</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sr">/0x/</span><span class="p">)[</span><span class="mi">1</span><span class="o">..-</span><span class="mi">1</span><span class="p">].</span><span class="nf">map</span> <span class="p">{</span><span class="o">|</span><span class="n">b</span><span class="o">|</span><span class="p">(</span><span class="n">b</span><span class="p">.</span><span class="nf">to_i</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">).</span><span class="nf">chr</span><span class="p">}.</span><span class="nf">join</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Despite separating the lines of code it is still plenty hard to understand what it is doing. Lets take it line by line:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span> <span class="o">=</span> <span class="sx">%w(A bunch of characters with whitespace)</span><span class="p">.</span><span class="nf">join</span>
+</code></pre></div></div>
+
+<p>The above uses Ruby’s quoted array syntax to turn a bunch of whitespace separated strings into an array of values.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#The whitespace separated tokens become strings in the array</span>
+<span class="sx">%w(one two three)</span> <span class="c1"># =&gt; ["one", "two", "three"]</span>
+
+<span class="c1">#Both using an uppercase W will function the same</span>
+<span class="sx">%W(one two three)</span> <span class="c1"># =&gt; ["one", "two", "three"]</span>
+
+<span class="c1">#If your tokens need to include parentheses the quoted character can be almost any</span>
+<span class="c1">#special character. If the special character is one of {, [, (, or &lt; then the end</span>
+<span class="c1">#character will be the matching closing delimiter. For other characters it is just</span>
+<span class="c1">#the same delimiter</span>
+<span class="sx">%w[one two three]</span> <span class="c1"># =&gt; ["one", "two", "three"]</span>
+<span class="sx">%w!one two three!</span> <span class="c1"># =&gt; ["one", "two", "three"]</span>
+<span class="sx">%w|one two three|</span> <span class="c1"># =&gt; ["one", "two", "three"]</span>
+</code></pre></div></div>
+
+<p>This means that the code takes the humongous block of gibberish and turns it into a huge array of tokens. The <code class="highlighter-rouge">join</code> method is immediately called on the response, meaning the variable <code class="highlighter-rouge">c</code> contains a large string of characters.</p>
+
+<p>The second line is a red-herring rot13 representation of the phrase <code class="highlighter-rouge">Made_by_Joe_"coderjoe"_Bauser"</code> which can be safely ignored.</p>
+
+<p>The third line:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">XYZZY</span> <span class="o">=</span> <span class="kp">__FILE__</span>
+</code></pre></div></div>
+
+<p>Does nothing more than store the value of <code class="highlighter-rouge">__FILE__</code> (which represents the name of the currently running file) into a constant variable named <code class="highlighter-rouge">XYZZY</code>.</p>
+
+<p>The last line is the meat and potatoes of this file. It has the job of interpreting the huge block of text! If we create some temporary variables we can see what is going on a little easier.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># We've seen %w() once before already so we know what that does</span>
+<span class="c1"># the rest of the methods operate on that value producing the symbol</span>
+<span class="c1"># value :eval</span>
+<span class="n">arg1</span> <span class="o">=</span> <span class="sx">%w(ale lava)</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">join</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">''</span><span class="p">).</span><span class="nf">uniq</span><span class="p">.</span><span class="nf">join</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">to_sym</span>
+
+<span class="c1"># The second argument gets its value from the C variable defined at the top of the file.</span>
+<span class="c1"># C is first split by the string 0x into a new array. The first element of the array is</span>
+<span class="c1"># omitted using the range [1..-1] and map is applied to the new array of values.</span>
+<span class="n">arg2</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sr">/0x/</span><span class="p">)[</span><span class="mi">1</span><span class="o">..-</span><span class="mi">1</span><span class="p">].</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">b</span><span class="o">|</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="nf">to_i</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="c1"># Each value of the array is converted from a hex value into an integer</span>
+	<span class="n">b</span> <span class="o">=</span> <span class="n">b</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>     <span class="c1"># Right shifted by two</span>
+	<span class="n">b</span><span class="p">.</span><span class="nf">chr</span>          <span class="c1"># And the integer value is converted to an ASCII character and returned</span>
+<span class="k">end</span>
+
+<span class="c1"># This newly formed array of ASCII characters is joined together!</span>
+<span class="n">arg2</span> <span class="o">=</span> <span class="n">arg2</span><span class="p">.</span><span class="nf">join</span>
+
+<span class="c1"># Now that we have our two arguments, they're used in the Object#send method.</span>
+<span class="c1"># Object#send sends a given message to an object (in our case identified by the symbol</span>
+<span class="c1"># :eval stored in arg1) providing the arguments which follow.</span>
+<span class="nb">send</span><span class="p">(</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="p">)</span>
+</code></pre></div></div>
+
+<p>Now we know what the obfuscated code is! It’s a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string ‘0x’. It is being used as the value to <code class="highlighter-rouge">send(:eval,string)</code> which means it must be more ruby code!</p>
+
+<p>Why did I do this? I had started with simple hex conversion, but I found I needed a larger canvas on which to draw my ASCII art, so the left shifting increased the hex values enough that I had a little more text to work with!</p>
+
+<h2 id="we-have-to-go-deeper">We Have to Go Deeper</h2>
+
+<p>Now that we know how the code is interpreted, we print it by replacing the code creating the <code class="highlighter-rouge">:eval</code> symbol with the symbol <code class="highlighter-rouge">:print</code> and the application will dutifully output the vanilla code!</p>
+
+<p>The output of which is as follows:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'zlib'</span>
+<span class="nb">require</span> <span class="s1">'base64'</span>
+<span class="nb">require</span> <span class="s1">'coderay'</span>
+<span class="nb">require</span> <span class="s1">'uri'</span>
+<span class="nb">require</span> <span class="s1">'sinatra'</span>
+
+<span class="k">module</span> <span class="nn">Wizardry</span>
+	<span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">do_some_magic</span><span class="p">(</span> <span class="n">request</span> <span class="p">)</span>
+		<span class="n">iywRFqowCSzrNe</span> <span class="o">=</span> <span class="p">[</span>
+			<span class="s2">"==geeZ6bD0nS1mp8AGeHt2VR+Tmyq3mD7rt5jLg7</span><span class="se">\n</span><span class="s2">u9dxALYH4m/+GLeH6FKh4IlsCvFaCqFMQvZg0jN6YjuY2g/PR8zCu2FvLkE/</span><span class="se">\n</span><span class="s2">/jX629hL4wfVvJOm6YGkvLne1Gn/xHgYFnhGzxYxzuzU14EScm+/Jv8ErvIB</span><span class="se">\n</span><span class="s2">Zcdx1ftynZWYIyxucKb9tVdqU1aR9saTVwak7lKC0jKS7bHEHzLfNbuZehgs</span><span class="se">\n</span><span class="s2">pu7/KtYaZKNbwezVdLdWK9iWRuE2CuIwDRcFklLJ9sUF5/ehQEzALF0jdpNe"</span><span class="p">,</span>
+			<span class="s2">"=oGq17wPIy0sZJ/JgLjZvX7vpr/D7vtCK+C0/Nr3fOv6</span><span class="se">\n</span><span class="s2">QpIN7OCFRp3M4lxUwHyWOdTJBXHf3phtezdqJtPv00BFFJF+Z/SnLmANQeID</span><span class="se">\n</span><span class="s2">6sl8Qf5oiuQ97DvchW+aqUT2k3Nn5e/8mj5lGx4j6q/Uze77MGmDe9R7OPey</span><span class="se">\n</span><span class="s2">7/N0ZSimTZE9lpOmJzS7mgpqoRdsJLuLbNAmTnwnZikMjnuCl/pTainokOWE</span><span class="se">\n</span><span class="s2">RuxORDYibKrh8cMQ7691WoTRaTekD2FwP598I7LRXbHmIWV6jciXQMcQ0IU8</span><span class="se">\n</span><span class="s2">g6q22SaDJZUEq0LEN2FG2fWONOFFWw94DE9WVasFQsappUZYsLVKXZdpNanq</span><span class="se">\n</span><span class="s2">IYdgWUNq5EAWWBtlHmIaXflSSwdENagIKQQim+dgdsmpPwUM3zr3hxQhIo4s</span><span class="se">\n</span><span class="s2">9+frt2amxYSza4o7lIq02HLS9qkFXK4wErVWK0F26xwVm/chQEjArFEkdpNe"</span><span class="p">,</span>
+			<span class="s2">"Ucu1Mbw+U0DbGjZeP+3JdnhF</span><span class="se">\n</span><span class="s2">aqjeaQeBKyBy5sKhJSzbU4z+hSyYoBpZA1sOXKC4DBvCXFQnyQCXwHkTPJyP</span><span class="se">\n</span><span class="s2">vTbgExcGmPH5ZUBFH6QG0skB6npa/e+nwuW6OWIGC+AO8ODzgt+tvMqnq0pN</span><span class="se">\n</span><span class="s2">gLIjU65cteemMlpwvEDjD7qfU6ahsnP8unG81nnevf99W66TyIN21gqgkznp</span><span class="se">\n</span><span class="s2">zowRSeTJFylFUKB4mmzFhxc7eE0dksLmOaayBv13mCCSyZQCGwDworrCYbBv</span><span class="se">\n</span><span class="s2">xbuB52nsNxxNBwaC+DajTw1TZrftBFGw3wf7TR4g1LlOyomra+YbLjVVpb7Z</span><span class="se">\n</span><span class="s2">Di7Cr5gl3mwaWy/FG74Vp5PH1rdyhoz2r1R76fsKrO06/90T71Ftcz+whgLg</span><span class="se">\n</span><span class="s2">9mt+XDxf2tSqWdRdSzMVfGU89hBmvkYYxzISMj0FFG3TX/ZxUAjwP91jNqNe"</span>
+		<span class="p">]</span>
+
+		<span class="nb">eval</span> <span class="no">Zlib</span><span class="o">::</span><span class="no">Inflate</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="no">Base64</span><span class="o">::</span><span class="n">decode64</span><span class="p">(</span><span class="n">iywRFqowCSzrNe</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">reverse</span><span class="p">))</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">set</span> <span class="ss">:protection</span><span class="p">,</span> <span class="ss">except: :ip_spoofing</span>
+
+<span class="n">get</span> <span class="s1">'/src'</span> <span class="k">do</span>
+	<span class="n">response</span><span class="p">.</span><span class="nf">headers</span><span class="p">[</span><span class="s1">'i_has_a_secret'</span><span class="p">]</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s1">'=IQCg7GAG4MTJ5yCN'</span><span class="p">)</span>
+	<span class="n">response</span><span class="p">.</span><span class="nf">headers</span><span class="p">[</span><span class="s1">'lulz'</span><span class="p">]</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"lllululuulull"</span><span class="p">)</span>
+	<span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="no">XYZZY</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span> <span class="no">CodeRay</span><span class="p">.</span><span class="nf">scan</span><span class="p">(</span> <span class="n">f</span><span class="p">.</span><span class="nf">readlines</span><span class="p">.</span><span class="nf">join</span><span class="p">,</span> <span class="ss">:ruby</span><span class="p">).</span><span class="nf">page</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="n">get</span> <span class="s1">'/'</span> <span class="k">do</span>
+	<span class="n">content_type</span> <span class="ss">:txt</span>
+	<span class="no">Wizardry</span><span class="o">::</span><span class="n">do_some_magic</span><span class="p">(</span> <span class="n">request</span> <span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>We now have some code which looks more like a standard Sinatra application!</p>
+
+<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code class="highlighter-rouge">get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I’ve taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
+
+<p>There are a few portions of this code we should make note of:</p>
+
+<ol>
+  <li>The first index of the array <code class="highlighter-rouge">iywRFqowCSzrNe</code> is a reversed base64 encoded zlib compressed chunk of Ruby code. It is reasonable to assume that the other two array locations may be similarly encoded.</li>
+  <li>The /src path sets some response headers. Their purpose isn’t immediately obvious.</li>
+  <li>The definition of <code class="highlighter-rouge">XYZZY</code> in the original file is important. The value of <code class="highlighter-rouge">__FILE__</code> changes when it is located inside of a string being run through <code class="highlighter-rouge">eval</code>. Storing the value of <code class="highlighter-rouge">__FILE__</code> in <code class="highlighter-rouge">XYZZY</code> allowed this obfuscated code to keep track of the current file name.</li>
+</ol>
+
+<p>If we go ahead and print the value of the first array we find that the first array value executes the second array value, which in turn executes the third. De-obfuscating this code manually we end up with code similar to the following.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Fetches the value of the HTTP response header i_has_a_secret and stores it to the array</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"http://</span><span class="si">#{</span><span class="n">request</span><span class="p">.</span><span class="nf">host</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">request</span><span class="p">.</span><span class="nf">port</span><span class="si">}</span><span class="s2">/src"</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+<span class="n">iywRFqowCSzrNe</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">get_fields</span><span class="p">(</span><span class="s1">'i_has_a_secret'</span><span class="p">).</span><span class="nf">pop</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#Fetch the value of the 'lulz' HTTP request header</span>
+<span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="s2">"http://</span><span class="si">#{</span><span class="n">request</span><span class="p">.</span><span class="nf">host</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">request</span><span class="p">.</span><span class="nf">port</span><span class="si">}</span><span class="s2">/src"</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">get_response</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+<span class="n">lulz</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">get_fields</span><span class="p">(</span><span class="s1">'lulz'</span><span class="p">).</span><span class="nf">pop</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+
+<span class="c1">#Using the value of the 'lulz' HTTP header, alter the case of the characters in the host </span>
+<span class="c1">#name on which the application is running, and store the result in the second array location</span>
+<span class="n">iywRFqowCSzrNe</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="nf">host</span><span class="p">.</span><span class="nf">slice</span><span class="p">(</span><span class="sr">/^[^.]+/</span><span class="p">).</span><span class="nf">split</span><span class="p">(</span><span class="s1">''</span><span class="p">).</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> 
+	<span class="k">if</span> <span class="n">lulz</span><span class="p">.</span><span class="nf">pop</span> <span class="o">==</span> <span class="s1">'u'</span> 
+		<span class="n">x</span><span class="p">.</span><span class="nf">upcase</span>
+	<span class="k">else</span> 
+		<span class="n">x</span><span class="p">.</span><span class="nf">downcase</span> 
+	<span class="k">end</span>
+<span class="k">end</span><span class="p">.</span><span class="nf">join</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Gets the name of the local variables defined in the scope of the method</span>
+<span class="c1"># Looks for one which, when combined with the values from above represents</span>
+<span class="c1"># a reversed base64 zlib compressed string, and returns that value</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">local_variables</span>
+<span class="n">l</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">v</span><span class="o">|</span>
+	<span class="n">iywRFqowCSzrNe</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="nf">to_s</span>
+
+	<span class="k">begin</span>
+		<span class="n">l</span> <span class="o">=</span> <span class="no">Zlib</span><span class="o">::</span><span class="no">Inflate</span><span class="p">.</span><span class="nf">inflate</span><span class="p">(</span><span class="no">Base64</span><span class="o">::</span><span class="n">decode64</span><span class="p">(</span><span class="n">iywRFqowCSzrNe</span><span class="p">.</span><span class="nf">join</span><span class="p">.</span><span class="nf">reverse</span><span class="p">))</span>
+		<span class="k">break</span>
+	<span class="k">rescue</span>
+		<span class="c1">#Yeah, catching all exceptions is horrible.. um.. chalk it up to "obfuscation"</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+<span class="k">return</span> <span class="n">l</span>
+</code></pre></div></div>
+
+<p>These small blocks of code, which were hidden in the array <code class="highlighter-rouge">iywRFqowCSzrNe</code> reveal their importance.
+They also help me achieve the rest of my goals for my obfuscated code!</p>
+
+<p>When these chunks of code are run in order as a result of a request to the root path the result is the string “Happy Birthday OpenStack” being output as a text/plain document.</p>
+
+<h2 id="reviewing-the-objectives">Reviewing the Objectives</h2>
+
+<p>I was very happy with the ways in which I met my original goals.</p>
+
+<ol>
+  <li>The code looked pretty thanks to ASCII images in original obfuscated code.</li>
+  <li>The code itself was obfuscated in two separate ways
+    <ul>
+      <li>The original code is obfuscated through hex encoded shifted integer character values</li>
+      <li>The internal code is encoded in reversed base64 zlib compressed strings</li>
+    </ul>
+  </li>
+  <li>The actual string “Happy Birthday OpenStack” isn’t present in fully de-obfuscated code
+    <ul>
+      <li>The string itself is yet another reversed base64 encoded zlib compressed string split into 3 parts</li>
+      <li>The first part is the host name of the machine running the code</li>
+      <li>The second part is the value of the <code class="highlighter-rouge">i_has_a_secret</code> HTTP response header from the /src URI</li>
+      <li>The final part is the variable name of an array in the source code itself!</li>
+    </ul>
+  </li>
+</ol>
+
+<p>I was quite happy that I managed to come up with three distinct methods in which to store the text “Happy Birthday OpenStack”. I hope you have enjoyed this de-obfuscation walk-through and post-mortem.</p>
+
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<ul class="socials">
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://twitter.com/coderjoe" target="_blank" class="socials__item__link" title="Twitter">
+			<i class="fab fa-twitter" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://github.com/coderjoe" target="_blank" class="socials__item__link" title="Github">
+			<i class="fab fa-github" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/josephbauser/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	<div class="footer__copyright">
+		<span>© 2019 coderjoe.net</span>
+		<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/simples-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+</html>
