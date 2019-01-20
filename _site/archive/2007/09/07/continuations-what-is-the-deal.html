@@ -1,0 +1,273 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+
+
+	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+	coderjoe.net
+
+	Simples Theme by https://jekyllthemes.io
+	Premium + free Jekyll themes for your blog or website.
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Page Info -->
+	<link rel="shortcut icon" href="/images/favicon.png">
+	<title>Continuations: What is the deal? – coderjoe.net</title>
+	<meta name="description" content="<p>Over the past few weeks I’ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I’m curious about how useful they will turn out to be. I’ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
+
+">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Continuations: What is the deal? – coderjoe.net">
+	<meta name="twitter:description" content="<p>Over the past few weeks I’ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I’m curious about how useful they will turn out to be. I’ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
+
+">
+	<meta name="twitter:image:src" content="">
+
+	<!-- Facebook OpenGraph -->
+	<meta property="og:title" content="Continuations: What is the deal? – coderjoe.net" />
+	<meta property="og:description" content="<p>Over the past few weeks I’ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I’m curious about how useful they will turn out to be. I’ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
+
+" />
+	<meta property="og:image" content="" />
+
+	
+	<!-- Font Embed Code -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600" rel="stylesheet">
+	
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<!-- Icons -->
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/solid.js" integrity="sha384-GXi56ipjsBwAe6v5X4xSrVNXGOmpdJYZEEh/0/GqJ3JTHsfDsF8v0YQvZCJYAiGu" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/brands.js" integrity="sha384-0inRy4HkP0hJ038ZyfQ4vLl+F4POKbqnaUB6ewmU4dWP0ki8Q27A0VFiVRIpscvL" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
+
+	
+	<!-- Custom Styles -->
+	<style></style>
+	
+
+	
+	<!-- Analytics Code -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-526253-2"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date());gtag('config', 'UA-526253-2');</script>
+	
+
+	
+	<!-- Extra Header JS Code -->
+	
+	
+	
+</head>
+
+
+<body class="loading ajax-loading" data-site-url="" data-page-url="/archive/2007/09/07/continuations-what-is-the-deal">
+
+
+	<header class="header">
+
+	<div class="wrap">
+
+		
+		<a href="/" class="header__avatar">
+			<img src="/images/avatar.jpg" class="header__avatar__img">
+		</a>
+		
+
+		
+		<a href="/" class="header__title">
+			coderjoe.net
+		</a>
+		
+
+		<p class="header__tagline">Me, myself, and my code.</p>
+
+		<div class="menu">
+			<ul class="menu__list">
+				
+				<li class="menu__list__item">
+					<a href="/" class="menu__list__item__link">Latest</a>
+				</li>
+				
+				<li class="menu__list__item">
+					<a href="/contact" class="menu__list__item__link">Contact</a>
+				</li>
+				
+			</ul>
+		</div>
+
+	</div>
+
+</header>
+
+
+	<div class="loader"><svg width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="60" cy="15" r="9" fill-opacity="0.3"><animate attributeName="r" from="9" to="9" begin="0s" dur="0.8s" values="9;15;9" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="0.5" to="0.5" begin="0s" dur="0.8s" values=".5;1;.5" calcMode="linear" repeatCount="indefinite" /></circle><circle cx="105" cy="15" r="15"><animate attributeName="r" from="15" to="15" begin="0s" dur="0.8s" values="15;9;15" calcMode="linear" repeatCount="indefinite" /><animate attributeName="fill-opacity" from="1" to="1" begin="0s" dur="0.8s" values="1;.5;1" calcMode="linear" repeatCount="indefinite" /></circle></svg></div>
+
+	<div class="page-loader"></div>
+
+	
+	<div class="page">
+
+		<div class="page__content" data-page-title="Continuations: What is the deal? – coderjoe.net" data-image="">
+
+			<section class="single">
+
+	<div class="wrap">
+
+		<h1>Continuations: What is the deal?</h1>
+		<p class="subtitle">07 September 2007</p>
+
+		<p>Over the past few weeks I’ve noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I’m curious about how useful they will turn out to be. I’ve even been known to suggest that continuations could be used to make code smaller and easier to write.</p>
+
+<p>With such a positive opinion about the potential use of continuations, it surprises my colleagues to learn that I am very wary of their actual use. I find myself asking, or being asked, the same question again and again.</p>
+
+<p><strong>What’s wrong with continuations?</strong></p>
+
+<p>Quite frankly, continuations remind me too much of the “GOTO” statement. Continuations, as with GOTOs, have their potential uses. However, I feel that the problems inherent in using continuations outweigh the benefits.</p>
+
+<p>From what I’ve gathered from my individual conversations, continuations are useful in a numer of ways.</p>
+
+<ul>
+  <li>First, in generators.</li>
+  <li>Second, in the form of their close cousin, the closure.</li>
+  <li>Finally, for their use in arbitrary state management.</li>
+</ul>
+
+<p>Their use as a part of generators is obvious, even if only made evident through the number of times the Python Fibonacci generator has been published as an example of the use of a continuation. Despite this, I don’t find myself creating and using generators in my every day code. Generators may be helpful, but using one seems like more of an occasional convenience than the rule.</p>
+
+<p>Closures on the other hand are something I use every day. My job involves a fair amount of web application development which results in a good deal of Javascript development. I will openly admit that I would be lost without  closures. Closures are invaluable when dealing with things such as binding execution to event handling. Without closures, some of the things I do might very well be impossible given Javascript’s event system design. Then again, Javascript was designed with closures in mind, so one could very well consider their use a moot point.</p>
+
+<p>The use of continuations for state management may not be as apparent as the previous examples. For an example, one need only look as far as the <a href="http://www.seaside.st/" title="Seaside: A Continuation Based Web Framework">Seaside</a> web framework. Seaside is a continuation based web framework which takes the stance that one should <a href="http://www.seaside.st/documentation/videos?16&amp;_k=jWLNbTUu&amp;_n&amp;_s=URoqQLYxrnXYKHZb" title="As stated by Lukas Renggli in his talk ">“share as much state as possible”</a>. In essence, the web framework itself keeps track of the sessions. These sessions are tied to a hash of continuations, each representing a state in the current application’s logical flow. The web application URL is not meaningful and contains little more than a reference ID to the current continuation. When you render a new page, a new continuation is generated and a reference to it is pushed into a hash somewhere for fetching later. That way if you hit the back button, going back to a previous page, the page will reference the previous continuation. When that continuation is used, your application flow would start from where you left off on that previous page.</p>
+
+<p>All of a sudden the back button is useful!</p>
+
+<p>Seaside has found an incredibly ingenious way to manage session state. At the same time, I believe it’s important to remember that while you gain automatic session state management, you lose some rather nice perks. The first thing I would miss while using Seaside would be meaningful URLs. In addition, your web framework is maintaining an ever increasing amount of state for each session. For some reason I get the feeling that this solution isn’t as great as it initially seemed.</p>
+
+<p><strong>With so many good examples, why be so wary of continuations?</strong></p>
+
+<p>It is true that there are many examples of continuations used for some very interesting, and often ingenious tasks. However, I still remember seeing GOTOs used in some of the most interesting and ingenious examples of code I have ever seen. For a proper example of the type of “ingenious” and “interesting” code I speak of, I refer you to <a href="http://catb.org/jargon/html/story-of-mel.html" title="The Story of Mel from The Jargon File.">“The Story of Mel”</a>.</p>
+
+<p>So Internet, I ask you, what is the deal? Are continuations just the current topic fad that they seem to be to me? Or are continuations something people are actually very excited about? Should I look forward to finding more examples of good continuation practice? Or will I soon be suggesting that programmers avoid both GOTOs and continuations because they encourage lazy or hard to manage code? Could their possibly be a happy medium?</p>
+
+<p>Forgive me for remaining skeptical, but I just can’t shake the feeling that continuations aren’t the magical entity that people seem to keep telling me they are.  I’ll leave it up to history (or the Internet) to decide…</p>
+
+<p>Addendum: It would seem that <a href="http://www.wikipedia.org/wiki/Continuation#Disadvantages" title="Wikipedia Continuations Article - Disadvantages">Wikipedia already agrees</a> with me that continuations are really just “the functional expression of the GOTO statement”.</p>
+
+
+	</div>
+
+</section>
+
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+
+	<ul class="socials">
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://twitter.com/coderjoe" target="_blank" class="socials__item__link" title="Twitter">
+			<i class="fab fa-twitter" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://github.com/coderjoe" target="_blank" class="socials__item__link" title="Github">
+			<i class="fab fa-github" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<li class="socials__item">
+		<a href="https://www.linkedin.com/in/josephbauser/" target="_blank" class="socials__item__link" title="Linkedin">
+			<i class="fab fa-linkedin" aria-hidden="true"></i>
+		</a>
+	</li>
+	
+	
+</ul>
+
+	<div class="footer__copyright">
+		<span>© 2019 coderjoe.net</span>
+		<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+	</div>
+
+</footer>
+
+
+	<!-- Javascript Assets -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/simples-min.js"></script>
+
+	
+	<!-- Extra Footer JS Code -->
+	
+	
+
+
+</body>
+
+</html>
