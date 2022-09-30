@@ -22,21 +22,18 @@
 	<link rel="shortcut icon" href="/images/favicon.png">
 	<title>How I Won the OpenStack Birthday Contest – coderjoe.net</title>
 	<meta name="description" content="<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
-
 ">
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="How I Won the OpenStack Birthday Contest – coderjoe.net">
 	<meta name="twitter:description" content="<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
-
 ">
 	<meta name="twitter:image:src" content="">
 
 	<!-- Facebook OpenGraph -->
 	<meta property="og:title" content="How I Won the OpenStack Birthday Contest – coderjoe.net" />
 	<meta property="og:description" content="<p>Last week I stumbled across the <a href="http://openstack.appfog.com">“AppFog OpenStack Birthday Contest”</a> via Twitter.</p>
-
 " />
 	<meta property="og:image" content="" />
 
@@ -206,16 +203,16 @@
 <span class="sx">%w|one two three|</span> <span class="c1"># =&gt; ["one", "two", "three"]</span>
 </code></pre></div></div>
 
-<p>This means that the code takes the humongous block of gibberish and turns it into a huge array of tokens. The <code class="highlighter-rouge">join</code> method is immediately called on the response, meaning the variable <code class="highlighter-rouge">c</code> contains a large string of characters.</p>
+<p>This means that the code takes the humongous block of gibberish and turns it into a huge array of tokens. The <code class="language-plaintext highlighter-rouge">join</code> method is immediately called on the response, meaning the variable <code class="language-plaintext highlighter-rouge">c</code> contains a large string of characters.</p>
 
-<p>The second line is a red-herring rot13 representation of the phrase <code class="highlighter-rouge">Made_by_Joe_"coderjoe"_Bauser"</code> which can be safely ignored.</p>
+<p>The second line is a red-herring rot13 representation of the phrase <code class="language-plaintext highlighter-rouge">Made_by_Joe_"coderjoe"_Bauser"</code> which can be safely ignored.</p>
 
 <p>The third line:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">XYZZY</span> <span class="o">=</span> <span class="kp">__FILE__</span>
 </code></pre></div></div>
 
-<p>Does nothing more than store the value of <code class="highlighter-rouge">__FILE__</code> (which represents the name of the currently running file) into a constant variable named <code class="highlighter-rouge">XYZZY</code>.</p>
+<p>Does nothing more than store the value of <code class="language-plaintext highlighter-rouge">__FILE__</code> (which represents the name of the currently running file) into a constant variable named <code class="language-plaintext highlighter-rouge">XYZZY</code>.</p>
 
 <p>The last line is the meat and potatoes of this file. It has the job of interpreting the huge block of text! If we create some temporary variables we can see what is going on a little easier.</p>
 
@@ -242,13 +239,13 @@
 <span class="nb">send</span><span class="p">(</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span> <span class="p">)</span>
 </code></pre></div></div>
 
-<p>Now we know what the obfuscated code is! It’s a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string ‘0x’. It is being used as the value to <code class="highlighter-rouge">send(:eval,string)</code> which means it must be more ruby code!</p>
+<p>Now we know what the obfuscated code is! It’s a series of ASCII characters, left shifted twice, converted to hexadecimal, and separated by the string ‘0x’. It is being used as the value to <code class="language-plaintext highlighter-rouge">send(:eval,string)</code> which means it must be more ruby code!</p>
 
 <p>Why did I do this? I had started with simple hex conversion, but I found I needed a larger canvas on which to draw my ASCII art, so the left shifting increased the hex values enough that I had a little more text to work with!</p>
 
 <h2 id="we-have-to-go-deeper">We Have to Go Deeper</h2>
 
-<p>Now that we know how the code is interpreted, we print it by replacing the code creating the <code class="highlighter-rouge">:eval</code> symbol with the symbol <code class="highlighter-rouge">:print</code> and the application will dutifully output the vanilla code!</p>
+<p>Now that we know how the code is interpreted, we print it by replacing the code creating the <code class="language-plaintext highlighter-rouge">:eval</code> symbol with the symbol <code class="language-plaintext highlighter-rouge">:print</code> and the application will dutifully output the vanilla code!</p>
 
 <p>The output of which is as follows:</p>
 
@@ -286,14 +283,14 @@
 
 <p>We now have some code which looks more like a standard Sinatra application!</p>
 
-<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code class="highlighter-rouge">get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I’ve taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
+<p>Those of you following along at home will notice that your code looks slightly different. The contents of the <code class="language-plaintext highlighter-rouge">get '/src' do</code> block and line 15 of the source above were originally obfuscated in a similar manner to the original file. I’ve taken the liberty of revealing them to you now, since the process of doing so is identical to the previous process we used.</p>
 
 <p>There are a few portions of this code we should make note of:</p>
 
 <ol>
-  <li>The first index of the array <code class="highlighter-rouge">iywRFqowCSzrNe</code> is a reversed base64 encoded zlib compressed chunk of Ruby code. It is reasonable to assume that the other two array locations may be similarly encoded.</li>
+  <li>The first index of the array <code class="language-plaintext highlighter-rouge">iywRFqowCSzrNe</code> is a reversed base64 encoded zlib compressed chunk of Ruby code. It is reasonable to assume that the other two array locations may be similarly encoded.</li>
   <li>The /src path sets some response headers. Their purpose isn’t immediately obvious.</li>
-  <li>The definition of <code class="highlighter-rouge">XYZZY</code> in the original file is important. The value of <code class="highlighter-rouge">__FILE__</code> changes when it is located inside of a string being run through <code class="highlighter-rouge">eval</code>. Storing the value of <code class="highlighter-rouge">__FILE__</code> in <code class="highlighter-rouge">XYZZY</code> allowed this obfuscated code to keep track of the current file name.</li>
+  <li>The definition of <code class="language-plaintext highlighter-rouge">XYZZY</code> in the original file is important. The value of <code class="language-plaintext highlighter-rouge">__FILE__</code> changes when it is located inside of a string being run through <code class="language-plaintext highlighter-rouge">eval</code>. Storing the value of <code class="language-plaintext highlighter-rouge">__FILE__</code> in <code class="language-plaintext highlighter-rouge">XYZZY</code> allowed this obfuscated code to keep track of the current file name.</li>
 </ol>
 
 <p>If we go ahead and print the value of the first array we find that the first array value executes the second array value, which in turn executes the third. De-obfuscating this code manually we end up with code similar to the following.</p>
@@ -337,7 +334,7 @@
 <span class="k">return</span> <span class="n">l</span>
 </code></pre></div></div>
 
-<p>These small blocks of code, which were hidden in the array <code class="highlighter-rouge">iywRFqowCSzrNe</code> reveal their importance.
+<p>These small blocks of code, which were hidden in the array <code class="language-plaintext highlighter-rouge">iywRFqowCSzrNe</code> reveal their importance.
 They also help me achieve the rest of my goals for my obfuscated code!</p>
 
 <p>When these chunks of code are run in order as a result of a request to the root path the result is the string “Happy Birthday OpenStack” being output as a text/plain document.</p>
@@ -358,7 +355,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
     <ul>
       <li>The string itself is yet another reversed base64 encoded zlib compressed string split into 3 parts</li>
       <li>The first part is the host name of the machine running the code</li>
-      <li>The second part is the value of the <code class="highlighter-rouge">i_has_a_secret</code> HTTP response header from the /src URI</li>
+      <li>The second part is the value of the <code class="language-plaintext highlighter-rouge">i_has_a_secret</code> HTTP response header from the /src URI</li>
       <li>The final part is the variable name of an array in the source code itself!</li>
     </ul>
   </li>
@@ -453,7 +450,7 @@ They also help me achieve the rest of my goals for my obfuscated code!</p>
 </ul>
 
 	<div class="footer__copyright">
-		<span>© 2019 coderjoe.net</span>
+		<span>© 2022 coderjoe.net</span>
 		<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
 	</div>
 
