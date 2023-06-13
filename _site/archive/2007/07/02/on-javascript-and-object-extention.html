@@ -19,6 +19,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 	<!-- Page Info -->
+	<link rel="me" href="https://hachyderm.io/@coderjoe">
 	<link rel="shortcut icon" href="/images/favicon.png">
 	<title>On Javascript and Object Extention – coderjoe.net</title>
 	<meta name="description" content="<p>I find myself doing more and more Javascript development as the days go on, and while I do not consider myself an expert on the language, I do consider myself well versed enough to get things done the right way.</p>
@@ -178,15 +179,15 @@
 
 <p>Here’s an example. Which works as expected with Prototype.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">();</span>
 
     <span class="nx">a</span><span class="p">[</span><span class="dl">"</span><span class="s2">joe</span><span class="dl">"</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
     <span class="nx">a</span><span class="p">[</span><span class="dl">"</span><span class="s2">jim</span><span class="dl">"</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
     <span class="nx">a</span><span class="p">[</span><span class="dl">"</span><span class="s2">sara</span><span class="dl">"</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
 
     <span class="k">for</span><span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">a</span> <span class="p">)</span>    
-        <span class="k">if</span><span class="p">(</span> <span class="nx">a</span><span class="p">.</span> <span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">)</span>
-            <span class="nx">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span> <span class="nx">a</span><span class="p">.</span> <span class="nf">hasOwnProperty</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">)</span>
+            <span class="nf">alert</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
 </code></pre></div></div>
 
 <p>In short, I’d say prototype is doing just fine. So long as you develop smartly you shouldn’t run into any serious problems.</p>
@@ -278,7 +279,7 @@
 </ul>
 
 	<div class="footer__copyright">
-		<span>© 2022 coderjoe.net</span>
+		<span>© 2023 coderjoe.net</span>
 		<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
 	</div>
 
