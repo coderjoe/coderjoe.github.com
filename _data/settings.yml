@@ -155,7 +155,16 @@ font_settings:
 
 advanced_settings:
   ajax_loading: true
-  analytics_code: "<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-526253-2\"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date());gtag('config', 'UA-526253-2');</script>"
+  analytics_code: |
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFHLWDNZ1H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-MFHLWDNZ1H');
+    </script>
   custom_styles: ""
   header_js: ""
   footer_js: ""
