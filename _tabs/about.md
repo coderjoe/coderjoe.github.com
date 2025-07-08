@@ -20,6 +20,6 @@ Also known as coderjoe on [github](https://github.com/coderjoe), on mastadon at 
 
 ## I enjoy
 - larping as a system admin on self-hosted infrastructure
-- contributing to opensource software projects
+- contributing to open source software projects
 - playing in and runing D&D campaigns
 - hiking in the mountains and biking around town
