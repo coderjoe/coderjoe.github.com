@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# I am Joseph Bauser
+# I am [Joseph Bauser](https://josephbauser.net)
 Also known as coderjoe on [github](https://github.com/coderjoe), on mastadon at [hachyderm.io](https://hackyderm.io/@coderjoe), and on [bluesky](https://bsky.app/profile/coderjoe.net).
 
 ## I am
