@@ -1,14 +1,13 @@
---- 
+---
 layout: post
 title: More Fun with Greasemonkey
 wordpress_id: 106
 wordpress_url: /archive/2007/10/30/more-fun-with-greasemonkey/
 comments: true
-categories: 
-- coding
-tags: 
+categories:
+- programming
+tags:
 - experts-exchange
-- greasemonkey
 ---
 
 The past month has been a difficult one. Between readying the apartment for winter, various chores, and social obligations, I've had little time for my own personal projects. Recently however I came across a few things that I just couldn't pass up.

@@ -1,17 +1,16 @@
---- 
+---
 layout: post
 title: "Continuations: What is the deal?"
 wordpress_id: 104
 wordpress_url: /archive/2007/09/07/continuations-what-is-the-deal/
 comments: true
-categories: 
-- coding
-tags: 
-- school
-- computer-science
+categories:
+- programming
+tags:
+- college
 ---
 
-Over the past few weeks I've noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I'm curious about how useful they will turn out to be. I've even been known to suggest that continuations could be used to make code smaller and easier to write. 
+Over the past few weeks I've noticed what I consider to be an interesting trend. It has become almost impossible for me to browse for technical reading on the internet, or partake in a technical discussion, without someone mentioning continuations. In general, I welcome any discussion, and discussion of continuations is no different. The implementation of continuations intrigues me, and I'm curious about how useful they will turn out to be. I've even been known to suggest that continuations could be used to make code smaller and easier to write.
 
 With such a positive opinion about the potential use of continuations, it surprises my colleagues to learn that I am very wary of their actual use. I find myself asking, or being asked, the same question again and again.
 

@@ -1,19 +1,13 @@
---- 
+---
 layout: post
 title: rstarcraft.info beta launch
 wordpress_id: 187
 wordpress_url: http://www.coderjoe.net/?p=187
 comments: true
-categories: 
-- coding
-tags: 
-- JavaScript
-- greasemonkey
-- google
-- chrome
-- starcraft 2
-- reddit
-- starcraft
+categories:
+- programming
+tags:
+- rstarcraft.info
 ---
 
 **The History:**
@@ -48,6 +42,6 @@ And thus [rstarcraft.info](http://rstarcraft.info "rstarcraft.info") was born. T
 
 [The site](http://rstarcraft.info "The site") is officially in open beta, and I'll be posting a link to the site with a short description on Reddit soon. I hope people enjoy it as much as  my limited test group did.
 
-Get support for the site at the [rstarcraft.info Google group](http://www.googlegroups.com/group/rstarcraftinfo. "rstarcraft.info Google group."). 
+Get support for the site at the [rstarcraft.info Google group](http://www.googlegroups.com/group/rstarcraftinfo. "rstarcraft.info Google group.").
 
 You can follow progress on the site by watching the Twitter account [@rstarcraftinfo](http://twitter.com/rstarcraftinfo "@rstarcraftinfo")

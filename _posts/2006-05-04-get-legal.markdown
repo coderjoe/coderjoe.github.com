@@ -1,20 +1,18 @@
---- 
+---
 layout: post
 title: Get Legal
 wordpress_id: 8
 wordpress_url: http://www.coderjoe.net/2006/05/04/get-legal/
 comments: true
-categories: 
-- Life
-tags: 
-- openoffice.org
-- suggestions
+categories:
+- life
+tags:
 ---
 
-I've just been clued into a new(?) advertising campaign created by my personal favorite word processing software producer OpenOffice.org. 
+I've just been clued into a new(?) advertising campaign created by my personal favorite word processing software producer OpenOffice.org.
 
-Apparently the buzz is that with Microsoft's new clamp down on pirated software, and schemes to implement pirate detecting software into new versions of their operating system and business software, that the best way to convince people to switch is by convincing them to "get legal". 
+Apparently the buzz is that with Microsoft's new clamp down on pirated software, and schemes to implement pirate detecting software into new versions of their operating system and business software, that the best way to convince people to switch is by convincing them to "get legal".
 
 So without further adieu, I present to you OpenOffice. org's Get Legal campaign.
 
-<http://why.openoffice.org>[![Get legal. Get OpenOffice.org](http://why.openoffice.org/images/ooo_get_legal.png)](http://why.openoffice.org)
+[![Get legal. Get OpenOffice.org](/images/posts/2006/05/ooo_get_legal.png)](https://web.archive.org/web/20060503125710/http://why.openoffice.org/)

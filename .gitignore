@@ -1,16 +1,27 @@
+# Bundler cache
 .bundle
-.DS_Store
-.sass-cache
-.gist-cache
-.pygments-cache
-.preview-mode
-.jekyll-cache
-_deploy
-public
-sass.old
-source.old
-source/_stash
-source/stylesheets/screen.css
 vendor
+Gemfile.lock
+
+# Jekyll cache
+.jekyll-cache
+.jekyll-metadata
+_site
+
+# RubyGems
+*.gem
+
+# NPM dependencies
 node_modules
-tags
+package-lock.json
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Misc
+_sass/vendors
+assets/js/dist

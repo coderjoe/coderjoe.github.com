@@ -1,19 +1,19 @@
---- 
+---
 layout: post
 title: The RND Benchmark Update Redux
 wordpress_id: 19
 wordpress_url: /archive/2006/08/13/the-rnd-benchmark-update-redux/
 comments: true
-categories: 
-- coding
+categories:
+- programming
 tags: []
 ---
 
-Yesterday I posted some updated benchmarks which put a new JavaScript templating system called RND up against basic DOM manipulation, AJS, and the use of innerHTML. 
+Yesterday I posted some updated benchmarks which put a new JavaScript templating system called RND up against basic DOM manipulation, AJS, and the use of innerHTML.
 
-Today [Amix](http://amix.dk "amix.dk") has [posted](http://amix.dk/index.py/permanentLink?id=163#comments "RND template redux") what I believe is a much fairer comparison. However the basic DOM manipulation code seemed slower than it should be to me. So I decided to optimize it. 
+Today [Amix](https://amix.dk "amix.dk") has [posted](https://amix.dk/index.py/permanentLink?id=163#comments "RND template redux") what I believe is a much fairer comparison. However the basic DOM manipulation code seemed slower than it should be to me. So I decided to optimize it.
 
-Let me stress again that **I believe the updated benchmark that Amix has on [his blog](http://amix.dk "amix.dk") is entirely fair as it is written exactly how most people would write it**. 
+Let me stress again that **I believe the updated benchmark that Amix has on [his blog](https://amix.dk "amix.dk") is entirely fair as it is written exactly how most people would write it**.
 
 That being said, I wanted to see what optimization of the DOM example could do against string concatination!
 
@@ -21,7 +21,7 @@ Get the zip [here](/images/posts/2006/08/html_rnd_benchmark-updated3.zip "html_r
 
 <!--more-->
 
-After writing this latest example I think there's a lot to be said for the basic DOM as compared to a templating system. However, if you use the templating system you will have a smaller JavaScript footprint and fewer lines of code. It's the classic speed vs complexity argument. :) Below are my benchmarks. 
+After writing this latest example I think there's a lot to be said for the basic DOM as compared to a templating system. However, if you use the templating system you will have a smaller JavaScript footprint and fewer lines of code. It's the classic speed vs complexity argument. :) Below are my benchmarks.
 
 The zip contains two files:
 
@@ -65,7 +65,7 @@ My benchmarks for the two files:
 
 Update:
 
-These numbers are great, but I don't have a copy of Internet Explorer to test on. I've been informed that in Internet Explorer innerHTML and RND blows the pants off of both DOM manipulation methods. 
+These numbers are great, but I don't have a copy of Internet Explorer to test on. I've been informed that in Internet Explorer innerHTML and RND blows the pants off of both DOM manipulation methods.
 
 This makes perfect sense to me. One would expect innerHTML to be superior in the browser it was designed for. :)
 

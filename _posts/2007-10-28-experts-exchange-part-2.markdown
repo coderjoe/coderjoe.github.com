@@ -1,12 +1,12 @@
---- 
+---
 layout: post
 title: Experts Exchange Part 2
 wordpress_id: 105
 wordpress_url: /archive/2007/10/28/experts-exchange-part-2/
 comments: true
-categories: 
-- coding
-tags: 
+categories:
+- programming
+tags:
 - experts-exchange
 ---
 

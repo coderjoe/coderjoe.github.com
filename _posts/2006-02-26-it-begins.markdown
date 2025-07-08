@@ -1,12 +1,11 @@
---- 
+---
 layout: post
 title: And it has begun...
 wordpress_id: 1
 comments: true
-categories: 
-- coding
-tags: 
-- projects
+categories:
+- programming
+tags:
 - coderjoe.net
 ---
 

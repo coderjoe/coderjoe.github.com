@@ -1,23 +1,19 @@
---- 
+---
 layout: post
 title: Setting up an NDS Homebrew tool chain in Linux and Mac OSX! (Ok... Windows too...)
 wordpress_id: 86
 wordpress_url: /archive/2007/07/23/setting-up-an-nds-homebrew-tool-chain-in-linux-and-mac-osx-ok-windows-too/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
+categories:
+- programming
+tags:
 - nintendo-ds-homebrew
 - tutorial
-- libnds
-- devkitpro
-- devkitarm
 ---
 
 > **UPDATE:** Given the updates made in the DevkitPro project since this article was written, it is quite out of date. For Linux, there is a little bit of hope! Commenter Namoul has created an installer script which can be used to get your development environment up and running. Find it here: [http://lmn.mooo.com/projects/devkitpro-sh](http://lmn.mooo.com/projects/devkitpro-sh)
 
-Well, I realize I had promised to give instructions for both Windows and Linux, but as it turns out, the instructions for Windows are so simple it's almost laughable. 
+Well, I realize I had promised to give instructions for both Windows and Linux, but as it turns out, the instructions for Windows are so simple it's almost laughable.
 
 Are you windows users ready?
 
@@ -30,13 +26,13 @@ That's right. That's it. You're done Windows users. Now go have a coffee while u
 
 **Installing devkitARM and setting up your environment in Linux and Mac OSX.**
 
-To be honest, the process isn't all that much more complex, but it does assume you know a little bit about setting environment variables. 
+To be honest, the process isn't all that much more complex, but it does assume you know a little bit about setting environment variables.
 
 The first thing you'll need to do is make sure you've downloaded the devkitARM binary package, the libnds source package, and the example code package mentioned in the previous post.
 
 **Step 1) Setting up the directory structure: **
 
-First we need to set up a development path. This path can be anywhere, but for the sake of this tutorial we'll assume you're installing to /usr/local/devkitPRO/. 
+First we need to set up a development path. This path can be anywhere, but for the sake of this tutorial we'll assume you're installing to /usr/local/devkitPRO/.
 
 The first thing we need to do is create our directory structure:
 
@@ -98,7 +94,7 @@ To make things easier for me, I just added the following three lines to the bott
 
 **Step 5) Compile libnds**:
 
-Now that we have our environment variable set, we can compile libnds. 
+Now that we have our environment variable set, we can compile libnds.
 Just go back to our libnds directory and type make!
 
 ```bash
@@ -110,15 +106,15 @@ If all went well, you should see a bunch of text fly by, and eventually successf
 
 **Step 6) Bake until golden brown:**
 
-Congratulations, you now have a successfully built Nintendo DS development tool chain and libraries. 
+Congratulations, you now have a successfully built Nintendo DS development tool chain and libraries.
 
-If you'd like to test your toolchain you can extract the example source tarball that I suggested you download in the previous tutorial, and type make in it's root directory. If everything is correctly set up, it should create a Nintendo DS ROM for each example in the examples directory. 
+If you'd like to test your toolchain you can extract the example source tarball that I suggested you download in the previous tutorial, and type make in it's root directory. If everything is correctly set up, it should create a Nintendo DS ROM for each example in the examples directory.
 
 The examples may not make much sense now, but make sure to poke around the examples. They're one of the most useful resources a Nintendo DS homebrew developer has at his or her disposal.
 
 **Final Notes:**
 
-A final suggestion would be to install a Nintendo DS Emulator on your computer if you haven't already. This way you can begin experimenting with your Nintendo DS examples even if you don't yet have a DS or development hardware. However, when it comes to testing your shiny new Nintendo DS programs, nothing beats booting them on a Nintendo DS. 
+A final suggestion would be to install a Nintendo DS Emulator on your computer if you haven't already. This way you can begin experimenting with your Nintendo DS examples even if you don't yet have a DS or development hardware. However, when it comes to testing your shiny new Nintendo DS programs, nothing beats booting them on a Nintendo DS.
 
 I would highly recommend that every budding Nintendo DS developer own at least one Nintendo DS. Besides... when you're not developing you can pop in your Mario Kart or Tetris cartridge and enjoy Nintendo's awesome handy-work!
 

@@ -1,18 +1,16 @@
---- 
+---
 layout: post
 title: "Checkpoint 2: Lines are so exciting!"
 wordpress_id: 33
 wordpress_url: /archive/2007/04/01/checkpoint-2-lines-are-so-exciting/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- school
-- computer-graphics-2
+categories:
+- programming
+tags:
+- college
 ---
 
-Well, not too much to look at, but enough to get us excited. We've got rays tracing!Below you should see a render with no reflection and no shadow detection. 
+Well, not too much to look at, but enough to get us excited. We've got rays tracing!Below you should see a render with no reflection and no shadow detection.
 
 What it does have is super sampling!
 

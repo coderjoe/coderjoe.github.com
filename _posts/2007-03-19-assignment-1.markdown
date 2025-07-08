@@ -1,15 +1,13 @@
---- 
+---
 layout: post
 title: Assignment 1
 wordpress_id: 31
 wordpress_url: /archive/2007/03/19/assignment-1/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- school
-- computer-graphics-2
+categories:
+- programming
+tags:
+- college
 ---
 
 Assignment 1 requires a render of some sort to get a basic idea of object dimensions and positions for our rendered scene. Here's what we came up with:

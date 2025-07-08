@@ -1,20 +1,16 @@
---- 
+---
 layout: post
 title: Official Rstarcraft.info Firefox Extension
 wordpress_id: 192
 wordpress_url: http://www.coderjoe.net/?p=192
 comments: true
-categories: 
+categories:
+- programming
+tags:
 - rstarcraft.info
-tags: 
-- extensions
-- Firefox
-- greasemonkey
-- starcraft
-- firefox extension
 ---
 
-When [rstarcraft.info](http://rstarcraft.info "rstarcraft.info") was [launched](/archive/2011/03/23/rstarcraft_info_beta_launch/ "launched") a little over a week ago, it was accompanied by both a Greasemonkey script and a Chrome extension. 
+When [rstarcraft.info](http://rstarcraft.info "rstarcraft.info") was [launched](/archive/2011/03/23/rstarcraft_info_beta_launch/ "launched") a little over a week ago, it was accompanied by both a Greasemonkey script and a Chrome extension.
 
 This was made very simple thanks to the fact that the structure of Greasemonkey scripts and Chrome extensions are very similar. However, this left me with a few small problems.
 
@@ -23,7 +19,7 @@ This was made very simple thanks to the fact that the structure of Greasemonkey 
 
 Combined, these two factors create an unacceptable situation for my Firefox users, so I'm happy to announce that there is now a [dedicated rstarcraft.info extension for Firefox](https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/ "dedicated rstarcraft.info extension for Firefox")!
 
-As a result of this switch, the greasemonkey script should be considered deprecated and unmaintained. No further updates to the Greasemonkey script will be made. 
+As a result of this switch, the greasemonkey script should be considered deprecated and unmaintained. No further updates to the Greasemonkey script will be made.
 
 The Firefox extension can be found at: [https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/](https://addons.mozilla.org/en-US/firefox/addon/rstarcraft-user-script/) and is the preferred method for enhancing your experience in Firefox.
 

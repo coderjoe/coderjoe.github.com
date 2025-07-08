@@ -1,17 +1,15 @@
---- 
+---
 layout: post
 title: "Google Chrome's Terms of Service: They want your stuff?"
 wordpress_id: 142
 wordpress_url: http://www.coderjoe.net/?p=142
 comments: true
-categories: 
-- Life
-tags: 
+categories:
+- life
+tags:
 - rant
-- google
-- chrome
-- terms of service
 - rights
+- google
 ---
 
 **UPDATE: The Terms of Service have been updated as of September 4th 2008 to state that you retain the rights and copyright on all things displayed with or through "The Service". The EULA is no longer a problem and I look forward to giving Chrome an in depth try. (See the EULA here:**[http://www.google.com/chrome/eula. html](http://www.google.com/chrome/eula.html "http://www.google.com/chrome/eula.html"))
@@ -28,7 +26,7 @@ In the majority of cases, pieces of desktop software do not contain the same roy
 
 However, when reading Google Chromeâ€™s terms of service I couldnâ€™t help but notice a slight difference. Unlike the desktop applications I was used to, this terms of service seems to treat the application like a service!
 
-Throughout the document you're reminded of the rights granted to you while using the "Service". Nowhere in the document is a distinction made between Google Chrome and Googleâ€™s services. As a result we end up with some curious phrases granting some rather astonishing rights to Google. 
+Throughout the document you're reminded of the rights granted to you while using the "Service". Nowhere in the document is a distinction made between Google Chrome and Googleâ€™s services. As a result we end up with some curious phrases granting some rather astonishing rights to Google.
 
 Take the following for example:
 > 11\. Content license from you
@@ -42,16 +40,16 @@ But wait, what if I use Google Chrome to access my web based source repository? 
 It is due to these concerns that I sent the following letter as part of my uninstall questionnaire:
 > I am not happy with one fairly critical decision made for Chrome distribution: The Terms of Service.
 >
-> I do not like the idea that Google Chrome will automatically download and update itself for me as described in the terms of service. In addition to the above, the overzealous use of the term "Service" to describe everything Google does, (presumably including Chrome since no language states otherwise) thereby granting Google trademark free and royalty free rights to my content is completely unacceptable. 
+> I do not like the idea that Google Chrome will automatically download and update itself for me as described in the terms of service. In addition to the above, the overzealous use of the term "Service" to describe everything Google does, (presumably including Chrome since no language states otherwise) thereby granting Google trademark free and royalty free rights to my content is completely unacceptable.
 >
 > While I do not believe that the Terms of Service were penned with malicious intent, but the danger is there and I must avoid it.
 >
-> Other than the issues with the Terms of Service I found Chrome quite nice, but I can't risk sacrificing the rights to my content for the sake of a new web browser. Unfortunately that means my opinion of Chrome will only change when the Terms of Service do. 
+> Other than the issues with the Terms of Service I found Chrome quite nice, but I can't risk sacrificing the rights to my content for the sake of a new web browser. Unfortunately that means my opinion of Chrome will only change when the Terms of Service do.
 >
 > I can't help but think only semi-sarcastically, "Why does a project supposedly fueled with such an Open Source mindset have such a draconian license anyway?"
 >
 > Sincerely,
-> 
+>
 > Joseph Bauser
 
 While I'm positive the TOS was not penned with malicious intent, I can't use any product or service which grants such far-reaching rights to its creators. If Google chooses to modify their Terms of Service for Chrome, I'd be happy to give it an honest trial.

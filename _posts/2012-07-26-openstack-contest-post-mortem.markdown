@@ -4,9 +4,9 @@ title: "How I Won the OpenStack Birthday Contest"
 date: 2012-07-26 19:01
 comments: true
 published: true
-categories: 
-- coding
-- contests
+categories:
+- programming
+tags:
 - ruby
 - obfuscation
 ---
@@ -17,7 +17,7 @@ I'd been quietly following AppFog's progress since I received a PHPFog beta invi
 
 Anticipating that I'd be up against stiff competition I chose to place some additional requirements on my contest submission. As the AppFog Blog [recently showed](http://blog.appfog.com/other-amazing-entries-from-the-openstack-contest/) I wasn't wrong about the competition. My hope was that the extra work I put into the submission would grant me at least an honorable mention.
 
-What I didn't expect was that I'd end up [winning the competition](http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/)!
+What I didn't expect was that I'd end up [winning the competition](https://web.archive.org/web/20140616071932/http://blog.appfog.com/congratulations-to-joe-bauser-on-winning-the-openstack-obfuscated-code-competition/)!
 
 I am honored that my code was chosen as the winning submission. As a small show of thanks, I've decided to detail my experiences with the AppFog beta as well as annotate the de-obfuscation of my code step-by-step.
 
@@ -26,9 +26,9 @@ I am honored that my code was chosen as the winning submission. As a small show 
 An AppFog First Impression
 --------------------------
 
-My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as [AppFog](http://www.appfog.com). At first I was worried about the work required to configure an application, but AppFog's simple interface had me finished with the process before I knew I had started!
+My first concern was getting an AppFog instance configured on which to develop. While I do have a little bit of experience dealing with shared hosting and VPS services, I have only minimal exposure to PaaS providers such as [AppFog](https://www.appfog.com). At first I was worried about the work required to configure an application, but AppFog's simple interface had me finished with the process before I knew I had started!
 
-After cloning an [example project](https://github.com/appfog/af-ruby-sinatra) published by AppFog on github, installing the [AppFog gem](http://rubygems.org/gems/af), and running a deploy I was done! Zero to functioning application in almost exactly 2 minutes!
+After cloning an [example project](https://github.com/appfog/af-ruby-sinatra) published by AppFog on github, installing the [AppFog gem](https://rubygems.org/gems/af), and running a deploy I was done! Zero to functioning application in almost exactly 2 minutes!
 
 Thanks to the simple in AppFog deployment process I was able to concentrate entirely on my code, and not my hosting.
 
@@ -37,7 +37,7 @@ Some Speed Bumps
 
 Unfortunately I can't say that my experience with AppFog was completely problem free. During development I ran into occasional trouble with deployment. Applications that ran perfectly fine locally started timing out regularly during staging. When they staged they would fail to start. A few of these problems were of my own making and were easily resolved by checking the support area of the AppFog site.
 
-For the more difficult problems, the AppFog support team met or exceeded the customer service I'd grown accustom to from both [Dreamhost](http://dreamhost.com) and [Linode](http://linode.com). With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn't paid them a cent!
+For the more difficult problems, the AppFog support team met or exceeded the customer service I'd grown accustom to from both [Dreamhost](https://dreamhost.com) and [Linode](https://linode.com/). With the help of the AppFog support team I was able to fix my deployment problems and submit my solution. I was especially impressed by their responsiveness given I hadn't paid them a cent!
 
 Enough about problems... on to the code!
 
@@ -59,7 +59,7 @@ Understanding the Obfuscation
 
 None of the methods of code obfuscation I used are terribly complex. The [full submission](https://github.com/coderjoe/happy_birthday_openstack/blob/a422a74da8b565c897079bc4b0af49490a4bdeca/app.rb) is plenty pretty with ASCII art declaring my affection for the people running the contest.
 
-The ASCII art itself was created with the help of an open source tool called [jp2a](http://csl.sublevel3.org/jp2a/) by [Christian Stigen Larsen](http://csl.sublevel3.org/). The generated ASCII was then used to format the resulting block of obfuscated code. This method allowed me to obfuscate the code first, then tweak the ASCII art as I saw fit.
+The ASCII art itself was created with the help of an open source tool called [jp2a](https://github.com/cslarsen/jp2a/) by [Christian Stigen Larsen](https://github.com/cslarsen/). The generated ASCII was then used to format the resulting block of obfuscated code. This method allowed me to obfuscate the code first, then tweak the ASCII art as I saw fit.
 
 Despite how complicated it may look my submission boils down to the following four lines of code:
 
@@ -201,13 +201,13 @@ uri = URI.parse("http://#{request.host}:#{request.port}/src")
 response = Net::HTTP.get_response(uri)
 lulz = response.get_fields('lulz').pop.split('')
 
-#Using the value of the 'lulz' HTTP header, alter the case of the characters in the host 
+#Using the value of the 'lulz' HTTP header, alter the case of the characters in the host
 #name on which the application is running, and store the result in the second array location
-iywRFqowCSzrNe[1] = request.host.slice(/^[^.]+/).split('').map do |x| 
-	if lulz.pop == 'u' 
+iywRFqowCSzrNe[1] = request.host.slice(/^[^.]+/).split('').map do |x|
+	if lulz.pop == 'u'
 		x.upcase
-	else 
-		x.downcase 
+	else
+		x.downcase
 	end
 end.join
 ```

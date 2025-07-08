@@ -1,20 +1,18 @@
---- 
+---
 layout: post
 title: Excitement!
 wordpress_id: 50
 wordpress_url: /archive/2007/05/08/excitement/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- school
-- computer-graphics-2
+categories:
+- programming
+tags:
+- college
 ---
 
 We've completed the final checkpoint for our raytracer and we couldn't be happier!
 
-First, please note that we have fixed the transmission  problems that were evident before. 
+First, please note that we have fixed the transmission  problems that were evident before.
 
 Ward Tone Reproduction:
 

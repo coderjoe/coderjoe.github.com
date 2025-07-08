@@ -1,14 +1,13 @@
---- 
+---
 layout: post
 title: Updated RND Benchmarks
 wordpress_id: 17
 wordpress_url: /archive/2006/08/12/updated-rnd-benchmarks/
 comments: true
-categories: 
-- coding
-tags: 
-- JavaScript
-- Benchmarks
+categories:
+- programming
+tags:
+- javascript
 ---
 
 Since the original author was curious about the results from my updated benchmarks here they are. I will only report results from test-fixed.html as I do consider test-unfairdom.html to be unfair in favor of the dom example. Then again I did make it so you already knew that. ;)

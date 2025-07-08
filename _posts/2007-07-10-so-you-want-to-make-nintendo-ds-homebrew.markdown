@@ -1,24 +1,23 @@
---- 
+---
 layout: post
 title: So you want to make Nintendo DS Homebrew...
 wordpress_id: 81
 wordpress_url: /archive/2007/07/10/so-you-want-to-make-nintendo-ds-homebrew/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
+categories:
+- programming
+tags:
 - nintendo-ds-homebrew
 - tutorial
 ---
 
-If you're like me, and you're new to the Nintendo DS scene, the first thing you'll notice is that you have a long road ahead of you before you can call yourself an expert homebrew developer. You've probably scoured message boards, websites, IRC channels, and source code soaking up as much information as you could so you could be somewhat ready to begin developing. 
+If you're like me, and you're new to the Nintendo DS scene, the first thing you'll notice is that you have a long road ahead of you before you can call yourself an expert homebrew developer. You've probably scoured message boards, websites, IRC channels, and source code soaking up as much information as you could so you could be somewhat ready to begin developing.
 
 Well you're ready to start... but how do you do that? Where are the tools? How do you install them?
 
 Never fear folks, I've collected this information and will provide you with step by step instructions for getting your development information up and running!
 
-Over the next few days I'll be posting these how-to tutorials on my site which should explain every step you need in order to start developing for your Nintendo DS. 
+Over the next few days I'll be posting these how-to tutorials on my site which should explain every step you need in order to start developing for your Nintendo DS.
 
 Topics which will be covered are as follows:
 

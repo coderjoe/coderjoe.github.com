@@ -1,16 +1,14 @@
---- 
+---
 layout: post
 title: A little turkey day coding!
 wordpress_id: 149
 wordpress_url: http://www.coderjoe.net/?p=149
 comments: true
-categories: 
-- coding
-tags: 
-- JavaScript
-- budget
-- holiday
-- jquery
+categories:
+- programming
+tags:
+- javascript
+- html
 ---
 
 So what does any self respecting programmer do when he finds himself awake at 2am after Thanksgiving?

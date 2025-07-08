@@ -1,18 +1,15 @@
---- 
+---
 layout: post
 title: Tasking
 wordpress_id: 3
 wordpress_url: http://www.coderjoe.net/2006/02/27/tasking/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- josephbauser.net
-- foxnight.net
+categories:
+- programming
+tags:
 ---
 
-One more week. 
+One more week.
 
 That's it, one more week and my status as a co-op employed student ends. I have a lot of things to work out, tasks, ideas, plans, and project ideas. First, however, I'll need to flesh out the layouts for my project sites. I'm setting my tentative release dates for Foxnight. net and JosephBauser. net today. After all, if you don't start you can't finish. I have a week of break which I'm taking mostly to myself between quarters, I need to produce something.
 

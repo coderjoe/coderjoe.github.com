@@ -1,26 +1,24 @@
---- 
+---
 layout: post
 title: On Javascript and Object Extention
 wordpress_id: 67
 wordpress_url: /archive/2007/07/02/on-javascript-and-object-extention/
 comments: true
-categories: 
-- coding
-tags: 
+categories:
+- programming
+tags:
 - rant
-- web-development
-- JavaScript
 ---
 
-I find myself doing more and more Javascript development as the days go on, and while I do not consider myself an expert on the language, I do consider myself well versed enough to get things done the right way. 
+I find myself doing more and more Javascript development as the days go on, and while I do not consider myself an expert on the language, I do consider myself well versed enough to get things done the right way.
 
-More often than not my solutions will involve heavy use of the [Prototype.js](http://www.prototypejs.org) library to make my life a little bit easier. 
+More often than not my solutions will involve heavy use of the [Prototype.js](http://www.prototypejs.org) library to make my life a little bit easier.
 
-I won't be shy, I love this library. I love that it isn't based on XPath, and I love that it provides me with common extensions to common objects to make my life easier. It would seem, however, that there are quite a few people who disagree with me. 
+I won't be shy, I love this library. I love that it isn't based on XPath, and I love that it provides me with common extensions to common objects to make my life easier. It would seem, however, that there are quite a few people who disagree with me.
 
-Following the Rails Spinoffs mailing list (a hangout for users of [Prototype](http://www.prototypejs.org) and [Scriptaculous](http://script.aculo.us/) alike) I came across a post entitled "[Why I Don't Use the Prototype Javascript Library](http://blog.metawrap.com/blog/WhyIDontUseThePrototypejsJavaScriptLibrary.aspx)". As I'm always willing to be pointed in the right direction when I'm doing something wrong, curiosity got the best of me and I checked the site out. 
+Following the Rails Spinoffs mailing list (a hangout for users of [Prototype](http://www.prototypejs.org) and [Scriptaculous](http://script.aculo.us/) alike) I came across a post entitled "[Why I Don't Use the Prototype Javascript Library](https://blog.metawrap.com/2006/01/06/why-i-dont-use-the-prototype-js-javascript-library/)". As I'm always willing to be pointed in the right direction when I'm doing something wrong, curiosity got the best of me and I checked the site out.
 
-I've got to say, I'm quite surprised at the number of times I hear the arguments presented in this post. 
+I've got to say, I'm quite surprised at the number of times I hear the arguments presented in this post.
 
 To be honest, I don't really understand what the problem is.
 
@@ -30,11 +28,11 @@ I've read through the article, and it's the same argument I keep hearing over an
 
 This is not necessarily true, and has bordered on a religious war for a while now. :p
 
-Prototype is doing nothing out of the ordinary. 
+Prototype is doing nothing out of the ordinary.
 
-Last I checked, Javascript was a prototyped language. 
+Last I checked, Javascript was a prototyped language.
 
-Unlike class based languages, a prototyped language stresses the reuse of objects through cloning as opposed to stressing the relationships between created objects (If my memory serves me correctly). 
+Unlike class based languages, a prototyped language stresses the reuse of objects through cloning as opposed to stressing the relationships between created objects (If my memory serves me correctly).
 
 Following this paradigm, when Prototype was developed they reused the existing Javascript objects to provide extra functionality which was useful to the framework. These sorts of extensions to existing Javascript classes such as Array do potentially overwrite native functionality. This, however, is the same for any prototyped object in Javascript and is allowable by design.
 
@@ -68,7 +66,7 @@ Here's an example. Which works as expected with Prototype.
     a["jim"]=1;
     a["sara"]=1;
 
-    for( i in a )    
+    for( i in a )
         if( a. hasOwnProperty(i) )
             alert(i);
 ```

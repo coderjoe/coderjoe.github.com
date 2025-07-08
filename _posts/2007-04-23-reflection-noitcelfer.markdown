@@ -1,18 +1,16 @@
---- 
+---
 layout: post
 title: Reflection | noitcelfeR
 wordpress_id: 44
 wordpress_url: /archive/2007/04/23/reflection-noitcelfer/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- school
-- computer-graphics-2
+categories:
+- programming
+tags:
+- college
 ---
 
-Our raytracer has been significantly expanded. First, we added reflection, which was cool... but everything looked like glass balls. Second, we added distributed rays for reflections which gave us wonderful blurry reflectionsThird, we applied this distribution to shadow calculations to get ourselves some soft shadows. Finally, we added simple pre-rendering of a rotation around a scene using a distance from to position a point a distancefrom our camera to rotate around. 
+Our raytracer has been significantly expanded. First, we added reflection, which was cool... but everything looked like glass balls. Second, we added distributed rays for reflections which gave us wonderful blurry reflectionsThird, we applied this distribution to shadow calculations to get ourselves some soft shadows. Finally, we added simple pre-rendering of a rotation around a scene using a distance from to position a point a distancefrom our camera to rotate around.
 
 Take a look:
 

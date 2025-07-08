@@ -1,20 +1,17 @@
---- 
+---
 layout: post
 title: A list of Nintendo DS Homebrew Resources
 wordpress_id: 99
 wordpress_url: /archive/2007/08/08/a-list-of-nintendo-ds-homebrew-resources/
 comments: true
-categories: 
-- coding
-tags: 
-- C/C++
+categories:
+- programming
+tags:
+- c++
 - nintendo-ds-homebrew
-- libnds
-- devkitpro
-- devkitarm
 ---
 
-I was asked recently what resources I use as references while developing Nintendo DS homebrew. 
+I was asked recently what resources I use as references while developing Nintendo DS homebrew.
 
 As such I've decided to collect my favorite links in a single post for your enjoyment.  ( Please keep in mind that I am also new to the Ninendo DS development scene, and as such this post is by no means a complete list of all of the resources available to you. )
 

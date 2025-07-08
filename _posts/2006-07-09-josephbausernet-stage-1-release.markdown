@@ -1,21 +1,19 @@
---- 
+---
 layout: post
 title: JosephBauser.net Stage 1 Release!
 wordpress_id: 12
 wordpress_url: /archive/2006/07/09/josephbausernet-stage-1-release/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- josephbauser.net
+categories:
+- programming
+tags:
 ---
 
-Well, [JosephBauser.net](http://www.josephbauser.net "JosephBauser.net") Stage 1 is completed. 
+Well, [JosephBauser.net](https://www.josephbauser.net "JosephBauser.net") Stage 1 is completed.
 
 Now with 100% more Web 2.0!
 
-This means that the layout is finalized, the navigation works, and the javascript is almost where I want it. 
+This means that the layout is finalized, the navigation works, and the javascript is almost where I want it.
 
 In addition the application degrades gracefully, so those of us with old browsers can still navigate just fine.
 
@@ -34,4 +32,4 @@ On my plate for Stage 2 release are the following items (In order of importance)
 5. Support for categories in the projects page.
 6. Update the projects page with all of my projects up to date.
 
-![JosephBauser.net now with 100% more Web 2.0!](http://www.josephbauser.net/images/projects/josephbauser.net/1_screenshot.png "JosephBauser.net now with 100% more Web 2.0!")
+![JosephBauser.net now with 100% more Web 2.0!](https://www.josephbauser.net/images/projects/josephbauser.net/1_screenshot.png "JosephBauser.net now with 100% more Web 2.0!")

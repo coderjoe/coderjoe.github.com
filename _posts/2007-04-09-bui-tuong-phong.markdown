@@ -1,15 +1,13 @@
---- 
+---
 layout: post
 title: Bui Tuong Phong <3 <3 <3
 wordpress_id: 201
 wordpress_url: /archive/2007/04/09/bui-tuong-phong/
 comments: true
-categories: 
-- coding
-tags: 
-- projects
-- school
-- computer-graphics-2
+categories:
+- programming
+tags:
+- college
 ---
 
 Dear Dr. Phong,
