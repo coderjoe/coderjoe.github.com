@@ -1,0 +1,77 @@
+/*
+ * Styles for the generation page
+ */
+.body {
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	/*zoom: 0;*/
+}
+
+noscript {
+	font-weight: bold;
+	color: red;
+	font-size: 18pt;
+}
+
+input.error {
+	border-color: red;
+}
+
+span.error {
+	color: red;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.step {
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid black;
+	margin-bottom: 12px;
+}
+
+.step p {
+	padding-left: 50px;
+}
+
+#step2 div {
+	margin-bottom: 12px;
+}
+
+#step2 span.error {
+	display: inline;
+}
+
+#step2 span.last {
+	display: inline;
+}
+
+/*
+ * Styles for the results page
+ */
+
+#results {
+	border: none;
+}
+
+.fineprint {
+	font-size: 8pt;
+}
+
+table, tr, td {
+	border: 1px solid black;
+}
+
+thead, tfoot {
+	font-weight: bold;
+	font-size: 18pt;
+	text-align: center;
+}
+
+tbody {
+	font-size: 12pt;
+	text-align: center;
+}

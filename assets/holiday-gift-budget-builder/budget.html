@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <title>Holiday Budget Builder</title>
+      <meta name="viewport" content="width=480">
+      <link rel="stylesheet" type="text/css" href="budget.css" />
+      <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
+      <script type="text/javascript" src="cookie.js"></script>
+      <script type="text/javascript" src="budget.js"></script>
+   </head>
+   <body>
+      <div class="body">
+      <h1>Holiday Budget Builder</h1>
+      <noscript>
+	 <p>No javascript?<br/> This little app is pretty useless without javascript.<br/> You might want to turn it on.</p>
+      </noscript>
+      <div class="step" id="step1">
+	 <h2>Step 1: How much do you want to spend?</h2>
+	 <p>$<input name="budget" size="5" type="text" value="100"/><span class="error"></span></p>
+      </div>
+      <div class="step" id="step2">
+	 <h2>Step 2: List and rate the people you are buying gifts for.</h2>
+	 <div>
+	    <label>Name: </label><input name="names" size="10" type="text"/>
+	    <label>Rating: </label>
+	    <select name="ratings">
+	       <option value="10">10</option>
+	       <option value="9">9</option>
+	       <option value="8">8</option>
+	       <option value="7">7</option>
+	       <option value="6">6</option>
+	       <option value="5">5</option>
+	       <option value="4">4</option>
+	       <option value="3">3</option>
+	       <option value="2">2</option>
+	       <option value="1">1</option>
+	    </select>
+	    <input name="remove" type="button" value="Remove"/>
+	    <input name="add" type="button" value="Add"/>
+	    <span class="error"></span>
+	 </div>
+      </div>
+      <div class="step" id="step3">
+	 <h2>Step 3: Press this button!</h2>
+	 <p><input type="button" value="I'm done!"/></p>
+      </div>
+      <div class="fineprint">This little app was inspired by an episode of <a href="http://science.discovery.com/brink/equations-life/holiday-shopping.html">Brink!</a> on Discovery Science</div>
+      </div>
+      <script type="text/javascript">
+	 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+	 var pageTracker = _gat._getTracker("UA-526253-6");
+	 pageTracker._trackPageview();
+      </script>
+   </body>
+</html>

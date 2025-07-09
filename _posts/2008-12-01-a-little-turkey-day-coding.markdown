@@ -17,7 +17,7 @@ Do some coding of course!
 
 In this case I decided to finish up that holiday shopping budget I had been putting off. Using this simple little javascript application you can tell exactly how much you can afford to spend on each person.
 
-[http://lab.coderjoe.net/holiday-budget/budget.html](http://lab.coderjoe.net/holiday-budget/budget.html "http://lab.coderjoe.net/holiday-budget/budget.html")
+[holiday-gift-budget-builder/budget.html](/assets/holiday-gift-budget-builder/budget.html)
 
 Just choose your overall max budget, enter the names of all those people you will be giving gifts to, and rate them on a scale from 1 to 10!
 
